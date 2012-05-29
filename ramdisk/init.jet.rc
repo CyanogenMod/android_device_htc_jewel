@@ -12,10 +12,10 @@ on emmc
     mkdir /cache 0770 system cache
     mkdir /devlog 0700 root root
 
-    mount ext4 emmc@system /system wait ro data=ordered noauto_da_alloc
-    mount ext4 emmc@userdata /data wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 emmc@cache /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 emmc@devlog /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p35 /system wait ro data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p37 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p36 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p26 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
 
 on emmc-fs
     # msm8960 firmware
@@ -25,14 +25,14 @@ on emmc-fs
     mkdir /firmware_wcnss 0771 system system
 
     #wait /dev/block/mmcblk0p16
-    wait emmc@radio
-    wait emmc@adsp
-    wait emmc@wcnss
+    wait /dev/block/mmcblk0p17
+    wait /dev/block/mmcblk0p18
+    wait /dev/block/mmcblk0p19
 
     #mount vfat /dev/block/mmcblk0p16 /firmware_dsps
-    mount vfat emmc@radio /firmware_radio ro shortname=lower
-    mount vfat emmc@adsp /firmware_q6 ro shortname=lower
-    mount vfat emmc@wcnss /firmware_wcnss ro shortname=lower
+    mount vfat /dev/block/mmcblk0p17 /firmware_radio ro shortname=lower
+    mount vfat /dev/block/mmcblk0p18 /firmware_q6 ro shortname=lower
+    mount vfat /dev/block/mmcblk0p19 /firmware_wcnss ro shortname=lower
 
     # use qcom link scripts for firmware links
     #exec /system/bin/sh /system/etc/init.qcom.dsps_links.sh
