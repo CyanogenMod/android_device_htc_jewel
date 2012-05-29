@@ -123,18 +123,17 @@ WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/prima_wlan.ko"
 TARGET_FORCE_CPU_UPLOAD := true
 DYNAMIC_SHARED_LIBV8SO := true
 
-# cat /proc/emmc
 #dev:        size     erasesize name
 #mmcblk0p23: 000ffa00 00000200 "misc"
 #mmcblk0p22: 00fffe00 00000200 "recovery"
 #mmcblk0p21: 01000000 00000200 "boot"
-#mmcblk0p33: 67fffc00 00000200 "system"
+#mmcblk0p35: 4dfffc00 00000200 "system"
 #mmcblk0p30: 00140200 00000200 "local"
-#mmcblk0p34: 0ffffe00 00000200 "cache"
-#mmcblk0p35: 97fffe00 00000200 "userdata"
+#mmcblk0p36: 0dfffe00 00000200 "cache"
+#mmcblk0p37: 89fffe00 00000200 "userdata"
 #mmcblk0p26: 01400000 00000200 "devlog"
 #mmcblk0p28: 00040000 00000200 "pdata"
-#mmcblk0p36: 27be00000 00000200 "fat"
+#mmcblk0p38: 27be00000 00000200 "fat"
 #mmcblk0p31: 00010000 00000200 "extra"
 #mmcblk0p17: 02d00000 00000200 "radio"
 #mmcblk0p18: 00a00000 00000200 "adsp"
@@ -143,6 +142,8 @@ DYNAMIC_SHARED_LIBV8SO := true
 #mmcblk0p20: 007ffa00 00000200 "radio_config"
 #mmcblk0p24: 00400000 00000200 "modem_st1"
 #mmcblk0p25: 00400000 00000200 "modem_st2"
+#mmcblk0p32: 00040000 00000200 "skylink"
+#mmcblk0p33: 00040000 00000200 "cdma_record"
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -151,7 +152,7 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1744829440
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2550136320
 BOARD_FLASH_BLOCK_SIZE := 131072
-#BOARD_VOLD_MAX_PARTITIONS := 36
+BOARD_VOLD_MAX_PARTITIONS := 36
 
 # Recovery
 #TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
