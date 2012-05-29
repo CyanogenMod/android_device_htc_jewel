@@ -240,6 +240,18 @@ service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
     disabled
     oneshot
 
+service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7
+    user root
+    disabled
+    oneshot
+    ioprio idle 0
+
+service htc_ebdlogd_rel /system/bin/htc_ebdlogd -s -k
+    user root
+    disabled
+    oneshot
+    ioprio idle 0
+
 service qcom-sh /system/bin/sh /init.qcom.sh
     user root
     oneshot
@@ -254,6 +266,10 @@ service qmuxd /system/bin/qmuxd
 service rmt_storage /system/bin/rmt_storage modem_st1 modem_st2 recovery radio_config
     class core
     user root
+
+service hdmid /system/bin/hdmid
+    socket displayd stream 0660 root system graphics
+    disabled
 
 service thermald /system/bin/thermald
     user root
@@ -306,3 +322,9 @@ on property:ro.qualcomm.cabl=0
 
 on property:ro.use_data_netmgrd=false
     stop netmgrd
+
+on property:ro.build.tags=test-keys
+    start htc_ebdlogd
+
+on property:ro.build.tags=release-keys
+    start htc_ebdlogd_rel
