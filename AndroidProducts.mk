@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_jewel.mk
+    $(LOCAL_DIR)/jewel.mk
