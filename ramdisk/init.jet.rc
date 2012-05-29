@@ -197,23 +197,13 @@ on boot
 
 # Services start here
 
-service abld /system/bin/mm-abl-daemon
-    disabled
-
 service akmd /system/bin/akmd
     user compass
     group compass misc input
 
-service cand /system/bin/cand
-    user root
-
 service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
     disabled
     oneshot
-
-service ewtzmud /system/bin/ewtzmud
-    user system
-    group system misc input
 
 service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
     user root
