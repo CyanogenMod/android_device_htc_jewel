@@ -4,7 +4,7 @@
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/htc/jewel/device_jewel.mk)
+$(call inherit-product, device/htc/jewel/jewel.mk)
 
 # Device naming
 PRODUCT_DEVICE := jewel
