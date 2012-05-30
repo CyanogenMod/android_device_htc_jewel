@@ -83,6 +83,9 @@ ro.sf.lcd_density=320
 ro.hwui.text_cache_width=2048
 ro.hwui.text_cache_height=256
 
+mobiledata.interfaces=rmnet0,wlan0,gprs,ppp0
+ro.telephony.ril_class=HTCQualcommRIL
+
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
