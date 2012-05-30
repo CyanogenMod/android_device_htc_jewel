@@ -22,15 +22,11 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/jewel/overlay
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
     device/htc/jewel/prebuilt/init:root/init \
-    device/htc/jewel/ramdisk/init.goldfish.rc:root/init.goldfish.rc \
     device/htc/jewel/ramdisk/init.jet.rc:root/init.jet.rc \
-    device/htc/jewel/ramdisk/init.qcom.rc:root/init.qcom.rc \
     device/htc/jewel/ramdisk/init.qcom.sh:root/init.qcom.sh \
-    device/htc/jewel/ramdisk/init.rc:root/init.rc \
-    device/htc/jewel/ramdisk/init.target.rc:root/init.target.rc \
     device/htc/jewel/ramdisk/init.usb.rc:root/init.usb.rc \
-    device/htc/jewel/ramdisk/ueventd.goldfish.rc:root/ueventd.goldfish.rc \
-    device/htc/jewel/ramdisk/ueventd.rc:root/ueventd.rc
+    device/htc/jewel/ramdisk/ueventd.jet.rc:root/ueventd.jet.rc \
+    device/htc/jewel/ramdisk/init.rc:root/init.rc
 
 # Qualcomm scripts
 PRODUCT_COPY_FILES += \
@@ -196,7 +192,7 @@ PRODUCT_COPY_FILES += \
     device/htc/jewel/firmware/leia_pfp_470.fw:/system/etc/firmware/leia_pfp_470.fw \
     device/htc/jewel/firmware/leia_pm4_470.fw:/system/etc/firmware/leia_pm4_470.fw \
     device/htc/jewel/firmware/vidc_1080p.fw:/system/etc/firmware/vidc_1080p.fw
-    #device/htc/jewel/firmware/wcd9310_anc.bin:/system/etc/firmware/wcd9310_anc.bin
+#    device/htc/jewel/firmware/wcd9310_anc.bin:/system/etc/firmware/wcd9310_anc.bin
 
 # Wifi firmware
 PRODUCT_COPY_FILES += \

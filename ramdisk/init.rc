@@ -1,5 +1,3 @@
-import init.usb.rc
-
 on early-init
     # Set init and its forked children's oom_adj.
     write /proc/1/oom_adj -16
@@ -9,10 +7,6 @@ on early-init
 # create mountpoints
     mkdir /mnt 0775 root system
     mkdir /mnt/sdcard 0000 system system
-
-on early-fs
-    # create dalvik-cache, so as to enforce our permissions
-    mkdir /cache/dalvik-cache 0771 system system
 
 on init
 
@@ -30,7 +24,7 @@ loglevel 3
     export EXTERNAL_STORAGE /mnt/sdcard
     export ASEC_MOUNTPOINT /mnt/asec
     export LOOP_MOUNTPOINT /mnt/obb
-    export BOOTCLASSPATH /system/framework/core.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/framework2.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/HTCDev.jar:/system/framework/HTCExtension.jar:/system/framework/filterfw.jar:/system/framework/com.htc.android.bluetooth.jar:/system/framework/wimax.jar:/system/framework/usbnet.jar:/system/framework/com.orange.authentication.simcard.jar
+    export BOOTCLASSPATH /system/framework/core.jar:/system/framework/core-junit.jar:/system/framework/bouncycastle.jar:/system/framework/ext.jar:/system/framework/framework.jar:/system/framework/android.policy.jar:/system/framework/services.jar:/system/framework/apache-xml.jar:/system/framework/filterfw.jar
 
 # Backward compatibility
     symlink /system/etc /etc
@@ -179,7 +173,6 @@ on post-fs-data
     mkdir /data/radio 0770 radio radio
 
     # create dalvik-cache, so as to enforce our permissions
-    mkdir /data/dalvik-cache 0771 system system
     mkdir /cache/dalvik-cache 0771 system system
 
     # create resource-cache and double-check the perms
