@@ -140,8 +140,8 @@ PRODUCT_PACKAGES += \
 #    gps.jewel \
 
 # Lights
-PRODUCT_PACKAGES += \
-    lights.jewel
+#PRODUCT_PACKAGES += \
+#    lights.jewel
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -160,7 +160,7 @@ PRODUCT_PACKAGES += \
 
 # Torch
 PRODUCT_PACKAGES += \
-		Torch
+    Torch
 
 # USB
 PRODUCT_PACKAGES += \
@@ -221,9 +221,9 @@ PRODUCT_COPY_FILES += \
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
-    dalvik.vm.lockprof.threshold=500 \
-    ro.com.google.locationfeatures=1 \
-    dalvik.vm.dexopt-flags=m=y
+    ro.com.google.locationfeatures=1
+#    dalvik.vm.lockprof.threshold=500
+#    dalvik.vm.dexopt-flags=m=y
 
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
