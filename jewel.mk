@@ -222,8 +222,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
     ro.com.google.locationfeatures=1
-#    dalvik.vm.lockprof.threshold=500
-#    dalvik.vm.dexopt-flags=m=y
+    dalvik.vm.lockprof.threshold=500
+    dalvik.vm.dexopt-flags=m=y
 
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
