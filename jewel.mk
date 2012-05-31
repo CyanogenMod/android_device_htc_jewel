@@ -106,15 +106,12 @@ PRODUCT_COPY_FILES += \
     device/htc/jewel/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/jewel/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
     device/htc/jewel/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
-    device/htc/jewel/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/htc/jewel/keylayout/tv-touchscreen.kl:system/usr/keylayout/tv-touchscreen.kl
+    device/htc/jewel/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl
 
 # Input device config
 PRODUCT_COPY_FILES += \
     device/htc/jewel/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
-    device/htc/jewel/idc/projector_input.idc:system/usr/idc/projector_input.idc \
-    device/htc/jewel/idc/tv-touchscreen.idc:system/usr/idc/tv-touchscreen.idc
-
+    device/htc/jewel/idc/projector_input.idc:system/usr/idc/projector_input.idc
 # Audio
 PRODUCT_PACKAGES += \
     alsa.msm8960 \

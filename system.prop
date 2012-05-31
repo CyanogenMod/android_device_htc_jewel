@@ -6,21 +6,15 @@ ro.sf.lcd_density=320
 ro.hwui.text_cache_width=2048
 ro.hwui.text_cache_height=256
 
+# RIL properties
+mobiledata.interfaces=rmnet0
+ro.telephony.default_network=8
+ro.telephony.ril_class=HTCQualcommRIL
+DEVICE_PROVISIONED=1
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
-persist.rild.nitz_plmn=
-persist.rild.nitz_long_ons_0=
-persist.rild.nitz_long_ons_1=
-persist.rild.nitz_long_ons_2=
-persist.rild.nitz_long_ons_3=
-persist.rild.nitz_short_ons_0=
-persist.rild.nitz_short_ons_1=
-persist.rild.nitz_short_ons_2=
-persist.rild.nitz_short_ons_3=
-persist.rild.ril.ltedr=0
-persist.rild.ril.ltedrtable=max_retries=infinite,10000
-ril.subscription.types=NV,RUIM
-DEVICE_PROVISIONED=1
+ro.vendor.extension_library=/system/lib/libqc-opt.so
+ro.baseband.arch=msm
 #
 # system props for telephony modules
 #
@@ -79,11 +73,6 @@ ro.qualcomm.cabl=0
 
 # System property for thermald
 persist.thermal.monitor=true
-
-# support sdcard2
-ro.sdcard2 = 1
-# For internal fat file system
-ro.phone_fat = 1
 
 # UMS
 persist.sys.usb.config=mass_storage,adb
