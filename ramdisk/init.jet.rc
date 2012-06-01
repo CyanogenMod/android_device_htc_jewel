@@ -261,6 +261,13 @@ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     disabled
 
 service netmgrd /system/bin/netmgrd
+    class main
+
+service btwlancoex /system/bin/sh /system/etc/init.qcom.coex.sh
+    user shell
+    group bluetooth net_bt_admin
+    disabled
+    oneshot
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
     user system
@@ -281,6 +288,9 @@ service qcom-wifi /system/bin/sh /system/etc/init.qcom.wifi.sh
 service qmuxd /system/bin/qmuxd
     user radio
     group radio
+
+service cnd /system/bin/cnd
+    socket cnd stream 660 root radio
 
 service rmt_storage /system/bin/rmt_storage modem_st1 modem_st2 recovery radio_config
     class core
