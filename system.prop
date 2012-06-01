@@ -8,29 +8,13 @@ ro.hwui.text_cache_height=256
 
 # RIL properties
 mobiledata.interfaces=rmnet0
-ro.telephony.default_network=8
+ro.telephony.default_network=0
 ro.telephony.ril_class=HTCQualcommRIL
 DEVICE_PROVISIONED=1
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 ro.vendor.extension_library=/system/lib/libqc-opt.so
 ro.baseband.arch=msm
-#
-# system props for telephony modules
-#
-#device supports LTE
-ro.config.lte=true
-#device supports EHRPD
-#ro.config.ehrpd=true
-#device supports simultaneous 1x voice + LTE
-ro.config.svlte1x=true
-
-# RF team request
-ro.ril.enable.dtm = 0
-ro.ril.gprsclass = 12
-ro.ril.hsdpa.category = 10
-ro.ril.hsupa.category = 6
-ro.ril.hsxpa = 3
 
 # For the default value of agps
 ro.ril.def.agps.mode = 6

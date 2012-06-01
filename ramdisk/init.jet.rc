@@ -6,11 +6,6 @@ on early-init
     # for backwards compatibility
     symlink /mnt/sdcard /sdcard
 
-    # create dalvik-cache, so as to enforce our permissions
-    # mkdir /cache/dalvik-cache 0771 system system
-    # chown system system /cache/dalvik-cache
-    # chmod 0771 /cache/dalvik-cache
-
 on emmc
     mkdir /system
     mkdir /data 0771 system system
@@ -290,7 +285,6 @@ service qmuxd /system/bin/qmuxd
 service rmt_storage /system/bin/rmt_storage modem_st1 modem_st2 recovery radio_config
     class core
     user root
-    disabled
 
 service thermald /system/bin/thermald
    class main
