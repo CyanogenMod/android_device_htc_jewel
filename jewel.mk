@@ -32,7 +32,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/jewel/configs/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh \
     device/htc/jewel/configs/init.qcom.coex.sh:/system/etc/init.qcom.coex.sh \
-    device/htc/jewel/configs/init.qcom.dsps_links.sh:/system/etc/init.qcom.dsps_links.sh \
     device/htc/jewel/configs/init.qcom.fm.sh:/system/etc/init.qcom.fm.sh \
     device/htc/jewel/configs/init.qcom.modem_links.sh:/system/etc/init.qcom.modem_links.sh \
     device/htc/jewel/configs/init.qcom.post_boot.sh:/system/etc/init.qcom.post_boot.sh \
