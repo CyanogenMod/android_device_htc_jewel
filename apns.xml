@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<apns version="8">
+    <apn carrier="Production" apn="1" mmsc="http://mms.sprintpcs.com" mmsproxy="68.28.31.7" mmsport="80" mmsprotocol="2.0" mcc="000" mnc="00" type="mms" />
+</apns>
