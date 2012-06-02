@@ -1,15 +1,16 @@
 import init.usb.rc
 
 on early-init
-    # external sdcard
-    export EXTERNAL_STORAGE /mnt/sdcard
+    
+    # internal sd on emmc
+    export INTERNAL_STORAGE /mnt/sdcard
     mkdir /mnt/sdcard 0000 system system
     symlink /mnt/sdcard /sdcard
-    # internal sd on emmc
-    export SECONDARY_STORAGE /mnt/emmc
-    mkdir /mnt/emmc 0000 system system
-    symlink /mnt/emmc /emmc
-
+    # external sdcard
+    export EXTERNAL_STORAGE /mnt/sdcard/ext_sd
+    mkdir /mnt/sdcard/ext_sd 0000 system system
+    symlink /mnt/ext_sd /sdcard2
+    
 on emmc
     mkdir /system
     mkdir /data 0771 system system
@@ -99,12 +100,11 @@ on boot
     chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
     chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
 
-<--    # for modem link
+    # for modem link
     chown system system /sys/module/serial/parameters/modem_enabled
     chown system system /dev/ttyHSUSB0
     chown system system /dev/ttySA0
     chown system system /dev/smd9
-<--
 
     # Create the directories used by the Wireless subsystem
     mkdir /data/misc/wifi 0770 wifi wifi
@@ -153,11 +153,20 @@ on boot
     chown system system /sys/devices/virtual/htc_accessory/fm/flag
     chown system system /sys/devices/virtual/htc_accessory/tty/flag
 
-    # Chown polling nodes as needed from UI running on system server
+    # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
+    # We chown/chmod /persist again so because mount is run as root + defaults
     chown system system /persist
     chmod 0771 /persist
     chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
+    chmod 0664 /sys/devices/platform/msm_sdcc.2/polling
+    chmod 0664 /sys/devices/platform/msm_sdcc.3/polling
+    chmod 0664 /sys/devices/platform/msm_sdcc.4/polling
+
+    # Chown polling nodes as needed from UI running on system server
     chown system system /sys/devices/platform/msm_sdcc.1/polling
+    chown system system /sys/devices/platform/msm_sdcc.2/polling
+    chown system system /sys/devices/platform/msm_sdcc.3/polling
+    chown system system /sys/devices/platform/msm_sdcc.4/polling
 
     #Set SUID bit for iproute2 ip tool
     chmod 4755 /system/bin/ip
@@ -309,10 +318,38 @@ service time_daemon /system/bin/time_daemon
     oneshot
     disabled
 
-service wpa_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant -Dnl80211
+service ril-daemon1 /system/bin/rild -c 1
+    socket rild1 stream 660 root radio
+    socket rild-debug1 stream 660 radio system
+    user root
+    disabled
+    group radio cache inet misc audio sdcard_rw qcom_oncrpc diag
+
+service wpa_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant -Dnl80211 -ddd
     user root
     group wifi inet
-    socket wpa_wlan0 dgram 660 wifi wifi
+    disabled
+    oneshot
+
+service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
+    disabled
+    oneshot
+
+service dhcpcd_p2p /system/bin/dhcpcd -ABKLG
+    class late_start
+    disabled
+    oneshot
+
+service iprenew_wlan0 /system/bin/dhcpcd -n wlan0
+    disabled
+    oneshot
+
+service iprenew_p2p /system/bin/dhcpcd -n p2p
+    class late_start
+    disabled
+    oneshot
+
+service dhcpcd_bnep0 /system/bin/dhcpcd -BKLG
     disabled
     oneshot
 
@@ -325,6 +362,14 @@ service zchgd_onmode /system/bin/zchgd -onmode
     user root
     group root graphics
     oneshot
+
+service ds_fmc_appd /system/bin/ds_fmc_appd -p "rmnet0" -D
+    group radio
+    disabled
+    oneshot
+
+on property:persist.data.ds_fmc_app.mode=1
+    start ds_fmc_appd
 
 on property:init.svc.bootanim=stopped
     start qcom-post-boot
