@@ -2,14 +2,10 @@ import init.usb.rc
 
 on early-init
     
-    # internal sd on emmc
-    export INTERNAL_STORAGE /mnt/sdcard
+    export EXTERNAL_STORAGE /mnt/sdcard
     mkdir /mnt/sdcard 0000 system system
+    # for backwards compatibility
     symlink /mnt/sdcard /sdcard
-    # external sdcard
-    export EXTERNAL_STORAGE /mnt/sdcard/ext_sd
-    mkdir /mnt/sdcard/ext_sd 0000 system system
-    symlink /mnt/ext_sd /sdcard2
     
 on emmc
     mkdir /system
@@ -60,6 +56,8 @@ on init
     chown system system /dev/mpu
     chown system system /dev/mpuirq
     chown system system /dev/timerirq
+
+	symlink /mnt/sdcard/ext_sd /sdcard2
 
     #set G-Sensor and Compass permissions
     chown compass system /dev/akm8975_aot
