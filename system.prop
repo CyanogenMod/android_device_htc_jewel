@@ -7,8 +7,20 @@ ro.sf.lcd_density=320
 ro.hwui.text_cache_width=2048
 ro.hwui.text_cache_height=256
 
+gsm.operator.alpha=Sprint
+ro.cdma.home.operator.numeric=310120
+gsm.sim.operator.numeric=310120
+gsm.operator.numeric=310120
+gsm.sim.operator.iso-country=us
+gsm.operator.iso-country=us
+ro.net.apnwhitelist=admin
+ro.htc.checkin.delay=0
+ro.da1.enable=true
+ro.watch.appid=com.sdgtl.watch.jelcl_40_ics
+ro.telephony.ipv6_capability=1
+
 # RIL properties
-mobiledata.interfaces=rmnet0
+mobiledata.interfaces=rmnet0,wlan0
 ro.telephony.default_network=0
 ro.telephony.ril_class=HTCQualcommRIL
 DEVICE_PROVISIONED=1

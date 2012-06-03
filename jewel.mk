@@ -31,9 +31,7 @@ PRODUCT_COPY_FILES += \
 # Qualcomm scripts
 PRODUCT_COPY_FILES += \
     device/htc/jewel/configs/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh \
-    device/htc/jewel/configs/init.qcom.coex.sh:/system/etc/init.qcom.coex.sh \
     device/htc/jewel/configs/init.qcom.fm.sh:/system/etc/init.qcom.fm.sh \
-    device/htc/jewel/configs/init.qcom.modem_links.sh:/system/etc/init.qcom.modem_links.sh \
     device/htc/jewel/configs/init.qcom.post_boot.sh:/system/etc/init.qcom.post_boot.sh \
     device/htc/jewel/configs/init.qcom.q6_links.sh:/system/etc/init.qcom.q6_links.sh \
     device/htc/jewel/configs/init.qcom.radio_links.sh:/system/etc/init.qcom.radio_links.sh \
@@ -61,14 +59,19 @@ PRODUCT_COPY_FILES += device/htc/jewel/configs/AudioBTID.csv:system/etc/AudioBTI
 # QC thermald config
 PRODUCT_COPY_FILES += device/htc/jewel/configs/thermald.conf:system/etc/thermald.conf
 
-# vold and apns config
+# vold and apns and other config
 PRODUCT_COPY_FILES += \
     device/htc/jewel/configs/vold.fstab:system/etc/vold.fstab \
-    device/htc/jewel/apns-conf.xml:system/etc/apns-conf.xml
+    device/htc/jewel/configs/apns-conf.xml:system/etc/apns-conf.xml \
+    device/htc/jewel/configs/OperatorPolicy.xml:system/etc/OperatorPolicy.xml \
+    device/htc/jewel/configs/UserPolicy.xml:system/etc/UserPolicy.xml
 
 # wifi config
 PRODUCT_COPY_FILES += \
-    device/htc/jewel/configs/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
+    device/htc/jewel/configs/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf \
+    device/htc/jewel/configs/apstacon.conf:/system/etc/wifi/apstacon.conf \
+    device/htc/jewel/configs/WCNSS_qcom_cfg_default.ini:/system/etc/wifi/WCNSS_qcom_cfg_default.ini \
+    device/htc/jewel/configs/hostapd_default.conf:/system/etc/wifi/hostapd_default.conf
 
 # Sound configs
 PRODUCT_COPY_FILES += \
@@ -192,13 +195,12 @@ PRODUCT_COPY_FILES += \
     device/htc/jewel/firmware/leia_pfp_470.fw:/system/etc/firmware/leia_pfp_470.fw \
     device/htc/jewel/firmware/leia_pm4_470.fw:/system/etc/firmware/leia_pm4_470.fw \
     device/htc/jewel/firmware/vidc_1080p.fw:/system/etc/firmware/vidc_1080p.fw
-#    device/htc/jewel/firmware/wcd9310_anc.bin:/system/etc/firmware/wcd9310_anc.bin
 
 # Wifi firmware
 PRODUCT_COPY_FILES += \
     device/htc/jewel/firmware/WCNSS_cfg.dat:/system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     device/htc/jewel/firmware/WCNSS_qcom_cfg.ini:/system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
-    device/htc/jewel/firmware/WCNSS_qcom_wlan_nv.bin:/system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+    device/htc/jewel/firmware/WCNSS_qcom_wlan_nv.bin:/system/etc/wifi/WCNSS_qcom_wlan_nv.bin
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -230,6 +232,13 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Set build date
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+
+## CDMA Sprint stuffs
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.com.google.clientidbase=android-sprint-us \
+	ro.com.google.locationfeatures=1 \
+	ro.cdma.home.operator.numeric=310120 \
+	ro.cdma.home.operator.alpha=Sprint
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi
