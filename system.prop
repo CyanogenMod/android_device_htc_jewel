@@ -1,4 +1,3 @@
-# end build properties
 #
 # system.prop for jewel
 #
@@ -15,17 +14,14 @@ gsm.sim.operator.iso-country=us
 gsm.operator.iso-country=us
 ro.net.apnwhitelist=admin
 ro.htc.checkin.delay=0
-ro.da1.enable=true
+ro.da1.enable=false
 ro.watch.appid=com.sdgtl.watch.jelcl_40_ics
 ro.telephony.ipv6_capability=1
 
 # RIL properties
 mobiledata.interfaces=rmnet0,wlan0
-ro.telephony.default_network=0
+ro.telephony.default_network=8
 ro.telephony.ril_class=HTCQualcommRIL
-DEVICE_PROVISIONED=1
-rild.libpath=/system/lib/libril-qc-qmi-1.so
-rild.libargs=-d /dev/smd0
 ro.vendor.extension_library=/system/lib/libqc-opt.so
 ro.baseband.arch=msm
 rild.libpath=/system/lib/libril-qc-qmi-1.so
@@ -43,18 +39,16 @@ persist.rild.ril.ltedr=0
 persist.rild.ril.ltedrtable=max_retries=infinite,10000
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
+
+# graphics
+debug.composition.type=dyn
+debug.enabletr=true
 debug.sf.hw=1
 debug.egl.hw=1
-debug.composition.type=dyn
-
+ro.opengles.version=131072
 ro.sf.compbypass.enable=1
-debug.enabletr=true
 debug.qctwa.preservebuf=1
 dev.pm.dyn_samplingrate=1
-
-# Default network type.
-# 4 => CDMA mode preferred.
-ro.telephony.default_network=8
 
 # system props for the cne module
 #
@@ -95,6 +89,10 @@ persist.htc.audio.pcm.channels=2
 #
 ro.use_data_netmgrd=true
 persist.data_netmgrd_mtu=1428
+ro.ril.disable.power.collapse=1
+#persist.data_netmgrd_nint=8
+#ro.ril.set.mtu1428 = 1
+
 #
 # system props for telephony modules
 #
@@ -118,15 +116,6 @@ ro.ril.hsdpa.category = 10
 ro.ril.hsupa.category = 6
 ro.ril.hsxpa = 3
  
-# For the default value of agps
-ro.ril.def.agps.mode = 6
- 
-# For HSDPA low throughput
-ro.ril.disable.power.collapse = 1
- 
-#system props for time-services
-persist.timed.enable=true
- 
 # System props for audio
 persist.audio.fluence.mode=endfire
 persist.audio.vr.enable=false
@@ -138,26 +127,12 @@ ro.ril.def.agps.mode = 6
 # audio
 lpa.decode=true
 
-# graphics
-debug.composition.type=dyn
-debug.enabletr=true
-debug.sf.hw=1
-ro.opengles.version=131072
-ro.sf.compbypass.enable=1
-
 com.qc.hardware=true
 com.qc.hdmi_out=true
-
-# qcom cpu governor service
-dev.pm.dyn_samplingrate=1
 
 # wifi
 ro.product.wireless=WCN3660
 wifi.interface=wlan0
-
-# data module
-ro.use_data_netmgrd=true
-persist.data_netmgrd_mtu=1428
 
 # for BT HCI transport
 ro.qualcomm.bt.hci_transport=smd

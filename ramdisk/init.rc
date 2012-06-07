@@ -17,7 +17,6 @@ loglevel 3
     export PATH /sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin
     export LD_LIBRARY_PATH /vendor/lib:/system/lib
     export ANDROID_BOOTLOGO 1
-    export ANDROID_CACHE /cache
     export ANDROID_ROOT /system
     export ANDROID_ASSETS /system/app
     export ANDROID_DATA /data
@@ -130,6 +129,9 @@ on post-fs-data
     # We chown/chmod /data again so because mount is run as root + defaults
     chown system system /data
     chmod 0771 /data
+
+    # create htcfs
+    mkdir /data/htcfs 0777 root root
 
     # Create dump dir and collect dumps.
     # Do this before we mount cache so eventually we can use cache for
@@ -329,9 +331,6 @@ on boot
 # Set this property so surfaceflinger is not started by system_init
     setprop system_init.startsurfaceflinger 0
 
-# Run sysinit
-    exec /system/bin/sysinit
-
     class_start core
     class_start main
 
@@ -428,7 +427,7 @@ service ril-daemon /system/bin/rild
     socket rild-htc stream 660 radio system
     socket aepls001 stream 660 radio system
     user root
-    group radio cache inet misc audio sdcard_rw qcom_oncrpc log diag
+    group radio cache inet misc audio sdcard_rw log diag
 
 service surfaceflinger /system/bin/surfaceflinger
     class main
@@ -438,7 +437,7 @@ service surfaceflinger /system/bin/surfaceflinger
 
 service zygote /system/bin/app_process -Xzygote /system/bin --zygote --start-system-server
     class main
-    socket zygote stream 660 root system
+    socket zygote stream 666
     onrestart write /sys/android_power/request_state wake
     onrestart write /sys/power/state on
     onrestart restart media

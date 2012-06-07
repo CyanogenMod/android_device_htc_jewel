@@ -6,6 +6,11 @@ on early-init
     mkdir /mnt/sdcard 0000 system system
     # for backwards compatibility
     symlink /mnt/sdcard /sdcard
+
+    export EXTERNAL_STORAGE2 /mnt/sdcard/ext_sd
+    mkdir /mnt/sdcard/ext_sd 0000 system system
+    # for backwards compatibility
+    symlink /mnt/sdcard/ext_sd /sdcard2
     
 on emmc
     mkdir /system
