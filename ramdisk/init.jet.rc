@@ -116,6 +116,7 @@ on boot
     # Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
     mkdir /data/system 0775 system system
     symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
+    symlink /dev/socket/wpa_wlan0 /data/system/wpa_supplicant/wlan0
 
     # liblights
     chown system system /sys/class/leds/red/brightness
@@ -241,10 +242,6 @@ service akmd /system/bin/akmd
     user compass
     group compass misc input
 
-service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
-    disabled
-    oneshot
-
 service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
     user root
     group system qcom_oncrpc
@@ -260,10 +257,6 @@ service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
 service hdmid /system/bin/hdmid
     socket displayd stream 0660 root system graphics
     disabled
-
-service iprenew_wlan0 /system/bin/dhcpcd -n
-    disabled
-    oneshot
 
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     user root
@@ -323,9 +316,10 @@ service ril-daemon1 /system/bin/rild -c 1
     disabled
     group radio cache inet misc audio sdcard_rw qcom_oncrpc diag
 
-service wpa_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant -Dnl80211 -ddd
+service wpa_supplicant /system/bin/wpa_supplicant -Dnl80211
     user root
     group wifi inet
+    socket wpa_wlan0 dgram 660 wifi wifi
     disabled
     oneshot
 
@@ -338,12 +332,11 @@ service dhcpcd_p2p /system/bin/dhcpcd -ABKLG
     disabled
     oneshot
 
-service iprenew_wlan0 /system/bin/dhcpcd -n wlan0
+service iprenew_wlan0 /system/bin/dhcpcd -n
     disabled
     oneshot
 
-service iprenew_p2p /system/bin/dhcpcd -n p2p
-    class late_start
+service iprenew_p2p /system/bin/dhcpcd -n
     disabled
     oneshot
 
