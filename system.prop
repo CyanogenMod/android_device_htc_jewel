@@ -6,6 +6,11 @@ ro.sf.lcd_density=320
 ro.hwui.text_cache_width=2048
 ro.hwui.text_cache_height=256
 
+ro.ril.oem.ecclist=911
+ro.ril.disable.fd.plmn.prefix=23402,23410,23411,23420
+ro.ril.enable.sdr=0
+ro.cdma.home.operator.alpha=Sprint
+gsm.sim.operator.alpha=Sprint
 gsm.operator.alpha=Sprint
 ro.cdma.home.operator.numeric=310120
 gsm.sim.operator.numeric=310120
@@ -19,6 +24,7 @@ ro.watch.appid=com.sdgtl.watch.jelcl_40_ics
 ro.telephony.ipv6_capability=1
 
 # RIL properties
+keyguard.no_require_sim=1
 mobiledata.interfaces=rmnet0,wlan0
 ro.telephony.default_network=8
 ro.telephony.ril_class=HTCQualcommRIL
@@ -89,9 +95,8 @@ persist.htc.audio.pcm.channels=2
 #
 ro.use_data_netmgrd=true
 persist.data_netmgrd_mtu=1428
+ro.ril.set.mtusize=1428
 ro.ril.disable.power.collapse=1
-#persist.data_netmgrd_nint=8
-#ro.ril.set.mtu1428 = 1
 
 #
 # system props for telephony modules
@@ -148,6 +153,11 @@ ro.qualcomm.cabl=0
 
 # System property for thermald
 persist.thermal.monitor=true
+
+# support sdcard2
+ro.sdcard2 = 1
+# For internal fat file system
+ro.phone_fat = 1
 
 # UMS
 persist.sys.usb.config=mass_storage,adb

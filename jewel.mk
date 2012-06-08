@@ -61,11 +61,13 @@ PRODUCT_COPY_FILES += device/htc/jewel/configs/AudioBTID.csv:system/etc/AudioBTI
 # QC thermald config
 PRODUCT_COPY_FILES += device/htc/jewel/configs/thermald.conf:system/etc/thermald.conf
 
-# vold and apns config
+# vold, apns, and other configs
 PRODUCT_COPY_FILES += \
     device/htc/jewel/configs/vold.fstab:system/etc/vold.fstab \
     device/htc/jewel/configs/apns.xml:system/etc/apns.xml \
-    device/htc/jewel/configs/apns-conf.xml:system/etc/apns-conf.xml
+    device/htc/jewel/configs/apns-conf.xml:system/etc/apns-conf.xml \
+    device/htc/jewel/configs/OperatorPolicy.xml:system/etc/OperatorPolicy.xml \
+    device/htc/jewel/configs/UserPolicy.xml:system/etc/UserPolicy.xml
 
 # wifi config
 PRODUCT_COPY_FILES += \
