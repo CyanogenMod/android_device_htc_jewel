@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StorageList
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <storage android:mountPoint="/mnt/sdcard/ext_sd" android:storageDescription="@string/storage_sd_card" android:primary="false" android:removable="true" />
-    <storage android:mountPoint="/mnt/sdcard" android:storageDescription="@string/storage_internal" android:primary="true" android:removable="false" />
+    <storage android:mountPoint="/mnt/sdcard2" android:storageDescription="@string/storage_sd_card" android:primary="false" android:removable="true" android:allowMassStorage="true"/>
+    <storage android:mountPoint="/mnt/sdcard" android:storageDescription="@string/storage_internal" android:primary="true" android:removable="false" android:allowMassStorage="true"/>
 </StorageList>
