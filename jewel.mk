@@ -143,8 +143,8 @@ PRODUCT_PACKAGES += \
 #    gps.jewel \
 
 # Lights
-PRODUCT_PACKAGES += \
-    lights.jewel
+#PRODUCT_PACKAGES += \
+#    lights.jewel
 
 # OMX
 PRODUCT_PACKAGES += \

@@ -96,6 +96,7 @@ persist.htc.audio.pcm.channels=2
 ro.use_data_netmgrd=true
 persist.data_netmgrd_mtu=1428
 ro.ril.set.mtusize=1428
+persist.data_netmgrd_nint=8
 ro.ril.disable.power.collapse=1
 
 #

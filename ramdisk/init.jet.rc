@@ -7,8 +7,8 @@ on early-init
     # for backwards compatibility
     symlink /mnt/sdcard /sdcard
 
-    mkdir /mnt/sdcard2/ 0000 system system
-    symlink /mnt/sdcard2/ /sdcard2
+    mkdir /mnt/sdcard2 0000 system system
+    symlink /mnt/sdcard2 /sdcard2
     
 on emmc
     mkdir /system
