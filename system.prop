@@ -27,6 +27,8 @@ ro.telephony.ipv6_capability=1
 keyguard.no_require_sim=1
 mobiledata.interfaces=rmnet0,wlan0
 ro.telephony.default_network=8
+telephony.lteOnCdmaDevice=1
+ro.telephony.lteOnCdmaDevice=1
 ro.telephony.ril_class=HTCQualcommRIL
 ro.vendor.extension_library=/system/lib/libqc-opt.so
 ro.baseband.arch=msm
@@ -96,7 +98,7 @@ persist.htc.audio.pcm.channels=2
 ro.use_data_netmgrd=true
 persist.data_netmgrd_mtu=1428
 ro.ril.set.mtusize=1428
-persist.data_netmgrd_nint=8
+#persist.data_netmgrd_nint=8
 ro.ril.disable.power.collapse=1
 
 #
