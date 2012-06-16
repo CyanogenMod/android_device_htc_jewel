@@ -1,7 +1,6 @@
-#TARGET_BOOTANIMATION_NAME := vertical-540x960
-
-# Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
+
+TARGET_BOOTANIMATION_NAME := vertical-720x1280
 
 # Inherit device configuration
 $(call inherit-product, device/htc/jewel/jewel.mk)
