@@ -90,13 +90,27 @@ persist.htc.audio.pcm.channels=2
 ro.config.lte=true
 #device supports simultaneous 1x voice + LTE
 ro.config.svlte1x=true
- 
+
+gsm.sim.operator.alpha=Sprint
+gsm.operator.alpha=Sprint
+gsm.sim.operator.numeric=310120
+gsm.operator.numeric=310120
+gsm.sim.operator.iso-country=us
+gsm.operator.iso-country=us
+
+gsm.sim.operator.alpha = sprint
+gsm.sim.operator.numeric = 310120
+gsm.sim.operator.iso-country = us
+gsm.operator.alpha = sprint
+gsm.operator.numeric = 310120
+gsm.operator.iso-country = us
+
 # For Verizon data retry configuration
 ro.cdma.data_retry_config = max_retries=infinite,0,0,60000,120000,480000,900000
- 
+
 # Modify MMS APN retry timer from 5s to 2s.
 ro.gsm.2nd_data_retry_config = max_retries=3, 2000, 2000, 2000
- 
+
 # RF team request
 ro.ril.enable.dtm = 0
 ro.ril.gprsclass = 12

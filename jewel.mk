@@ -28,6 +28,13 @@ PRODUCT_COPY_FILES += \
     device/htc/jewel/ramdisk/ueventd.jet.rc:root/ueventd.jet.rc \
     device/htc/jewel/ramdisk/init.rc:root/init.rc
 
+## CDMA Sprint stuffs
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.com.google.clientidbase=android-sprint-us \
+	ro.com.google.locationfeatures=1 \
+	ro.cdma.home.operator.numeric=310120 \
+	ro.cdma.home.operator.alpha=Sprint
+
 # Qualcomm scripts
 PRODUCT_COPY_FILES += \
     device/htc/jewel/configs/init.qcom.bt.sh:/system/etc/init.qcom.bt.sh \
