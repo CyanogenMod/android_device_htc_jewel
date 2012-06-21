@@ -109,7 +109,7 @@ BOARD_PROVIDES_LIBRIL := true
 BOARD_USE_NEW_LIBRIL_HTC := true
 
 # USB
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
 
 # Wifi
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
