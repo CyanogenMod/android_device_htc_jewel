@@ -2,13 +2,13 @@ import init.usb.rc
 
 on early-init
     # external sdcard
-    export SECONDARY_STORAGE /mnt/sdcard
+    export SECONDARY_STORAGE /mnt/sdcard2
+    mkdir /mnt/sdcard2 0000 system system
+    symlink /mnt/sdcard2 /sdcard2
+    # internal sd on emmc
+    export EXTERNAL_STORAGE /mnt/sdcard
     mkdir /mnt/sdcard 0000 system system
     symlink /mnt/sdcard /sdcard
-    # internal sd on emmc
-    export EXTERNAL_STORAGE /mnt/emmc
-    mkdir /mnt/emmc 0000 system system
-    symlink /mnt/emmc /emmc
     
 on emmc
     mkdir /system

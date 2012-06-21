@@ -25,5 +25,5 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-dev_mount emmc /mnt/emmc 38 /devices/platform/msm_sdcc.1/mmc_host/mmc0
-dev_mount sdcard /mnt/sdcard auto /devices/platform/msm_sdcc.3/mmc_host
+dev_mount sdcard /mnt/sdcard 38 /devices/platform/msm_sdcc.1/mmc_host/mmc0
+dev_mount sdcard2 /mnt/sdcard2 auto /devices/platform/msm_sdcc.3/mmc_host
