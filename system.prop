@@ -71,16 +71,6 @@ persist.cne.be.do.sqi.min=0
 persist.cne.be.do.sqi.max=100
 persist.cne.be.wlan.sqi.min=0
 persist.cne.be.wlan.sqi.max=100
-#lpa.tunnel=true
-#lpa.use-stagefright=true
-#htc.audio.lpa.a2dp=0
-#htc.audio.global.state=0
-#htc.audio.global.profile=0
-#htc.audio.q6.topology=0
-#htc.audio.enable_dmic=1
-#export for SoundHound
-#persist.htc.audio.pcm.samplerate=44100
-#persist.htc.audio.pcm.channels=2
 
 #
 # system props for telephony modules
@@ -116,11 +106,6 @@ ro.ril.disable.power.collapse = 1
 #system props for time-services
 persist.timed.enable=true
  
-# System props for audio
-#persist.audio.fluence.mode=endfire
-#persist.audio.vr.enable=false
-#persist.audio.handset.mic=analog
-
 # For the default value of agps
 ro.ril.def.agps.mode = 6
 
