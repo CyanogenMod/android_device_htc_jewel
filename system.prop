@@ -110,7 +110,7 @@ persist.timed.enable=true
 ro.ril.def.agps.mode = 6
 
 # audio
-lpa.decode=true
+#lpa.decode=true
 
 # wifi
 ro.product.wireless=WCN3660
