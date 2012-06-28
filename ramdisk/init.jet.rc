@@ -274,6 +274,12 @@ service hdmid /system/bin/hdmid
     socket displayd stream 0660 root system graphics
     disabled
 
+service hostapd /system/bin/hostapd -dddd /data/hostapd/hostapd.conf
+    user root
+    group root
+    oneshot
+    disabled
+
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     user root
     disabled
