@@ -95,8 +95,8 @@ USE_OPENGL_RENDERER := true
 TARGET_HAVE_BYPASS := false
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_ION := true
-#TARGET_USES_OVERLAY := true
-TARGET_QCOM_HDMI_OUT := true
+TARGET_USES_OVERLAY := true
+#TARGET_QCOM_HDMI_OUT := true
 BOARD_EGL_CFG := device/htc/jewel/configs/egl.cfg
 
 # RIL
@@ -118,6 +118,7 @@ WIFI_DRIVER_MODULE_NAME          := prima_wlan
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/prima_wlan.ko"
 
 # Webkit
+ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 DYNAMIC_SHARED_LIBV8SO := true
 
