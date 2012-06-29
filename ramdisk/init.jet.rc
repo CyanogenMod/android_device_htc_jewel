@@ -1,4 +1,4 @@
-import init.usb.rc
+import init.jewel.usb.rc
 
 on early-init
     # external sdcard
@@ -8,23 +8,9 @@ on early-init
     # internal sd on emmc
     export EXTERNAL_STORAGE /mnt/sdcard
     mkdir /mnt/sdcard 0000 system system
+    # for backwards compatibility
     symlink /mnt/sdcard /sdcard
-    
-on emmc
-    mkdir /system
-    mkdir /data 0771 system system
-    mkdir /cache 0771 system cache
-    mkdir /devlog 0700 root root
 
-    mount ext4 /dev/block/mmcblk0p35 /system wait ro data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p37 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p36 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p26 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
-
-    mkdir /vendor               0771 system system
-    mkdir /vendor/firmware      0771 system system
-
-on emmc-fs
     # msm8960 firmware
     #mkdir /firmware_dsps 0771 system system
     mkdir /firmware_q6 0771 system system
@@ -41,16 +27,38 @@ on emmc-fs
     mount vfat /dev/block/mmcblk0p18 /firmware_q6 ro shortname=lower
     mount vfat /dev/block/mmcblk0p19 /firmware_wcnss ro shortname=lower
 
+on early-fs
+    mkdir /system
+    mkdir /data 0771 system system
+    mkdir /cache 0771 system cache
+    mkdir /devlog 0700 root root
+
+    mount ext4 /dev/block/mmcblk0p35 /system wait ro data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p37 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p36 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
+    mount ext4 /dev/block/mmcblk0p26 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
+
     # use qcom link scripts for firmware links
     #exec /system/bin/sh /system/etc/init.qcom.dsps_links.sh
     exec /system/bin/sh /system/etc/init.qcom.q6_links.sh
     exec /system/bin/sh /system/etc/init.qcom.radio_links.sh
     exec /system/bin/sh /system/etc/init.qcom.wcnss_links.sh
 
-on init
-    # double check the perms and set owner
+on post-fs-data
+    # double check perms and set owner
     chown root root /devlog
     chmod 0700 /devlog
+
+    remount rootfs rootfs / remount
+
+    # wifi
+    mkdir /data/misc/wifi 0770 wifi wifi
+    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    mkdir /data/misc/wifi/hostapd 0770 wifi wifi
+    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
+    mkdir /data/misc/dhcp 0770 dhcp dhcp
+    chown dhcp dhcp /data/misc/dhcp
+    setprop wifi.interface wlan0
 
     # for Invense MPU3050
     chmod 0664 /dev/mpu
@@ -78,10 +86,16 @@ on init
     chown system system /sys/class/htc_gyro/gyro/reg_value
     chown system system /sys/class/htc_gyro/gyro/reg_addr
 
-on boot-pause
-    exec system/bin/battery_charging
+    # audio
+    mkdir /data/audio 0775 media audio
 
-on boot
+    # radio
+    mkdir /data/radio 0770 radio radio
+
+    # Set indication (checked by vold) that we have finished this action
+    setprop vold.post_fs_done 1
+
+on init
     # bluetooth
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -105,21 +119,11 @@ on boot
     chown system system /dev/ttySA0
     chown system system /dev/smd9
 
-    # Create the directories used by the Wireless subsystem
-    mkdir /data/misc/wifi 0770 wifi wifi
-    mkdir /data/misc/wifi/sockets 0770 wifi wifi
-    mkdir /data/misc/wifi/hostapd 0770 wifi wifi
-    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
-    mkdir /data/misc/dhcp 0770 dhcp dhcp
-    chown dhcp dhcp /data/misc/dhcp
-    setprop wifi.interface wlan0
-
-    # Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
-    mkdir /data/system 0775 system system
+    # create symlink to qcn wpa_supplicant folder
     symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
     symlink /dev/socket/wpa_wlan0 /data/system/wpa_supplicant/wlan0
 
-    # Permissions for Liblights.
+    # liblights
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/green/blink
     chown system system /sys/class/leds/amber/brightness
@@ -132,7 +136,7 @@ on boot
 
     # flashlight
     chown system camera /sys/class/leds/flashlight/brightness
-    chmod 0660          /sys/class/leds/flashlight/brightness
+    chmod 0666          /sys/class/leds/flashlight/brightness
 
     # liblights
     chown system system /sys/class/leds/red/brightness
@@ -168,8 +172,7 @@ on boot
     chown system system /sys/devices/virtual/htc_accessory/fm/flag
     chown system system /sys/devices/virtual/htc_accessory/tty/flag
 
-    # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
-    # We chown/chmod /persist again so because mount is run as root + defaults
+    # Chown polling nodes as needed from UI running on system server
     chown system system /persist
     chmod 0771 /persist
     chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
@@ -198,31 +201,18 @@ on boot
     # symlink for HDMI
     symlink /dev/graphics/fb1 /dev/graphics/hdmi
 
-    # Remove write permissions to video related nodes
-    chmod 0664 /sys/devices/virtual/graphics/fb1/hpd
-    chmod 0664 /sys/devices/virtual/graphics/fb1/video_mode
-    chmod 0664 /sys/devices/virtual/graphics/fb1/format_3d
-
-    # Change owner and group for media server and surface flinger
-    chown media system /sys/devices/virtual/graphics/fb1/format_3d
-
-    # for netmgr daemon to inform the USB driver of the correct transport
-    chown radio radio /sys/class/usb_composite/rmnet_smd_sdio/transport
-
     # create folder for time-services
     mkdir /data/time 0700 system system
 
-    # audio
-    mkdir /data/audio 0775 media audio
+    # low charge current in voice call
+    chown radio radio /sys/class/power_supply/battery/phone_call
+    chown radio radio /sys/class/power_supply/battery/network_search
 
-    # radio
-    mkdir /data/radio 0770 radio radio
+    # for slate charging timer
+    chown radio /sys/class/power_supply/battery/charger_timer
 
-    # for simlock
-    chown radio radio /dev/simlock
-    chmod 0660 /dev/simlock
-
-    #To allow interfaces to get v6 address when tethering is enabled
+on boot
+    # allow interfaces to get v6 address when tethering is enabled
     write /proc/sys/net/ipv6/conf/rmnet0/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet1/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet2/accept_ra 2
@@ -239,6 +229,17 @@ on boot
     write /proc/sys/net/ipv6/conf/rmnet_sdio5/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet_sdio6/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet_sdio7/accept_ra 2
+
+# Define TCP buffer sizes for various networks
+     setprop net.tcp.buffersize.default 4096,87380,110208,4096,16384,110208
+     setprop net.tcp.buffersize.wifi    4096,221184,3461120,4096,221184,3461120
+     setprop net.tcp.buffersize.hsdpa   4094,87380,704512,4096,16384,110208
+     setprop net.tcp.buffersize.umts    4094,87380,704512,4096,16384,110208
+     setprop net.tcp.buffersize.edge    4093,26280,704512,4096,16384,35040
+     setprop net.tcp.buffersize.gprs    4092,8760,704512,4096,8760,11680
+     setprop net.tcp.buffersize.lte     4096,221184,3461120,4096,221184,3461120
+     setprop net.tcp.buffersize.evdo_b  4094,87380,262144,4096,16384,262144
+     setprop net.tcp.buffersize.wimax   4096,1398102,2097152,4096,16384,110208
 
     # for RIL to notify battery driver talking and network_search state
     chown radio radio /sys/class/power_supply/battery/phone_call
@@ -258,6 +259,10 @@ service akmd /system/bin/akmd
     user compass
     group compass misc input
 
+service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
+    disabled
+    oneshot
+
 service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
     user root
     group system qcom_oncrpc
@@ -271,7 +276,7 @@ service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     oneshot
 
 service hdmid /system/bin/hdmid
-    socket displayd stream 0660 root system graphics
+    socket hdmid stream 0660 root system graphics
     disabled
 
 service hostapd /system/bin/hostapd -dddd /data/hostapd/hostapd.conf
@@ -280,18 +285,15 @@ service hostapd /system/bin/hostapd -dddd /data/hostapd/hostapd.conf
     oneshot
     disabled
 
+service iprenew_wlan0 /system/bin/dhcpcd -n
+    disabled
+    oneshot
+
 service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
     user root
     disabled
 
 service netmgrd /system/bin/netmgrd
-    class main
-
-service btwlancoex /system/bin/sh /system/etc/init.qcom.coex.sh
-    user shell
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
     user system
@@ -313,17 +315,14 @@ service qmuxd /system/bin/qmuxd
     user radio
     group radio
 
-service cnd /system/bin/cnd
-    socket cnd stream 660 root radio
-
 service rmt_storage /system/bin/rmt_storage modem_st1 modem_st2 recovery radio_config
     class core
     user root
 
 service thermald /system/bin/thermald
-   class main
-   user root
-   group root
+    user root
+    group root
+    disabled
 
 service time_daemon /system/bin/time_daemon
     user root
@@ -338,31 +337,10 @@ service ril-daemon1 /system/bin/rild -c 1
     disabled
     group radio cache inet misc audio sdcard_rw qcom_oncrpc diag
 
-service wpa_supplicant /system/bin/wpa_supplicant -Dnl80211
+service wpa_supplicant /system/bin/wpa_supplicant -Dnl80211 -iwlan0
     user root
     group wifi inet
-    socket wpa_wlan0 dgram 660 wifi wifi
-    disabled
-    oneshot
-
-service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
-    disabled
-    oneshot
-
-service dhcpcd_p2p /system/bin/dhcpcd -ABKLG
-    class late_start
-    disabled
-    oneshot
-
-service iprenew_wlan0 /system/bin/dhcpcd -n
-    disabled
-    oneshot
-
-service iprenew_p2p /system/bin/dhcpcd -n
-    disabled
-    oneshot
-
-service dhcpcd_bnep0 /system/bin/dhcpcd -BKLG
+    socket wpa_wlan0 dgram 0660 wifi wifi
     disabled
     oneshot
 
@@ -376,19 +354,11 @@ service zchgd_onmode /system/bin/zchgd -onmode
     group root graphics
     oneshot
 
-service ds_fmc_appd /system/bin/ds_fmc_appd -p "rmnet0" -D
-    group radio
-    disabled
-    oneshot
-
-on property:persist.data.ds_fmc_app.mode=1
-    start ds_fmc_appd
-
 on property:init.svc.bootanim=stopped
     start qcom-post-boot
 
 on property:init.svc.wpa_supplicant=stopped
-    stop dhcpcd
+    stop dhcpcd_wlan0
 
 on property:persist.thermal.monitor=true
     start thermald
