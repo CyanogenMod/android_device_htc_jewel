@@ -33,18 +33,18 @@
     <!-- disable menu hard key in non-pattern lockscreen -->
     <bool name="config_disableMenuKeyInLockScreen">true</bool>
 
-    <!-- Component name of the service providing network location support. -->
-    <string name="config_networkLocationProvider">com.google.android.location.NetworkLocationProvider</string>
+    <!-- TODO Component name of the service providing network location support. -->
+    <string name="config_networkLocationProviderPackageName">com.google.android.location.NetworkLocationProvider</string>
 
-    <!-- Component name of the service providing geocoder API support. -->
-    <string name="config_geocodeProvider">com.google.android.location.GeocodeProvider</string>
+    <!-- TODO Component name of the service providing geocoder API support. -->
+    <string name="config_geocodeProviderPackageName">com.google.android.location.GeocodeProvider</string>
 
     <!-- Flag indicating whether we should enable the automatic brightness in Settings.
          config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
     <bool name="config_automatic_brightness_available">true</bool>
 
-    <!-- Needed for capacitive buttons to work without toggling auto-brightness. -->
-    <bool name="config_autoBrightnessButtonKeyboard">false</bool>
+    <!-- TODO Needed for capacitive buttons to work without toggling auto-brightness. -->
+    <!-- bool name="config_autoBrightnessButtonKeyboard">false</bool -->
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 zones as follows:
@@ -198,7 +198,7 @@
     <!-- The VoiceMail default value is displayed to my own number if it is true -->
     <bool name="config_telephony_use_own_number_for_voicemail">true</bool>
 
-    <!-- We dont have different firmware for wifi modes, prevent reloading it -->
-    <bool name="config_wifi_ap_firmware_reload">false</bool>
+    <!-- TODO We dont have different firmware for wifi modes, prevent reloading it -->
+    <!--bool name="config_wifi_ap_firmware_reload">false</bool -->
 
 </resources>
