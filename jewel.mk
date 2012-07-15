@@ -24,10 +24,11 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/jewel/overlay
 
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
-    device/htc/jewel/prebuilt/init:root/init \
     device/htc/jewel/ramdisk/init.jet.rc:root/init.jet.rc \
     device/htc/jewel/ramdisk/init.jewel.usb.rc:root/init.jewel.usb.rc \
-    device/htc/jewel/ramdisk/ueventd.jet.rc:root/ueventd.jet.rc
+    device/htc/jewel/ramdisk/ueventd.jet.rc:root/ueventd.jet.rc \
+    device/htc/jewel/ramdisk/init.rc:root/init.rc \
+    device/htc/jewel/ramdisk/fstab.jewel:root/fstab.jewel
 
 ## CDMA Sprint stuffs
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -48,7 +49,8 @@ PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/gps.conf
 
 # Media config
 PRODUCT_COPY_FILES += \
-    device/htc/msm8960-common/configs/media_profiles.xml:system/etc/media_profiles.xml
+    device/htc/msm8960-common/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    device/htc/jewel/configs/media_codecs.xml:system/etc/media_codecs.xml
 
 # HTC BT audio config
 PRODUCT_COPY_FILES += device/htc/jewel/configs/AudioBTID.csv:system/etc/AudioBTID.csv
@@ -133,7 +135,7 @@ PRODUCT_COPY_FILES += $(shell \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -157,7 +159,7 @@ PRODUCT_LOCALES += en_US
 $(call inherit-product-if-exists, vendor/htc/jewel/jewel-vendor.mk)
 
 # call dalvik heap config
-$(call inherit-product, frameworks/base/build/phone-xhdpi-1024-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 # gapps Installation
 $(call inherit-product-if-exists, vendor/twisted/google-vendor.mk)
