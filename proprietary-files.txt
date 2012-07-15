@@ -102,6 +102,7 @@ lib/libqmiservices.so
 # Radio
 lib/libnetmgr.so
 lib/libqc-opt.so
+lib/libril.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
 lib/libnetutils.so
