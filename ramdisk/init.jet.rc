@@ -1,5 +1,3 @@
-import init.jewel.usb.rc
-
 on early-init
     mkdir /storage 0050 system sdcard_r
     mkdir /storage/sdcard0 0000 system system
@@ -37,7 +35,7 @@ on early-fs
     mkdir /cache 0771 system cache
     mkdir /devlog 0700 root root
 
-    mount_all fstab.jewel
+    mount_all fstab.jet
 
     # use qcom link scripts for firmware links
     #exec /system/bin/sh /system/etc/init.qcom.dsps_links.sh

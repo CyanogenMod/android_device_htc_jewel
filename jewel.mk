@@ -25,10 +25,9 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/jewel/overlay
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
     device/htc/jewel/ramdisk/init.jet.rc:root/init.jet.rc \
-    device/htc/jewel/ramdisk/init.jewel.usb.rc:root/init.jewel.usb.rc \
+    device/htc/jewel/ramdisk/init.usb.rc:root/init.usb.rc \
     device/htc/jewel/ramdisk/ueventd.jet.rc:root/ueventd.jet.rc \
-    device/htc/jewel/ramdisk/init.rc:root/init.rc \
-    device/htc/jewel/ramdisk/fstab.jewel:root/fstab.jewel
+    device/htc/jewel/ramdisk/fstab.jet:root/fstab.jet
 
 ## CDMA Sprint stuffs
 PRODUCT_PROPERTY_OVERRIDES += \
