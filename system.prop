@@ -2,6 +2,8 @@
 # system.prop for jewel
 #
 
+persist.fuse_sdcard=true
+
 ro.sf.lcd_density=320
 ro.hwui.text_cache_width=2048
 ro.hwui.text_cache_height=256
