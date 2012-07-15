@@ -30,6 +30,8 @@ lib/libmpl.so
 lib/libmlplatform.so
 lib/libmllite.so
 lib/libimu.so
+lib/hw/lights.msm8960.so
+lib/libMLTransition.so
 
 # Camera
 lib/libchromatix_s5k3h2yx_default_video.so
@@ -37,12 +39,17 @@ lib/libchromatix_s5k3h2yx_hdr.so
 lib/libchromatix_s5k3h2yx_hfr.so
 lib/libchromatix_s5k3h2yx_preview.so
 lib/libchromatix_s5k3h2yx_zsl.so
+lib/libchromatix_s5k6a1gx_default_video.so
+lib/libchromatix_s5k6a1gx_preview.so
+lib/libchromatix_s5k6a1gx_zsl.so
 lib/hw/camera.msm8960.so
 lib/libcameraface.so
 lib/libcamerapp.so
 lib/libcam_oem_plugin.so
 lib/libDxOAF.so
 lib/libgemini.so
+lib/libmmparser.so
+lib/libmmparser_divxdrmlib.so
 lib/libmmcamera_frameproc.so
 lib/libmmcamera_rawchipproc.so
 lib/libmmcamera_statsproc30.so
@@ -61,6 +68,7 @@ lib/egl/libq3dtools_adreno200.so
 lib/libC2D2.so
 lib/libsc-a2xx.so
 lib/libsc-a3xx.so
+lib/libtime_genoff.so
 
 # GPS
 lib/hw/gps.default.so
@@ -96,7 +104,7 @@ lib/libnetmgr.so
 lib/libqc-opt.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
-
+lib/libnetutils.so
 vendor/firmware/libpn544_fw.so
 
 # Sensors
