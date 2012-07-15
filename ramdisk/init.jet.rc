@@ -33,10 +33,7 @@ on early-fs
     mkdir /cache 0771 system cache
     mkdir /devlog 0700 root root
 
-    mount ext4 /dev/block/mmcblk0p35 /system wait ro data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p37 /data wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p36 /cache wait noatime nosuid nodev data=ordered noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p26 /devlog wait noatime nosuid nodev data=ordered noauto_da_alloc
+    mount_all fstab.jewel
 
     # use qcom link scripts for firmware links
     #exec /system/bin/sh /system/etc/init.qcom.dsps_links.sh
@@ -49,7 +46,7 @@ on post-fs-data
     chown root root /devlog
     chmod 0700 /devlog
 
-    remount rootfs rootfs / remount
+    #remount rootfs rootfs / remount
 
     # wifi
     mkdir /data/misc/wifi 0770 wifi wifi
@@ -296,8 +293,8 @@ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
 service netmgrd /system/bin/netmgrd
 
 service qcamerasvr /system/bin/mm-qcamera-daemon
-    user system
-    group system camera inet
+    user camera
+    group camera system inet input
 
 service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
     user root
