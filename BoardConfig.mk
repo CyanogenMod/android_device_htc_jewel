@@ -45,15 +45,12 @@ BOARD_KERNEL_BASE :=  0x80400000
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81800000
 BOARD_KERNEL_PAGESIZE := 4096
 
-TARGET_PREBUILT_KERNEL := device/htc/jewel/prebuilt/kernel
-#TARGET_KERNEL_CONFIG := jewel_defconfig
-#TARGET_KERNEL_SOURCE := kernel/htc/jewel
+#TARGET_PREBUILT_KERNEL := device/htc/jewel/prebuilt/kernel
+TARGET_KERNEL_CONFIG := cm_jewel_defconfig
+TARGET_KERNEL_SOURCE := kernel/htc/jewel
 
 # Lights
 TARGET_PROVIDES_LIBLIGHTS := true
-
-# RIL
-BOARD_PROVIDES_LIBRIL := true
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun%d/file

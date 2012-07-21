@@ -46,23 +46,14 @@ PRODUCT_COPY_FILES += \
 # GPS config
 PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/gps.conf
 
-# Media config
-PRODUCT_COPY_FILES += \
-    device/htc/msm8960-common/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    device/htc/jewel/configs/media_codecs.xml:system/etc/media_codecs.xml
-
 # HTC BT audio config
 PRODUCT_COPY_FILES += device/htc/jewel/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
-# QC thermald config
-PRODUCT_COPY_FILES += device/htc/jewel/configs/thermald.conf:system/etc/thermald.conf
 
 # vold, apns, and other configs
 PRODUCT_COPY_FILES += \
     device/htc/jewel/configs/vold.fstab:system/etc/vold.fstab \
-    device/htc/jewel/configs/apns-conf.xml:system/etc/apns-conf.xml \
-    device/htc/jewel/configs/OperatorPolicy.xml:system/etc/OperatorPolicy.xml \
-    device/htc/jewel/configs/UserPolicy.xml:system/etc/UserPolicy.xml
+    device/htc/jewel/configs/apns-conf.xml:system/etc/apns-conf.xml
 
 # wifi config
 PRODUCT_COPY_FILES += \
@@ -126,6 +117,21 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Torch
 
+# NFC
+PRODUCT_PACKAGES += \
+    libnfc \
+    libnfc_ndef \
+    libnfc_jni \
+    Nfc \
+    Tag \
+    com.android.nfc_extras
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+   make_ext4fs \
+   e2fsck \
+   setup_fs
+
 # Kernel Modules
 PRODUCT_COPY_FILES += $(shell \
     find device/htc/jewel/modules -name '*.ko' \
@@ -159,9 +165,6 @@ $(call inherit-product-if-exists, vendor/htc/jewel/jewel-vendor.mk)
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
-
-# gapps Installation
-$(call inherit-product-if-exists, vendor/twisted/google-vendor.mk)
 
 PRODUCT_NAME := htc_jewel
 PRODUCT_DEVICE := jewel

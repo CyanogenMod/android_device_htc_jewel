@@ -8,39 +8,24 @@ on early-init
     # for backwards compatibility
     symlink /storage/sdcard0 /mnt/sdcard
     symlink /storage/sdcard0 /sdcard
-    symlink  /storage/sdcard1 /external_sd
-    symlink  /storage/sdcard1 /mnt/external_sd
+    symlink /storage/sdcard1 /external_sd
+    symlink /storage/sdcard1 /mnt/external_sd
 
     export EXTERNAL_STORAGE /mnt/sdcard
     export EXTERNAL_STORAGE /storage/sdcard0
     export SECONDARY_STORAGE /storage/sdcard1
 
+on emmc-fs
     # msm8960 firmware
-    #mkdir /firmware_dsps 0771 system system
     mkdir /firmware_q6 0771 system system
     mkdir /firmware_radio 0771 system system
     mkdir /firmware_wcnss 0771 system system
-
-    #wait /dev/block/mmcblk0p16
-    wait /dev/block/mmcblk0p17
-    wait /dev/block/mmcblk0p18
-    wait /dev/block/mmcblk0p19
-
-    #mount vfat /dev/block/mmcblk0p16 /firmware_dsps
-    mount vfat /dev/block/mmcblk0p17 /firmware_radio ro shortname=lower
-    mount vfat /dev/block/mmcblk0p18 /firmware_q6 ro shortname=lower
-    mount vfat /dev/block/mmcblk0p19 /firmware_wcnss ro shortname=lower
-
-on early-fs
-    mkdir /system
-    mkdir /data 0771 system system
-    mkdir /cache 0771 system cache
     mkdir /devlog 0700 root root
 
+    #mount all the things
     mount_all fstab.jet
 
     # use qcom link scripts for firmware links
-    #exec /system/bin/sh /system/etc/init.qcom.dsps_links.sh
     exec /system/bin/sh /system/etc/init.qcom.q6_links.sh
     exec /system/bin/sh /system/etc/init.qcom.radio_links.sh
     exec /system/bin/sh /system/etc/init.qcom.wcnss_links.sh
@@ -232,35 +217,38 @@ on boot
     write /proc/sys/net/ipv6/conf/rmnet_sdio7/accept_ra 2
 
 # Define TCP buffer sizes for various networks
-     setprop net.tcp.buffersize.default 4096,87380,110208,4096,16384,110208
-     setprop net.tcp.buffersize.wifi    4096,221184,3461120,4096,221184,3461120
-     setprop net.tcp.buffersize.hsdpa   4094,87380,704512,4096,16384,110208
-     setprop net.tcp.buffersize.umts    4094,87380,704512,4096,16384,110208
-     setprop net.tcp.buffersize.edge    4093,26280,704512,4096,16384,35040
-     setprop net.tcp.buffersize.gprs    4092,8760,704512,4096,8760,11680
-     setprop net.tcp.buffersize.lte     4096,221184,3461120,4096,221184,3461120
-     setprop net.tcp.buffersize.evdo_b  4094,87380,262144,4096,16384,262144
-     setprop net.tcp.buffersize.wimax   4096,1398102,2097152,4096,16384,110208
+    setprop net.tcp.buffersize.default 4096,87380,110208,4096,16384,110208
+    setprop net.tcp.buffersize.wifi    4096,221184,3461120,4096,221184,3461120
+    setprop net.tcp.buffersize.hsdpa   4094,87380,704512,4096,16384,110208
+    setprop net.tcp.buffersize.umts    4094,87380,704512,4096,16384,110208
+    setprop net.tcp.buffersize.edge    4093,26280,704512,4096,16384,35040
+    setprop net.tcp.buffersize.gprs    4092,8760,704512,4096,8760,11680
+    setprop net.tcp.buffersize.lte     4096,221184,3461120,4096,221184,3461120
+    setprop net.tcp.buffersize.evdo_b  4094,87380,262144,4096,16384,262144
+    setprop net.tcp.buffersize.wimax   4096,1398102,2097152,4096,16384,110208
 
-    # for RIL to notify battery driver talking and network_search state
-    chown radio radio /sys/class/power_supply/battery/phone_call
-    chown radio radio /sys/class/power_supply/battery/network_search
-    chown system system /sys/class/power_supply/battery/navigation
+   # for RIL to notify battery driver talking and network_search state
+   chown radio radio /sys/class/power_supply/battery/phone_call
+   chown radio radio /sys/class/power_supply/battery/network_search
+   chown system system /sys/class/power_supply/battery/navigation
 
-    # for slate charging timer
-    chown radio /sys/class/power_supply/battery/charger_timer
+   # for slate charging timer
+   chown radio /sys/class/power_supply/battery/charger_timer
 
-    # cyttsp update
-    write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
+   # cyttsp update
+   write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
+
+   start qcmodemlink
 
 # Services start here
 
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
+    class main
     user compass
     group compass misc input
 
-service dhcpcd_wlan0 /system/bin/dhcpcd -ABKLG
+service dhcpcd_wlan0 /system/bin/dhcpcd -aABKL
     disabled
     oneshot
 
@@ -286,6 +274,11 @@ service hostapd /system/bin/hostapd -dddd /data/hostapd/hostapd.conf
     oneshot
     disabled
 
+service dhcpcd_eth0 /system/bin/dhcpcd -ABKL
+    class main
+    disabled
+    oneshot
+
 service iprenew_wlan0 /system/bin/dhcpcd -n
     disabled
     oneshot
@@ -296,7 +289,15 @@ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
 
 service netmgrd /system/bin/netmgrd
 
+#Create modem links
+service qcmodemlink /system/bin/sh /system/etc/init.qcom.modem_links.sh
+    class main
+    user root
+    disabled
+    oneshot
+
 service qcamerasvr /system/bin/mm-qcamera-daemon
+    class main
     user camera
     group camera system inet input
 
@@ -306,6 +307,7 @@ service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
     oneshot
 
 service qcom-sh /system/bin/sh /init.qcom.sh
+    class core
     user root
     oneshot
 
@@ -338,10 +340,28 @@ service ril-daemon1 /system/bin/rild -c 1
     disabled
     group radio cache inet misc audio sdcard_rw qcom_oncrpc diag
 
-service wpa_supplicant /system/bin/wpa_supplicant -Dnl80211 -iwlan0
-    user root
-    group wifi inet
-    socket wpa_wlan0 dgram 0660 wifi wifi
+# New supplicant service config to support both BCM4334 / WCN3660
+service wpa_supplicant /system/bin/wpa_supplicant \
+    -Dnl80211 -iwlan0 -puse_p2p_group_interface=1 -e/data/misc/wifi/entropy.bin
+    #   we will start as root and wpa_supplicant will switch to user wifi
+    #   after setting up the capabilities required for WEXT
+    #   user wifi
+    #   group wifi inet keystore
+    class main
+    socket wpa_wlan0 dgram 660 wifi wifi
+    disabled
+    oneshot
+
+# New supplicant service config to support both BCM4334 / WCN3660
+service p2p_supplicant /system/bin/wpa_supplicant \
+    -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf -N \
+    -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf -e/data/misc/wifi/entropy.bin -puse_p2p_group_interface=1
+    #   we will start as root and wpa_supplicant will switch to user wifi
+    #   after setting up the capabilities required for WEXT
+    #   user wifi
+    #   group wifi inet keystore
+    class main
+    socket wpa_wlan0 dgram 660 wifi wifi
     disabled
     oneshot
 
