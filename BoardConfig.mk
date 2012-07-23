@@ -45,9 +45,9 @@ BOARD_KERNEL_BASE :=  0x80400000
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81800000
 BOARD_KERNEL_PAGESIZE := 4096
 
-#TARGET_PREBUILT_KERNEL := device/htc/jewel/prebuilt/kernel
-TARGET_KERNEL_CONFIG := cm_jewel_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/jewel
+TARGET_PREBUILT_KERNEL := device/htc/jewel/prebuilt/kernel
+#TARGET_KERNEL_CONFIG := cm_jewel_defconfig
+#TARGET_KERNEL_SOURCE := kernel/htc/jewel
 
 # Lights
 TARGET_PROVIDES_LIBLIGHTS := true
