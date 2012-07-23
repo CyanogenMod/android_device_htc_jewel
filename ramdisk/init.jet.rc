@@ -1,4 +1,4 @@
-import init.usb.rc
+import init.jet.usb.rc
 
 on early-init
     mkdir /storage 0050 system sdcard_r
