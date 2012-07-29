@@ -200,4 +200,8 @@
 
     <!-- TODO We dont have different firmware for wifi modes, prevent reloading it -->
     <bool name="config_wifiApFirmwareReload">false</bool>
+
+    <!-- If this value is true, The mms content-disposition field is supported correctly.
+    If false, Content-disposition fragments are ignored -->
+    <bool name="config_mms_content_disposition_support">false</bool>
 </resources>
