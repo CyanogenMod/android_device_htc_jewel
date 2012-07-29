@@ -11,7 +11,7 @@ ro.hwui.text_cache_height=256
 # RIL properties
 # cm props
 mobiledata.interfaces=rmnet0
-ro.telephony.ril_class=HTCCDMAQualcommRIL
+ro.telephony.ril_class=HTCQualcommRIL
 
 # Default network type.
 ro.telephony.default_network=8

@@ -46,8 +46,8 @@ BOARD_FORCE_RAMDISK_ADDRESS := 0x81800000
 BOARD_KERNEL_PAGESIZE := 4096
 
 TARGET_PREBUILT_KERNEL := device/htc/jewel/prebuilt/kernel
-#TARGET_KERNEL_CONFIG := cm_jewel_defconfig
-#TARGET_KERNEL_SOURCE := kernel/htc/jewel
+TARGET_KERNEL_CONFIG := jet_defconfig
+TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 
 # Lights
 TARGET_PROVIDES_LIBLIGHTS := true
