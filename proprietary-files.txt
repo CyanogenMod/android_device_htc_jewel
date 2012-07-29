@@ -47,6 +47,8 @@ lib/libchromatix_s5k6a1gx_zsl.so
 lib/hw/camera.msm8960.so
 lib/libcameraface.so
 lib/libcamerapp.so
+lib/libsurfaceflinger_client.so
+lib/libcamera_client.so
 lib/libcam_oem_plugin.so
 lib/libDxOAF.so
 lib/libgemini.so
