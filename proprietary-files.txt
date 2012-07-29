@@ -24,6 +24,8 @@ bin/zchgd
 # Audio
 lib/libacdbloader.so
 lib/libaudcal.so
+lib/libwvm.so
+lib/libWVStreamControlAPI_L3.so
 
 # Sensors
 lib/libmpl.so
