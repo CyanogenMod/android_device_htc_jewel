@@ -59,7 +59,9 @@ PRODUCT_COPY_FILES += device/htc/jewel/configs/thermald.conf:system/etc/thermald
 # vold, apns, and other configs
 PRODUCT_COPY_FILES += \
     device/htc/jewel/configs/vold.fstab:system/etc/vold.fstab \
-    device/htc/jewel/configs/apns-conf.xml:system/etc/apns-conf.xml
+    device/htc/jewel/configs/apns-conf.xml:system/etc/apns-conf.xml \
+    device/htc/jewel/configs/voicemail-conf.xml:system/etc/voicemail-conf.xml \
+    device/htc/jewel/configs/spn-conf.xml:system/etc/spn-conf.xml \
 
 # wifi config
 PRODUCT_COPY_FILES += \
