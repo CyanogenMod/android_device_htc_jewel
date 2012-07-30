@@ -101,8 +101,8 @@ PRODUCT_COPY_FILES += \
 #    gps.jewel \
 
 # Lights
-#PRODUCT_PACKAGES += \
-#    lights.jewel
+PRODUCT_PACKAGES += \
+    lights.jet
 
 # Torch
 PRODUCT_PACKAGES += \
