@@ -15,7 +15,7 @@ PRODUCT_MODEL := EVO
 PRODUCT_MANUFACTURER := HTC
 
 # Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_jewel BUILD_ID=IML74K BUILD_FINGERPRINT=sprint_wwe/jewel/jewel:4.0.3/IML74K/60201.1:user/release-keys PRIVATE_BUILD_DESC="1.13.651.1 CL60201 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_jewel BUILD_ID=IML74K BUILD_FINGERPRINT=sprint_wwe/jewel/jewel:4.0.3/IML74K/78702.3:user/release-keys PRIVATE_BUILD_DESC="1.22.651.3 CL78702 release-keys"
 
 # Release name
 PRODUCT_RELEASE_NAME := jewel
