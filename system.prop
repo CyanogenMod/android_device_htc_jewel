@@ -33,6 +33,7 @@ persist.rild.ril.ltedrtable=max_retries=infinite,10000
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 telephony.lteOnCdmaDevice=1
+keyguard.no_require_sim=true
 
 # graphics
 debug.composition.type=dyn
@@ -82,12 +83,17 @@ ro.config.lte=true
 #device supports simultaneous 1x voice + LTE
 ro.config.svlte1x=true
 
-gsm.sim.operator.alpha=Sprint
-gsm.operator.alpha=Sprint
-gsm.sim.operator.numeric=310120
-gsm.operator.numeric=310120
-gsm.sim.operator.iso-country=us
-gsm.operator.iso-country=us
+gsm.sim.operator.alpha = sprint
+gsm.sim.operator.numeric = 310120
+gsm.sim.operator.iso-country = us
+gsm.operator.alpha = sprint
+gsm.operator.numeric = 310120
+gsm.operator.iso-country = us
+ro.cdma.home.operator.numeric=310120
+ro.cdma.home.operator.alpha=Sprint
+
+# System property for SIM
+persist.radio.apm_sim_not_pwdn=1
 
 # For Verizon data retry configuration
 ro.cdma.data_retry_config = max_retries=infinite,0,0,60000,120000,480000,900000
@@ -112,7 +118,7 @@ persist.timed.enable=true
 ro.ril.def.agps.mode = 6
 
 # audio
-#lpa.decode=true
+lpa.decode=true
 
 # wifi
 ro.product.wireless=WCN3660
