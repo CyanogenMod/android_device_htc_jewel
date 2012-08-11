@@ -33,6 +33,9 @@ BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := jewel
 
+# Disable VSYNC
+TARGET_NO_HW_VSYNC := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE :=  console=ttyHSL0,115200,n8 androidboot.hardware=jet
 BOARD_KERNEL_BASE :=  0x80400000
@@ -52,6 +55,11 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storag
 # Wifi
 WIFI_DRIVER_MODULE_NAME          := prima_wlan
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/prima_wlan.ko"
+
+# QCOM GPS
+#BOARD_USES_QCOM_GPS := true
+#BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
+#BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := jet
 
 #dev:        size     erasesize name
 #mmcblk0p23: 000ffa00 00000200 "misc"
