@@ -61,8 +61,7 @@ PRODUCT_COPY_FILES += \
     device/htc/jewel/configs/vold.fstab:system/etc/vold.fstab \
     device/htc/jewel/configs/apns-conf.xml:system/etc/apns-conf.xml \
     device/htc/jewel/configs/voicemail-conf.xml:system/etc/voicemail-conf.xml \
-    device/htc/jewel/configs/spn-conf.xml:system/etc/spn-conf.xml \
-    device/htc/jewel/configs/nfcee_access.xml:system/etc/nfcee_access.xml
+    device/htc/jewel/configs/spn-conf.xml:system/etc/spn-conf.xml
 
 # wifi config
 PRODUCT_COPY_FILES += \
@@ -98,6 +97,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/jewel/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/jewel/idc/projector_input.idc:system/usr/idc/projector_input.idc
+
+# NFCEE access control
+ifeq ($(TARGET_BUILD_VARIANT),user)
+    NFCEE_ACCESS_PATH := device/htc/jewel/configs/nfcee_access.xml
+else
+    NFCEE_ACCESS_PATH := device/htc/jewel/configs/nfcee_access_debug.xml
+endif
+PRODUCT_COPY_FILES += \
+    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 # GPS
 #PRODUCT_PACKAGES += \

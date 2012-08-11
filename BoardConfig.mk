@@ -56,6 +56,9 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storag
 WIFI_DRIVER_MODULE_NAME          := prima_wlan
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/prima_wlan.ko"
 
+# NFC
+BOARD_HAVE_NFC := true
+
 # QCOM GPS
 #BOARD_USES_QCOM_GPS := true
 #BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
