@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="preferred_network_mode_dialogtitle">Preferred network mode</string>
+    <!-- Mobile network settings, summary for preferred network mode WCDMA preferred[CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_wcdma_perf_summary">Preferred network mode: WCDMA preferred</string>
+    <!-- Mobile network settings, summary for preferred network mode GSM [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_gsm_only_summary">Preferred network mode: GSM only</string>
+    <!-- Mobile network settings, summary for preferred network mode WCDMA only [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_wcdma_only_summary">Preferred network mode: WCDMA only</string>
+    <!-- Mobile network settings, summary for preferred network mode GSM / UMTS [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_gsm_wcdma_summary">Preferred network mode: GSM / WCDMA</string>
+    <!-- Mobile network settings, summary for preferred network mode CDMA [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_cdma_summary">Preferred network mode: CDMA</string>
+    <!-- Mobile network settings, summary for preferred network mode CDMA / EvDo [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_cdma_evdo_summary">Preferred network mode: CDMA / EvDo</string>
+    <!-- Mobile network settings, summary for preferred network mode CDMA only [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_cdma_only_summary">Preferred network mode: CDMA only</string>
+    <!-- Mobile network settings, summary for preferred network mode EvDo only [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_evdo_only_summary">Preferred network mode: EvDo only</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / CDMA[CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_summary">Preferred network mode: LTE / CDMA</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / GSM[CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_gsm_summary">Preferred network mode: LTE / WCDMA / GSM</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / CDMA / EvDo[CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">Preferred network mode: LTE / CDMA</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / CMDA / EvDo / GSM/WCDMACHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Preferred network mode: LTE / CMDA / EvDo / GSM/WCDMA</string>
+
+    <string-array name="preferred_network_mode_choices">
+        <item>LTE ONLY</item>  <!-- 11 -->
+        <item>LTE/CMDA/EvDo/GSM/WCDMA</item> <!-- 10 -->
+        <item>LTE/WCDMA/GSM</item> <!-- 9 -->
+        <item>LTE/CDMA/ EvDo</item>  <!-- 8 -->
+        <item>LTE/CDMA</item> <!-- 7 -->
+        <item>EvDo only</item> <!-- 6 -->
+        <item>CDMA w/o EvDo</item> <!-- 5 -->
+        <item>CDMA/EvDo auto</item> <!-- 4 -->
+        <item>GSM/WCDMA auto</item> <!-- 3 -->
+        <item>WCDMA only</item> <!-- 2 -->
+        <item>GSM only</item> <!-- 1 -->
+        <item>GSM/WCDMA preferred</item> <!-- 0 -->
+    </string-array>
+    <string-array name="preferred_network_mode_values"  translatable="false">
+        <item>"11"</item>
+        <item>"10"</item>
+        <item>"9"</item>
+        <item>"8"</item>
+        <item>"7"</item>
+        <item>"6"</item>
+        <item>"5"</item>
+        <item>"4"</item>
+        <item>"3"</item>
+        <item>"2"</item>
+        <item>"1"</item>
+        <item>"0"</item>
+    </string-array>
+    <!-- Mobile network settings, network mode choices for a device supporting CDMA and LTE [CHAR LIMIT=25] -->
+    <string-array name="preferred_network_mode_choices_lte">
+        <item>LTE / CDMA</item>
+        <item>CDMA</item>
+    </string-array>
+    <string-array name="preferred_network_mode_values_lte" translatable="false">
+        <item>"8"</item>
+        <item>"4"</item>
+    </string-array>
+    <!-- Mobile network settings, network mode choices for a device supporting GSM and LTE [CHAR LIMIT=25] -->
+    <string-array name="preferred_network_mode_choices_lte_gsm">
+        <item>LTE / GSM</item>
+        <item>GSM</item>
+    </string-array>
+    <string-array name="preferred_network_mode_values_lte_gsm" translatable="false">
+        <item>"9"</item>
+        <item>"0"</item>
+    </string-array>
+</resources>
