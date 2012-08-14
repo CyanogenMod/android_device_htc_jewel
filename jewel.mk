@@ -60,10 +60,6 @@ PRODUCT_COPY_FILES += device/htc/jewel/configs/thermald.conf:system/etc/thermald
 PRODUCT_COPY_FILES += \
     device/htc/jewel/configs/vold.fstab:system/etc/vold.fstab
 
-# apns-conf
-PRODUCT_COPY_FILES += \
-    device/htc/jewel/configs/apns-conf.xml:system/etc/apns-conf.xml
-
 # wifi config
 PRODUCT_COPY_FILES += \
     device/htc/jewel/configs/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
