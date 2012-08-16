@@ -131,11 +131,6 @@ PRODUCT_PACKAGES += \
    e2fsck \
    setup_fs
 
-# Media profiles
-PRODUCT_COPY_FILES += \
-    device/htc/jewel/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    device/htc/jewel/configs/media_codecs.xml:system/etc/media_codecs.xml
-
 # Kernel Modules
 PRODUCT_COPY_FILES += $(shell \
     find device/htc/jewel/modules -name '*.ko' \

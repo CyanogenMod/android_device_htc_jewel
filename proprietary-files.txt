@@ -9,8 +9,6 @@ bin/cam_ins_spmo
 bin/charging
 bin/hci_qcomm_init
 bin/hdmid
-bin/hostapd
-bin/htc_ebdlogd
 bin/mm-qcamera-daemon
 bin/mpdecision
 bin/netmgrd
@@ -18,22 +16,11 @@ bin/netsharing
 bin/rmt_storage
 bin/qmuxd
 bin/thermald
-bin/time_daemon
 bin/zchgd
 
 # Audio
 lib/libacdbloader.so
 lib/libaudcal.so
-lib/libwvm.so
-lib/libWVStreamControlAPI_L3.so
-
-# Sensors
-lib/libmpl.so
-lib/libmlplatform.so
-lib/libmllite.so
-lib/libimu.so
-lib/hw/lights.msm8960.so
-lib/libMLTransition.so
 
 # Camera
 lib/libchromatix_s5k3h2yx_default_video.so
@@ -47,18 +34,17 @@ lib/libchromatix_s5k6a1gx_zsl.so
 lib/hw/camera.msm8960.so
 lib/libcameraface.so
 lib/libcamerapp.so
-lib/libsurfaceflinger_client.so
-lib/libcamera_client.so
 lib/libcam_oem_plugin.so
 lib/libDxOAF.so
 lib/libgemini.so
-lib/libmmparser.so
-lib/libmmparser_divxdrmlib.so
 lib/libmmcamera_frameproc.so
 lib/libmmcamera_rawchipproc.so
 lib/libmmcamera_statsproc30.so
 lib/libmmipl.so
 lib/libmmjpeg.so
+lib/libmmosal.so
+lib/libmmparser.so
+lib/libmmparser_divxdrmlib.so
 lib/liboemcamera.so
 lib/libOlaEngine.so
 lib/libposteffect.so
@@ -70,10 +56,12 @@ lib/egl/libEGL_adreno200.so
 lib/egl/libGLESv1_CM_adreno200.so
 lib/egl/libGLESv2_adreno200.so
 lib/egl/libq3dtools_adreno200.so
+lib/libc2d2_z180.so
 lib/libC2D2.so
+lib/libgsl.so
+lib/libOpenVG.so
 lib/libsc-a2xx.so
 lib/libsc-a3xx.so
-lib/libtime_genoff.so
 
 # GPS
 lib/hw/gps.default.so
@@ -81,12 +69,15 @@ lib/libgps.utils.so
 lib/libloc_adapter.so
 lib/libloc_api_v02.so
 lib/libloc_eng.so
-etc/agps_rm
 
-# Misc libraries
-lib/libgsl.so
+# Media
 lib/libmm-color-convertor.so
-lib/libOpenVG.so
+lib/libwvm.so
+lib/libWVStreamControlAPI_L3.so
+
+# NFC
+lib/hw/nfc.jet.so
+vendor/firmware/libpn544_fw.so
 
 # Qualcomm/HTC common libs
 lib/libdiag.so
@@ -104,15 +95,17 @@ lib/libqmiservices.so
 
 # Radio
 lib/libnetmgr.so
+lib/libnetutils.so
 lib/libqc-opt.so
 lib/libril.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
-lib/libnetutils.so
-vendor/firmware/libpn544_fw.so
 
 # Sensors
+lib/hw/lights.msm8960.so
 lib/hw/sensors.jet.so
-
-# Webkit
-lib/libv8.so
+lib/libimu.so
+lib/libmlplatform.so
+lib/libmllite.so
+lib/libMLTransition.so
+lib/libmpl.so
