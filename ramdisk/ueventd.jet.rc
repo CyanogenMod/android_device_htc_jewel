@@ -1,7 +1,11 @@
 /dev/rtc0                 0600   system     system
 
-# the DIAG device node is world writable/readable.
-/dev/diag                 0666   root       root
+# HTC diag
+/dev/btdiag               0660   radio      radio
+/dev/diag                 0660   radio      radio
+/dev/diag_arm9            0660   radio      radio
+/dev/diag_mdm             0660   radio      radio
+/dev/htcdiag              0660   radio      radio
 
 # the genlock client device node is world writable/readable.
 /dev/genlock              0666   root      root
@@ -97,6 +101,14 @@
 /dev/msm_a2dp_in          0640  system       audio
 /dev/msm_amrnb_in         0640  system       audio
 
+# for jet sensors
+/dev/akm8975_aot          0640  compass      system
+/dev/akm8975_daemon       0640  compass      system
+/dev/bma150               0640  compass      system
+/dev/mpu                  0640  system       system
+/dev/mpuirq               0640  system       system
+/dev/timerirq             0640  system       system
+
 # sysfs properties
 /sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
 
@@ -119,3 +131,6 @@
 # for autobot car pc
 /dev/ttyHSUSB3                                 0660    autobot_access autobot_access
 /dev/ttyHSUSB1                                 0600    system system
+
+# jewel NFC
+/dev/pn544                0600  nfc          nfc

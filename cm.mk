@@ -3,6 +3,9 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherrit CDMA apns
 $(call inherit-product, vendor/cm/config/cdma.mk)
 
+# Enhanced NFC
+$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
+
 # Preload bootanimation
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_NAME := vertical-720x1280

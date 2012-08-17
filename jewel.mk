@@ -75,9 +75,15 @@ PRODUCT_COPY_FILES += \
     device/htc/jewel/dsp/soundimage/srs_global.cfg:system/etc/soundimage/srs_global.cfg
 
 PRODUCT_COPY_FILES += \
+    device/htc/jewel/dsp/snd_soc_msm/FM_A2DP_REC_2x:/system/etc/snd_soc_msm/FM_A2DP_REC_2x \
+    device/htc/jewel/dsp/snd_soc_msm/FM_Digital_Radio_2x:/system/etc/snd_soc_msm/FM_Digital_Radio_2x \
     device/htc/jewel/dsp/snd_soc_msm/HiFi_2x:/system/etc/snd_soc_msm/HiFi_2x \
+    device/htc/jewel/dsp/snd_soc_msm/HiFi_Low_Power_2x:/system/etc/snd_soc_msm/HiFi_Low_Power_2x \
+    device/htc/jewel/dsp/snd_soc_msm/HiFi_Rec_2x:/system/etc/snd_soc_msm/HiFi_Rec_2x \
     device/htc/jewel/dsp/snd_soc_msm/snd_soc_msm:/system/etc/snd_soc_msm/snd_soc_msm \
-    device/htc/jewel/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x
+    device/htc/jewel/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x \
+    device/htc/jewel/dsp/snd_soc_msm/Voice_Call_2x:/system/etc/snd_soc_msm/Voice_Call_2x \
+    device/htc/jewel/dsp/snd_soc_msm/Voice_Call_IP_2x:/system/etc/snd_soc_msm/Voice_Call_IP_2x
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
@@ -130,11 +136,6 @@ PRODUCT_PACKAGES += \
    make_ext4fs \
    e2fsck \
    setup_fs
-
-# Media profiles
-PRODUCT_COPY_FILES += \
-    device/htc/jewel/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    device/htc/jewel/configs/media_codecs.xml:system/etc/media_codecs.xml
 
 # Kernel Modules
 PRODUCT_COPY_FILES += $(shell \
