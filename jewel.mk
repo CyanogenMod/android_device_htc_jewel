@@ -75,7 +75,6 @@ PRODUCT_COPY_FILES += \
     device/htc/jewel/dsp/soundimage/srs_global.cfg:system/etc/soundimage/srs_global.cfg
 
 PRODUCT_COPY_FILES += \
-    device/htc/jewel/dsp/snd_soc_msm/HiFi_2x:/system/etc/snd_soc_msm/HiFi_2x \
     device/htc/jewel/dsp/snd_soc_msm/snd_soc_msm:/system/etc/snd_soc_msm/snd_soc_msm \
     device/htc/jewel/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x
 
@@ -108,6 +107,14 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_PACKAGES += \
 #    gps.jewel \
 
+# NFC Support
+PRODUCT_PACKAGES += \
+    libnfc \
+    libnfc_jni \
+    Nfc \
+    Tag \
+    com.android.nfc_extras
+
 # Lights
 PRODUCT_PACKAGES += \
     lights.jet
@@ -115,15 +122,6 @@ PRODUCT_PACKAGES += \
 # Torch
 PRODUCT_PACKAGES += \
     Torch
-
-# NFC
-PRODUCT_PACKAGES += \
-    libnfc \
-    libnfc_ndef \
-    libnfc_jni \
-    Nfc \
-    Tag \
-    com.android.nfc_extras
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -139,7 +137,10 @@ PRODUCT_COPY_FILES += $(shell \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
+    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
+    frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
+    device/sample/nxp/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
 
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \

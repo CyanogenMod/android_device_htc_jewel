@@ -1,6 +1,5 @@
 #XB_HiFi_Merge_1x_Jewel_20120407_FM
 SectionUseCase."HiFi" {
-File "HiFi"
 Comment "Music playback use case"
 SectionVerb
 	Name "HiFi"
@@ -574,7 +573,6 @@ EndSection
 }
 
 SectionUseCase."HiFi Low Power" {
-File "HiFi_Low_Power"
 Comment "LPA use case"
 SectionVerb
 	Name "HiFi Low Power"
@@ -1065,7 +1063,6 @@ EndSection
 }
 
 SectionUseCase."HiFi Rec" {
-File "HiFi_Rec"
 Comment "Recording use case"
 SectionVerb
 	Name "HiFi Rec"
@@ -1709,7 +1706,6 @@ EndSection
 }
 
 SectionUseCase."Voice Call" {
-File "Voice_Call"
 Comment "Voice Call use case"
 SectionVerb
 	Name "Voice Call"
@@ -2747,7 +2743,6 @@ EndSection
 }
 
 SectionUseCase."Voice Call IP" {
-File "Voice_Call_IP"
 Comment "VOIP Call use case"
 SectionVerb
 	Name "Voice Call IP"
@@ -3900,7 +3895,6 @@ EndSection
 }
 
 SectionUseCase."FM Digital Radio" {
-File "FM_Digital_Radio"
 Comment "FM Radio use case"
 SectionVerb
 	Name "FM Digital Radio"
@@ -4418,7 +4412,6 @@ EndSection
 }
 
 SectionUseCase."FM REC" {
-File "FM_REC"
 Comment "FM Recording use case"
 SectionVerb
 	Name "FM REC"
@@ -4440,7 +4433,6 @@ EndSection
 }
 
 SectionUseCase."FM A2DP REC" {
-File "FM_A2DP_REC"
 Comment "FM A2DP playback use case"
 SectionVerb
 	Name "FM A2DP REC"
@@ -4462,7 +4454,6 @@ EndSection
 }
 
 SectionUseCase."HiFi Low Power Tunnel" {
-File "HiFi_Low_Power"
 Comment "LPA use case"
 SectionVerb
 	Name "HiFi Low Power Tunnel"

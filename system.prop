@@ -139,6 +139,12 @@ ro.qualcomm.bt.hci_transport=smd
 # System prop for switching gps driver to qmi
 persist.gps.qmienabled=true
 
+# NFC
+debug.nfc.fw_download=true
+debug.nfc.fw_boot_download=false
+debug.nfc.se=true
+ro.nfc.port=I2C
+
 # enable time services
 persist.timed.enable=true
 

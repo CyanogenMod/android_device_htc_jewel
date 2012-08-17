@@ -14,12 +14,20 @@ on early-init
     export EXTERNAL_STORAGE /storage/sdcard0
     export SECONDARY_STORAGE /storage/sdcard1
 
-on emmc-fs
-    # msm8960 firmware
-    mkdir /firmware_q6 0771 system system
-    mkdir /firmware_radio 0771 system system
-    mkdir /firmware_wcnss 0771 system system
+on init
     mkdir /devlog 0700 root root
+
+on emmc-fs
+    # msm8960 firmware partitions
+    mkdir /tombstones 0771 system system
+    mkdir /tombstones/modem 0771 system system
+    mkdir /tombstones/lpass 0771 system system
+    mkdir /tombstones/wcnss 0771 system system
+    mkdir /tombstones/dsps 0771 system system
+    mkdir /firmware_radio 0771 system system
+    mkdir /firmware_q6 0771 system system
+    mkdir /firmware_wcnss 0771 system system
+    mkdir /firmware_dsps 0771 system system
 
     #mount all the things
     mount_all fstab.jet
@@ -29,53 +37,14 @@ on emmc-fs
     exec /system/bin/sh /system/etc/init.qcom.radio_links.sh
     exec /system/bin/sh /system/etc/init.qcom.wcnss_links.sh
 
+    # for NFC
+    symlink /system/vendor/pittpatt /vendor/pittpatt
+    symlink /system/vendor/firmware/libpn544_fw.so /vendor/firmware/libpn544_fw.so
+
 on post-fs-data
     # double check perms and set owner
     chown root root /devlog
     chmod 0700 /devlog
-
-    #remount rootfs rootfs / remount
-
-    # wifi
-    mkdir /data/misc/wifi 0770 wifi wifi
-    mkdir /data/misc/wifi/sockets 0770 wifi wifi
-    mkdir /data/misc/wifi/hostapd 0770 wifi wifi
-    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
-    mkdir /data/misc/dhcp 0770 dhcp dhcp
-    chown dhcp dhcp /data/misc/dhcp
-    setprop wifi.interface wlan0
-
-    # for Invense MPU3050
-    chmod 0664 /dev/mpu
-    chmod 0664 /dev/mpuirq
-    chmod 0664 /dev/timerirq
-    chown system system /dev/mpu
-    chown system system /dev/mpuirq
-    chown system system /dev/timerirq
-
-    #set G-Sensor and Compass permissions
-    chown compass system /dev/akm8975_aot
-    chown compass system /dev/akm8975_daemon
-    chown compass system /dev/bma150
-    chmod 0640 /dev/akm8975_aot
-    chmod 0640 /dev/akm8975_daemon
-    chmod 0640 /dev/bma150
-
-    # for ST R3GD20
-    chown system system /sys/class/htc_gyro/gyro/enable_device
-    chown system system /sys/class/htc_gyro/gyro/pollrate_ms
-    chown system system /sys/class/htc_gyro/gyro/range
-    chown system system /sys/class/htc_gyro/gyro/enable_polling
-    chown system system /sys/class/htc_gyro/gyro/fifo_samples
-    chown system system /sys/class/htc_gyro/gyro/fifo_mode
-    chown system system /sys/class/htc_gyro/gyro/reg_value
-    chown system system /sys/class/htc_gyro/gyro/reg_addr
-
-    # audio
-    mkdir /data/audio 0775 media audio
-
-    # radio
-    mkdir /data/radio 0770 radio radio
 
     # Set indication (checked by vold) that we have finished this action
     setprop vold.post_fs_done 1
@@ -84,7 +53,21 @@ on post-fs-data
     setprop ro.product.wireless WCN3660
     write /dev/wcnss_wlan 1
 
-on init
+on boot
+    # Chown polling nodes as needed from UI running on system server
+    chown system system /persist
+    chmod 0771 /persist
+    chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
+    chmod 0664 /sys/devices/platform/msm_sdcc.2/polling
+    chmod 0664 /sys/devices/platform/msm_sdcc.3/polling
+    chmod 0664 /sys/devices/platform/msm_sdcc.4/polling
+
+    # Chown polling nodes as needed from UI running on system server
+    chown system system /sys/devices/platform/msm_sdcc.1/polling
+    chown system system /sys/devices/platform/msm_sdcc.2/polling
+    chown system system /sys/devices/platform/msm_sdcc.3/polling
+    chown system system /sys/devices/platform/msm_sdcc.4/polling
+
     # bluetooth
     mkdir /data/misc/bluetooth 0770 bluetooth bluetooth
     chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
@@ -108,9 +91,40 @@ on init
     chown system system /dev/ttySA0
     chown system system /dev/smd9
 
+    # wifi
+    mkdir /data/misc/wifi 0770 wifi wifi
+    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    mkdir /data/misc/wifi/hostapd 0770 wifi wifi
+    mkdir /data/misc/wifi/wpa_supplicant 0770 wifi wifi
+    mkdir /data/misc/dhcp 0770 dhcp dhcp
+    chown dhcp dhcp /data/misc/dhcp
+    setprop wifi.interface wlan0
+
+    # for ST R3GD20
+    chown system system /sys/class/htc_gyro/gyro/enable_device
+    chown system system /sys/class/htc_gyro/gyro/pollrate_ms
+    chown system system /sys/class/htc_gyro/gyro/range
+    chown system system /sys/class/htc_gyro/gyro/enable_polling
+    chown system system /sys/class/htc_gyro/gyro/fifo_samples
+    chown system system /sys/class/htc_gyro/gyro/fifo_mode
+    chown system system /sys/class/htc_gyro/gyro/reg_value
+    chown system system /sys/class/htc_gyro/gyro/reg_addr
+
     # create symlink to qcn wpa_supplicant folder
     symlink /data/misc/wifi/wpa_supplicant /data/system/wpa_supplicant
     symlink /dev/socket/wpa_wlan0 /data/system/wpa_supplicant/wlan0
+
+    # symlink for HDMI
+    symlink /dev/graphics/fb1 /dev/graphics/hdmi
+
+    # audio
+    mkdir /data/audio 0775 media audio
+
+    # radio
+    mkdir /data/radio 0770 radio radio
+
+    # time-services
+    mkdir /data/time 0700 system system
 
     # liblights
     chown system system /sys/class/leds/green/brightness
@@ -161,20 +175,6 @@ on init
     chown system system /sys/devices/virtual/htc_accessory/fm/flag
     chown system system /sys/devices/virtual/htc_accessory/tty/flag
 
-    # Chown polling nodes as needed from UI running on system server
-    chown system system /persist
-    chmod 0771 /persist
-    chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
-    chmod 0664 /sys/devices/platform/msm_sdcc.2/polling
-    chmod 0664 /sys/devices/platform/msm_sdcc.3/polling
-    chmod 0664 /sys/devices/platform/msm_sdcc.4/polling
-
-    # Chown polling nodes as needed from UI running on system server
-    chown system system /sys/devices/platform/msm_sdcc.1/polling
-    chown system system /sys/devices/platform/msm_sdcc.2/polling
-    chown system system /sys/devices/platform/msm_sdcc.3/polling
-    chown system system /sys/devices/platform/msm_sdcc.4/polling
-
     #Set SUID bit for iproute2 ip tool
     chmod 4755 /system/bin/ip
 
@@ -187,12 +187,6 @@ on init
 
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
-    # symlink for HDMI
-    symlink /dev/graphics/fb1 /dev/graphics/hdmi
-
-    # create folder for time-services
-    mkdir /data/time 0700 system system
-
     # low charge current in voice call
     chown radio radio /sys/class/power_supply/battery/phone_call
     chown radio radio /sys/class/power_supply/battery/network_search
@@ -200,7 +194,6 @@ on init
     # for slate charging timer
     chown radio /sys/class/power_supply/battery/charger_timer
 
-on boot
     # allow interfaces to get v6 address when tethering is enabled
     write /proc/sys/net/ipv6/conf/rmnet0/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet1/accept_ra 2
