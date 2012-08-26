@@ -49,10 +49,6 @@ PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/gps.conf
 # HTC BT audio config
 PRODUCT_COPY_FILES += device/htc/jewel/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
-# Sound configs
-PRODUCT_COPY_FILES += \
-    device/htc/jewel/configs/audio_policy.conf:system/etc/audio_policy.conf
-
 # QC thermald config
 PRODUCT_COPY_FILES += device/htc/jewel/configs/thermald.conf:system/etc/thermald.conf
 
