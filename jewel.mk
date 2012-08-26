@@ -29,13 +29,6 @@ PRODUCT_COPY_FILES += \
     device/htc/jewel/ramdisk/ueventd.jet.rc:root/ueventd.jet.rc \
     device/htc/jewel/ramdisk/fstab.jet:root/fstab.jet
 
-## CDMA Sprint stuffs
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.com.google.clientidbase=android-sprint-us \
-	ro.com.google.locationfeatures=1 \
-	ro.cdma.home.operator.numeric=310120 \
-	ro.cdma.home.operator.alpha=Sprint
-
 # recovery and custom charging
 PRODUCT_COPY_FILES += \
     device/htc/jewel/recovery/sbin/choice_fn:recovery/root/sbin/choice_fn \
@@ -146,6 +139,13 @@ PRODUCT_COPY_FILES += \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
 
+## CDMA Sprint stuffs
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=android-sprint-us \
+    ro.com.google.locationfeatures=1 \
+    ro.cdma.home.operator.numeric=310120 \
+    ro.cdma.home.operator.alpha=Sprint
+
 # Extra properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
@@ -169,6 +169,3 @@ $(call inherit-product-if-exists, vendor/htc/jewel/jewel-vendor.mk)
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
-
-PRODUCT_NAME := htc_jewel
-PRODUCT_DEVICE := jewel
