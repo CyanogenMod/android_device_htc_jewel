@@ -27,14 +27,8 @@
 # inherit from common msm8960
 -include device/htc/msm8960-common/BoardConfigCommon.mk
 
-# vold
-BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := jewel
-
-# Disable VSYNC
-TARGET_NO_HW_VSYNC := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE :=  console=ttyHSL0,115200,n8 androidboot.hardware=jet
@@ -42,7 +36,7 @@ BOARD_KERNEL_BASE :=  0x80400000
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81800000
 BOARD_KERNEL_PAGESIZE := 4096
 
-#TARGET_PREBUILT_KERNEL := device/htc/jewel/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := device/htc/jewel/prebuilt/kernel
 TARGET_KERNEL_CONFIG := jet_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 
@@ -61,6 +55,9 @@ WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/prima_wlan.ko"
 #BOARD_USES_QCOM_GPS := true
 #BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 #BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := jet
+
+# Vold
+BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 
 #dev:        size     erasesize name
 #mmcblk0p23: 000ffa00 00000200 "misc"
