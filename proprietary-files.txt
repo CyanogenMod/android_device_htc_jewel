@@ -48,7 +48,6 @@ lib/libmmparser_divxdrmlib.so
 lib/liboemcamera.so
 lib/libOlaEngine.so
 lib/libposteffect.so
-lib/libsurfaceflinger_client.so
 
 # Graphics
 lib/egl/eglsubAndroid.so
