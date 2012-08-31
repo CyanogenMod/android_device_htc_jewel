@@ -3,9 +3,7 @@ etc/agps_rm
 
 # Executable files
 bin/akmd
-bin/awb_camera
 bin/bma150_usr
-bin/cam_ins_spmo
 bin/charging
 bin/hci_qcomm_init
 bin/hdmid
@@ -107,3 +105,4 @@ lib/libmlplatform.so
 lib/libmllite.so
 lib/libMLTransition.so
 lib/libmpl.so
+lib/libmpl_jni.so
