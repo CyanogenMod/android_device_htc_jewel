@@ -5,6 +5,14 @@ Comment "Music playback use case"
 SectionVerb
 	Name "HiFi"
 
+	EnableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
+	EndSequence
+
+	DisableSequence
+		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
+	EndSequence
+
 	# ALSA PCMs
 	CapturePCM 0
 	PlaybackPCM 0
@@ -5931,6 +5939,30 @@ SectionDevice
 EndSection
 
 SectionDevice
+
+        Name "Voice Earpiece"
+	        Comment "Handset Rx device"
+	
+	        EnableSequence
+	                'SLIM_0_RX Channels':0:One
+	                'RX1 MIX1 INP1':0:RX1
+	                'DAC1 Switch':1:1
+	                'RX1 Digital Volume':1:67
+	                'EAR PA Gain':0:POS_6_DB
+	        EndSequence
+	
+	        DisableSequence
+	                'EAR PA Gain':0:POS_2_DB
+	                'RX1 Digital Volume':1:0
+	                'DAC1 Switch':1:0
+	                'RX1 MIX1 INP1':0:ZERO
+	        EndSequence
+	
+	        ACDBID 7:1
+	
+EndSection
+	
+SectionDevice
 	Name "Line Voice"
 	Comment "Speaker Tx device"
 
@@ -6001,6 +6033,33 @@ SectionDevice
 EndSection
 
 SectionDevice
+    Name "Voice Speaker"
+    Comment "Speaker Rx device for voice call"
+
+    EnableSequence
+        'PRI_RX Channels':0:Two
+        'RX5 MIX1 INP1':0:RX1
+        'RX5 MIX1 INP2':0:RX2
+        'RX6 DSM MUX':0:DSM_INV
+        'LINEOUT2 Volume':1:100%
+        'LINEOUT4 Volume':1:100%
+        'RX5 Digital Volume':1:67.7%
+    EndSequence
+
+    DisableSequence
+        'RX5 MIX1 INP1':0:ZERO
+        'RX5 MIX1 INP2':0:ZERO
+        'LINEOUT2 Volume':1:0
+        'LINEOUT4 Volume':1:0
+        'RX5 Digital Volume':1:65%
+    EndSequence
+
+    ACDBID  15:1
+    EffectsMixerCTL "SRS TruMedia"
+
+EndSection
+
+SectionDevice
 	Name "Headset Voice"
 	Comment "Headset Tx device"
 
@@ -6024,7 +6083,39 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Headphones Voice"
+        Name "Headphones Voice"
+        Comment "Headset Rx device"
+
+        EnableSequence
+                'SLIM_0_RX Channels':0:One
+                'RX1 MIX1 INP1':0:RX1
+                'RX2 MIX1 INP1':0:RX1
+                'HPHL DAC Switch':1:1
+                'HPHR DAC Switch':1:1
+                'RX1 Digital Volume':1:67
+                'RX2 Digital Volume':1:67
+                'HPHL Volume':1:60
+                'HPHR Volume':1:60
+        EndSequence
+
+        DisableSequence
+                'HPHL Volume':1:0
+                'HPHR Volume':1:0
+                'RX1 Digital Volume':1:0
+                'RX2 Digital Volume':1:0
+                'HPHL DAC Switch':1:0
+                'HPHR DAC Switch':1:0
+                'RX1 MIX1 INP1':0:ZERO
+                'RX2 MIX1 INP1':0:ZERO
+        EndSequence
+
+        ACDBID 10:1
+
+EndSection
+
+
+SectionDevice
+	Name "Voice Headphones"
 	Comment "Headset Rx device"
 
 	EnableSequence
@@ -6037,11 +6128,9 @@ SectionDevice
 		'RX2 Digital Volume':1:67
 		'HPHL Volume':1:60
 		'HPHR Volume':1:60
-		'FENS Enable':1:1
 	EndSequence
 
 	DisableSequence
-		'FENS Enable':1:0
 		'HPHL Volume':1:0
 		'HPHR Volume':1:0
 		'RX1 Digital Volume':1:0
