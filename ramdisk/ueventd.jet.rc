@@ -99,6 +99,7 @@
 /dev/msm_preproc_ctl      0660  system       audio
 /dev/msm_a2dp_in          0640  system       audio
 /dev/msm_amrnb_in         0640  system       audio
+/dev/tpa2051d3            0660  system       audio
 
 # for jet sensors
 /dev/akm8975_aot          0640  compass      system

@@ -35,6 +35,11 @@ PRODUCT_COPY_FILES += \
     device/htc/jewel/recovery/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
     device/htc/jewel/recovery/sbin/detect_key:recovery/root/sbin/detect_key
 
+# Qcom configs
+PRODUCT_COPY_FILES += \
+    device/htc/jewel/configs/init.qcom.coex.sh:system/etc/init.qcom.coex.sh \
+    device/htc/jewel/configs/init.qcom.modem_links.sh:system/etc/init.qcom.modem_links.sh
+
 # GPS config
 PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/gps.conf
 
