@@ -303,7 +303,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFiEarpiece Voice"
+	Name "HiFiVoice Earpiece"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
@@ -321,7 +321,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFiSpeaker Voice"
+	Name "HiFiVoice Speaker"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
@@ -339,7 +339,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFiHeadphones Voice"
+	Name "HiFiVoice Headphones"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
@@ -357,7 +357,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFiEarpiece HAC Voice"
+	Name "HiFiVoice Earpiece HAC"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
@@ -465,7 +465,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFiCradle Rx Voice"
+	Name "HiFiVoice Cradle Rx"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
@@ -483,7 +483,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFiSpeaker Car Voice"
+	Name "HiFiVoice Speaker Car"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
@@ -736,7 +736,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerEarpiece Voice"
+	Name "HiFi Low PowerVoice Earpiece"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -753,7 +753,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerSpeaker Voice"
+	Name "HiFi Low PowerVoice Speaker"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -770,7 +770,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerHeadphones Voice"
+	Name "HiFi Low PowerVoice Headphones"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -787,7 +787,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerEarpiece HAC Voice"
+	Name "HiFi Low PowerVoice Earpiece HAC"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -889,7 +889,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerCradle Rx Voice"
+	Name "HiFi Low PowerVoice Cradle Rx"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -906,7 +906,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerSpeaker Car Voice"
+	Name "HiFi Low PowerVoice Speaker Car"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -1134,7 +1134,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi RecHandset Voice"
+	Name "HiFi RecVoice Handset"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -1152,7 +1152,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi RecLine Voice"
+	Name "HiFi RecVoice Line"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -1170,7 +1170,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi RecHeadset Voice"
+	Name "HiFi RecVoice Headset"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -1422,7 +1422,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi RecCradle Tx Voice"
+	Name "HiFi RecVoice Cradle Tx"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -1440,7 +1440,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi RecLine Car Voice"
+	Name "HiFi RecVoice Line Car"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -1910,7 +1910,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallHandset Voice"
+	Name "Voice CallVoice Handset"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -1925,7 +1925,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallEarpiece Voice"
+	Name "Voice CallVoice Earpiece"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
@@ -1940,7 +1940,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallLine Voice"
+	Name "Voice CallVoice Line"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -1955,7 +1955,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallSpeaker Voice"
+	Name "Voice CallVoice Speaker"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
@@ -1970,7 +1970,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallHeadset Voice"
+	Name "Voice CallVoice Headset"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -1985,7 +1985,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallHeadphones Voice"
+	Name "Voice CallVoice Headphones"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
@@ -2000,7 +2000,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallEarpiece HAC Voice"
+	Name "Voice CallVoice Earpiece HAC"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
@@ -2285,7 +2285,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallCradle Tx Voice"
+	Name "Voice CallVoice Cradle Tx"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -2300,7 +2300,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallCradle Rx Voice"
+	Name "Voice CallVoice Cradle Rx"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
@@ -2315,7 +2315,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallLine Car Voice"
+	Name "Voice CallVoice Line Car"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -2330,7 +2330,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallSpeaker Car Voice"
+	Name "Voice CallVoice Speaker Car"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
@@ -2737,7 +2737,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPHandset Voice"
+	Name "Voice Call IPVoice Handset"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -2757,7 +2757,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPEarpiece Voice"
+	Name "Voice Call IPVoice Earpiece"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -2777,7 +2777,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPLine Voice"
+	Name "Voice Call IPVoice Line"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -2797,7 +2797,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPSpeaker Voice"
+	Name "Voice Call IPVoice Speaker"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -2817,7 +2817,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPHeadset Voice"
+	Name "Voice Call IPVoice Headset"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -2837,7 +2837,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPHeadphones Voice"
+	Name "Voice Call IPVoice Headphones"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -2857,7 +2857,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPEarpiece HAC Voice"
+	Name "Voice Call IPVoice Earpiece HAC"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -3217,7 +3217,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPCradle Tx Voice"
+	Name "Voice Call IPVoice Cradle Tx"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -3237,7 +3237,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPCradle Rx Voice"
+	Name "Voice Call IPVoice Cradle Rx"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -3257,7 +3257,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPLine Car Voice"
+	Name "Voice Call IPVoice Line Car"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -3277,7 +3277,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPSpeaker Car Voice"
+	Name "Voice Call IPVoice Speaker Car"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -3499,7 +3499,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "FM Digital RadioEarpiece Voice"
+	Name "FM Digital RadioVoice Earpiece"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -3520,7 +3520,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "FM Digital RadioSpeaker Voice"
+	Name "FM Digital RadioVoice Speaker"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -3541,7 +3541,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "FM Digital RadioHeadphones Voice"
+	Name "FM Digital RadioVoice Headphones"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -3562,7 +3562,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "FM Digital RadioEarpiece HAC Voice"
+	Name "FM Digital RadioVoice Earpiece HAC"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -3688,7 +3688,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "FM Digital RadioCradle Rx Voice"
+	Name "FM Digital RadioVoice Cradle Rx"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -3709,7 +3709,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "FM Digital RadioSpeaker Car Voice"
+	Name "FM Digital RadioVoice Speaker Car"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -4007,7 +4007,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low Power TunnelEarpiece Voice"
+	Name "HiFi Low Power TunnelVoice Earpiece"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -4024,7 +4024,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low Power TunnelSpeaker Voice"
+	Name "HiFi Low Power TunnelVoice Speaker"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -4041,7 +4041,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low Power TunnelHeadphones Voice"
+	Name "HiFi Low Power TunnelVoice Headphones"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -4058,7 +4058,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low Power TunnelEarpiece HAC Voice"
+	Name "HiFi Low Power TunnelVoice Earpiece HAC"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -4160,7 +4160,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low Power TunnelCradle Rx Voice"
+	Name "HiFi Low Power TunnelVoice Cradle Rx"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -4177,7 +4177,7 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low Power TunnelSpeaker Car Voice"
+	Name "HiFi Low Power TunnelVoice Speaker Car"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -5013,7 +5013,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Handset Voice"
+	Name "Voice Handset"
 	Comment "Handset Tx device"
 
 	EnableSequence
@@ -5048,7 +5048,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Earpiece Voice"
+	Name "Voice Earpiece"
 	Comment "Handset Rx device"
 
 	EnableSequence
@@ -5073,7 +5073,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Line Voice"
+	Name "Voice Line"
 	Comment "Speaker Tx device"
 
 	EnableSequence
@@ -5108,7 +5108,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Speaker Voice"
+	Name "Voice Speaker"
 	Comment "Speaker Rx device"
 
 	EnableSequence
@@ -5143,7 +5143,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Headset Voice"
+	Name "Voice Headset"
 	Comment "Headset Tx device"
 
 	EnableSequence
@@ -5166,7 +5166,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Headphones Voice"
+	Name "Voice Headphones"
 	Comment "Headset Rx device"
 
 	EnableSequence
@@ -5199,7 +5199,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Earpiece HAC Voice"
+	Name "Voice Earpiece HAC"
 	Comment "Handset Rx device"
 
 	EnableSequence
@@ -5758,7 +5758,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Cradle Tx Voice"
+	Name "Voice Cradle Tx"
 	Comment "Speaker Tx device"
 
 	EnableSequence
@@ -5783,7 +5783,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Cradle Rx Voice"
+	Name "Voice Cradle Rx"
 	Comment "Speaker Rx device"
 
 	EnableSequence
@@ -5816,7 +5816,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Line Car Voice"
+	Name "Voice Line Car"
 	Comment "Speaker Tx device"
 
 	EnableSequence
@@ -5841,7 +5841,7 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Speaker Car Voice"
+	Name "Voice Speaker Car"
 	Comment "Speaker Rx device"
 
 	EnableSequence
@@ -6192,7 +6192,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play MusicEarpiece Voice"
+	Name "Play MusicVoice Earpiece"
 	Comment "Modifier for music playback"
 
 	EnableSequence
@@ -6211,7 +6211,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play MusicSpeaker Voice"
+	Name "Play MusicVoice Speaker"
 	Comment "Modifier for music playback"
 
 	EnableSequence
@@ -6230,7 +6230,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play MusicHeadphones Voice"
+	Name "Play MusicVoice Headphones"
 	Comment "Modifier for music playback"
 
 	EnableSequence
@@ -6249,7 +6249,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play MusicEarpiece HAC Voice"
+	Name "Play MusicVoice Earpiece HAC"
 	Comment "Modifier for music playback"
 
 	EnableSequence
@@ -6363,7 +6363,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play MusicCradle Rx Voice"
+	Name "Play MusicVoice Cradle Rx"
 	Comment "Modifier for music playback"
 
 	EnableSequence
@@ -6382,7 +6382,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play MusicSpeaker Car Voice"
+	Name "Play MusicVoice Speaker Car"
 	Comment "Modifier for music playback"
 
 	EnableSequence
@@ -6600,7 +6600,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play FMEarpiece Voice"
+	Name "Play FMVoice Earpiece"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -6621,7 +6621,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play FMSpeaker Voice"
+	Name "Play FMVoice Speaker"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -6642,7 +6642,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play FMHeadphones Voice"
+	Name "Play FMVoice Headphones"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -6663,7 +6663,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play FMEarpiece HAC Voice"
+	Name "Play FMVoice Earpiece HAC"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -6789,7 +6789,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play FMCradle Rx Voice"
+	Name "Play FMVoice Cradle Rx"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -6810,7 +6810,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play FMSpeaker Car Voice"
+	Name "Play FMVoice Speaker Car"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -7117,7 +7117,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPAEarpiece Voice"
+	Name "Play LPAVoice Earpiece"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -7134,7 +7134,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPASpeaker Voice"
+	Name "Play LPAVoice Speaker"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -7151,7 +7151,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPAHeadphones Voice"
+	Name "Play LPAVoice Headphones"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -7168,7 +7168,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPAEarpiece HAC Voice"
+	Name "Play LPAVoice Earpiece HAC"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -7270,7 +7270,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPACradle Rx Voice"
+	Name "Play LPAVoice Cradle Rx"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -7287,7 +7287,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPASpeaker Car Voice"
+	Name "Play LPAVoice Speaker Car"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -7512,7 +7512,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Capture MusicHandset Voice"
+	Name "Capture MusicVoice Handset"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -7530,7 +7530,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Capture MusicLine Voice"
+	Name "Capture MusicVoice Line"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -7548,7 +7548,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Capture MusicHeadset Voice"
+	Name "Capture MusicVoice Headset"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -7800,7 +7800,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Capture MusicCradle Tx Voice"
+	Name "Capture MusicVoice Cradle Tx"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -7818,7 +7818,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Capture MusicLine Car Voice"
+	Name "Capture MusicVoice Line Car"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -8285,7 +8285,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceHandset Voice"
+	Name "Play VoiceVoice Handset"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -8300,7 +8300,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceEarpiece Voice"
+	Name "Play VoiceVoice Earpiece"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
@@ -8315,7 +8315,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceLine Voice"
+	Name "Play VoiceVoice Line"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -8330,7 +8330,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceSpeaker Voice"
+	Name "Play VoiceVoice Speaker"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
@@ -8345,7 +8345,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceHeadset Voice"
+	Name "Play VoiceVoice Headset"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -8360,7 +8360,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceHeadphones Voice"
+	Name "Play VoiceVoice Headphones"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
@@ -8375,7 +8375,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceEarpiece HAC Voice"
+	Name "Play VoiceVoice Earpiece HAC"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
@@ -8660,7 +8660,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceCradle Tx Voice"
+	Name "Play VoiceVoice Cradle Tx"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -8675,7 +8675,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceCradle Rx Voice"
+	Name "Play VoiceVoice Cradle Rx"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
@@ -8690,7 +8690,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceLine Car Voice"
+	Name "Play VoiceVoice Line Car"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -8705,7 +8705,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceSpeaker Car Voice"
+	Name "Play VoiceVoice Speaker Car"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
@@ -9062,7 +9062,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPHandset Voice"
+	Name "Play VOIPVoice Handset"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -9077,7 +9077,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPEarpiece Voice"
+	Name "Play VOIPVoice Earpiece"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:0
@@ -9092,7 +9092,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPLine Voice"
+	Name "Play VOIPVoice Line"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -9107,7 +9107,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPSpeaker Voice"
+	Name "Play VOIPVoice Speaker"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:0
@@ -9122,7 +9122,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPHeadset Voice"
+	Name "Play VOIPVoice Headset"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -9137,7 +9137,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPHeadphones Voice"
+	Name "Play VOIPVoice Headphones"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:0
@@ -9152,7 +9152,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPEarpiece HAC Voice"
+	Name "Play VOIPVoice Earpiece HAC"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:0
@@ -9407,7 +9407,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPCradle Tx Voice"
+	Name "Play VOIPVoice Cradle Tx"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -9422,7 +9422,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPCradle Rx Voice"
+	Name "Play VOIPVoice Cradle Rx"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:0
@@ -9437,7 +9437,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPLine Car Voice"
+	Name "Play VOIPVoice Line Car"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -9452,7 +9452,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPSpeaker Car Voice"
+	Name "Play VOIPVoice Speaker Car"
 
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:0
@@ -9735,7 +9735,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPA TunnelEarpiece Voice"
+	Name "Play LPA TunnelVoice Earpiece"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -9752,7 +9752,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPA TunnelSpeaker Voice"
+	Name "Play LPA TunnelVoice Speaker"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -9769,7 +9769,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPA TunnelHeadphones Voice"
+	Name "Play LPA TunnelVoice Headphones"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -9786,7 +9786,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPA TunnelEarpiece HAC Voice"
+	Name "Play LPA TunnelVoice Earpiece HAC"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -9888,7 +9888,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPA TunnelCradle Rx Voice"
+	Name "Play LPA TunnelVoice Cradle Rx"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -9905,7 +9905,7 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPA TunnelSpeaker Car Voice"
+	Name "Play LPA TunnelVoice Speaker Car"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
