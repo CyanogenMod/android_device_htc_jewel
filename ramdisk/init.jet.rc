@@ -126,20 +126,14 @@ on boot
     # time-services
     mkdir /data/time 0700 system system
 
-    # liblights
-    chown system system /sys/class/leds/green/brightness
-    chown system system /sys/class/leds/green/blink
-    chown system system /sys/class/leds/amber/brightness
-    chown system system /sys/class/leds/amber/blink
-    chown system system /sys/class/leds/button-backlight/brightness
-    chown system system /sys/class/leds/lcd-backlight/brightness
-    chown system system /sys/class/leds/keyboard-backlight/brightness
-    chown system system /sys/class/leds/func/brightness
-    chown system system /sys/class/leds/caps/brightness
-
     # flashlight
     chown system camera /sys/class/leds/flashlight/brightness
     chmod 0666          /sys/class/leds/flashlight/brightness
+
+    # For Flashlight Restriction
+    chown radio system /sys/camera_led_status/led_ril_status
+    chown system system /sys/camera_led_status/led_wimax_status
+    chown system system /sys/camera_led_status/led_hotspot_status
 
     # liblights
     chown system system /sys/class/leds/red/brightness
@@ -178,6 +172,9 @@ on boot
     #Set SUID bit for iproute2 ip tool
     chmod 4755 /system/bin/ip
 
+    #Set SUID bit for btwlancoex
+    chmod 4755 /system/bin/btwlancoex
+
     # port-bridge
     chmod 0660 /dev/smd0
     chown system system /dev/smd0
@@ -190,6 +187,7 @@ on boot
     # low charge current in voice call
     chown radio radio /sys/class/power_supply/battery/phone_call
     chown radio radio /sys/class/power_supply/battery/network_search
+    chown system system /sys/class/power_supply/battery/navigation
 
     # for slate charging timer
     chown radio /sys/class/power_supply/battery/charger_timer
@@ -222,14 +220,6 @@ on boot
     setprop net.tcp.buffersize.lte     4096,221184,3461120,4096,221184,3461120
     setprop net.tcp.buffersize.evdo_b  4094,87380,262144,4096,16384,262144
     setprop net.tcp.buffersize.wimax   4096,1398102,2097152,4096,16384,110208
-
-   # for RIL to notify battery driver talking and network_search state
-   chown radio radio /sys/class/power_supply/battery/phone_call
-   chown radio radio /sys/class/power_supply/battery/network_search
-   chown system system /sys/class/power_supply/battery/navigation
-
-   # for slate charging timer
-   chown radio /sys/class/power_supply/battery/charger_timer
 
    # cyttsp update
    write /sys/devices/i2c-3/3-0024/cyttsp_update_fw 1
@@ -278,6 +268,12 @@ service netmgrd /system/bin/netmgrd
 service qcmodemlink /system/bin/sh /system/etc/init.qcom.modem_links.sh
     class main
     user root
+    disabled
+    oneshot
+
+service btwlancoex /system/bin/sh /system/etc/init.qcom.coex.sh
+    user shell
+    group bluetooth net_bt_admin
     disabled
     oneshot
 
