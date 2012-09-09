@@ -267,42 +267,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFiHeadphone Beats"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFiSpeaker VZWUSB"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
 	Name "HiFiHeadphones FM"
 
 	EnableSequence
@@ -376,24 +340,6 @@ EndSection
 
 SectionVerb
 	Name "HiFiHeadphones Voice"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFiHeadphones Beats Voice"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
@@ -502,24 +448,6 @@ EndSection
 
 SectionVerb
 	Name "HiFiHeadphones HW VOIP"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFiHeadphones Beats HW VOIP"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
@@ -774,40 +702,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low PowerHeadphone Beats"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 4
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low PowerSpeaker VZWUSB"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 4
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
 	Name "HiFi Low PowerHeadphones FM"
 
 	EnableSequence
@@ -877,23 +771,6 @@ EndSection
 
 SectionVerb
 	Name "HiFi Low PowerHeadphones Voice"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 4
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low PowerHeadphones Beats Voice"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -996,23 +873,6 @@ EndSection
 
 SectionVerb
 	Name "HiFi Low PowerHeadphones HW VOIP"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 4
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low PowerHeadphones Beats HW VOIP"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -1274,42 +1134,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi RecHeadset Beats"
-
-	EnableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi RecHeadset BeatsVR"
-
-	EnableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
 	Name "HiFi RecHandset Voice"
 
 	EnableSequence
@@ -1364,24 +1188,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi RecHeadset Beats Voice"
-
-	EnableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
 	Name "HiFi RecLine mono cam"
 
 	EnableSequence
@@ -1419,24 +1225,6 @@ EndSection
 
 SectionVerb
 	Name "HiFi RecHeadset Cam"
-
-	EnableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi RecHeadset BeatsCam"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -1509,24 +1297,6 @@ EndSection
 
 SectionVerb
 	Name "HiFi RecHeadset StereoCam"
-
-	EnableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi RecHeadset Beats StereoCam"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -1635,24 +1405,6 @@ EndSection
 
 SectionVerb
 	Name "HiFi RecHeadset HW VOIP"
-
-	EnableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi RecHeadset Beats HW VOIP"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -2098,36 +1850,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallHeadphone Beats"
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:0
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice CallSpeaker VZWUSB"
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:0
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
 	Name "Voice CallLine VR"
 
 	EnableSequence
@@ -2144,36 +1866,6 @@ EndSection
 
 SectionVerb
 	Name "Voice CallHeadset VR"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice CallHeadset Beats"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice CallHeadset BeatsVR"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -2308,36 +2000,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallHeadset Beats Voice"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice CallHeadphones Beats Voice"
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:0
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
 	Name "Voice CallEarpiece HAC Voice"
 
 	DisableSequence
@@ -2398,21 +2060,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice CallHeadset BeatsCam"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
 	Name "Voice CallLine LandscapeCam"
 
 	EnableSequence
@@ -2459,21 +2106,6 @@ EndSection
 
 SectionVerb
 	Name "Voice CallHeadset StereoCam"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice CallHeadset Beats StereoCam"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -2643,36 +2275,6 @@ SectionVerb
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice CallHeadphones Beats HW VOIP"
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:0
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice CallHeadset Beats HW VOIP"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
 	EndSequence
 
 	# ALSA PCMs
@@ -3055,46 +2657,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPHeadphone Beats"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice Call IPSpeaker VZWUSB"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
 	Name "Voice Call IPLine VR"
 
 	EnableSequence
@@ -3116,46 +2678,6 @@ EndSection
 
 SectionVerb
 	Name "Voice Call IPHeadset VR"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice Call IPHeadset Beats"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice Call IPHeadset BeatsVR"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -3335,46 +2857,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPHeadset Beats Voice"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice Call IPHeadphones Beats Voice"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
 	Name "Voice Call IPEarpiece HAC Voice"
 
 	EnableSequence
@@ -3455,26 +2937,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "Voice Call IPHeadset BeatsCam"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
 	Name "Voice Call IPLine LandscapeCam"
 
 	EnableSequence
@@ -3536,26 +2998,6 @@ EndSection
 
 SectionVerb
 	Name "Voice Call IPHeadset StereoCam"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice Call IPHeadset Beats StereoCam"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -3756,46 +3198,6 @@ EndSection
 
 SectionVerb
 	Name "Voice Call IPHeadphones HW VOIP"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice Call IPHeadphones Beats HW VOIP"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "Voice Call IPHeadset Beats HW VOIP"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -4055,48 +3457,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "FM Digital RadioHeadphone Beats"
-
-	EnableSequence
-		'Internal FM RX Volume':1:0
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
-		'SLIMBUS_DL_HL Switch':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
-		'SLIMBUS_DL_HL Switch':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 6
-	PlaybackPCM 5
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "FM Digital RadioSpeaker VZWUSB"
-
-	EnableSequence
-		'Internal FM RX Volume':1:0
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
-		'SLIMBUS_DL_HL Switch':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
-		'SLIMBUS_DL_HL Switch':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 6
-	PlaybackPCM 5
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
 	Name "FM Digital RadioHeadphones FM"
 
 	EnableSequence
@@ -4182,27 +3542,6 @@ EndSection
 
 SectionVerb
 	Name "FM Digital RadioHeadphones Voice"
-
-	EnableSequence
-		'Internal FM RX Volume':1:0
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
-		'SLIMBUS_DL_HL Switch':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
-		'SLIMBUS_DL_HL Switch':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 6
-	PlaybackPCM 5
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "FM Digital RadioHeadphones Beats Voice"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -4329,27 +3668,6 @@ EndSection
 
 SectionVerb
 	Name "FM Digital RadioHeadphones HW VOIP"
-
-	EnableSequence
-		'Internal FM RX Volume':1:0
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
-		'SLIMBUS_DL_HL Switch':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
-		'SLIMBUS_DL_HL Switch':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 6
-	PlaybackPCM 5
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "FM Digital RadioHeadphones Beats HW VOIP"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -4655,40 +3973,6 @@ SectionVerb
 EndSection
 
 SectionVerb
-	Name "HiFi Low Power TunnelHeadphone Beats"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelSpeaker VZWUSB"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
 	Name "HiFi Low Power TunnelHeadphones FM"
 
 	EnableSequence
@@ -4758,23 +4042,6 @@ EndSection
 
 SectionVerb
 	Name "HiFi Low Power TunnelHeadphones Voice"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelHeadphones Beats Voice"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -4877,23 +4144,6 @@ EndSection
 
 SectionVerb
 	Name "HiFi Low Power TunnelHeadphones HW VOIP"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionVerb
-	Name "HiFi Low Power TunnelHeadphones Beats HW VOIP"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -5651,68 +4901,6 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Headphone Beats"
-	Comment "Headset Rx device"
-
-	EnableSequence
-		'SLIM_0_RX Channels':0:Two
-		'RX1 MIX1 INP1':0:RX1
-		'RX2 MIX1 INP1':0:RX2
-		'HPHL DAC Switch':1:1
-		'HPHR DAC Switch':1:1
-		'RX1 Digital Volume':1:67
-		'RX2 Digital Volume':1:67
-		'HPHL Volume':1:90
-		'HPHR Volume':1:90
-	EndSequence
-
-	DisableSequence
-		'HPHL Volume':1:0
-		'HPHR Volume':1:0
-		'RX1 Digital Volume':1:0
-		'RX2 Digital Volume':1:0
-		'HPHL DAC Switch':1:0
-		'HPHR DAC Switch':1:0
-		'RX1 MIX1 INP1':0:ZERO
-		'RX2 MIX1 INP1':0:ZERO
-	EndSequence
-
-	ACDBID 421:1
-
-EndSection
-
-SectionDevice
-	Name "Speaker VZWUSB"
-	Comment "Speaker Rx device"
-
-	EnableSequence
-		'SLIM_0_RX Channels':0:Two
-		'RX5_USB MIX1 INP1':0:RX1
-		'RX6_USB MIX1 INP1':0:RX2
-		'LINEOUT2 DAC Switch':1:1
-		'LINEOUT4 DAC Switch':1:1
-		'LINEOUT2 Volume':1:50
-		'LINEOUT4 Volume':1:50
-		'RX5 Digital Volume':1:67
-		'RX6 Digital Volume':1:67
-	EndSequence
-
-	DisableSequence
-		'LINEOUT2 Volume':1:0
-		'LINEOUT4 Volume':1:0
-		'RX5 Digital Volume':1:0
-		'RX6 Digital Volume':1:0
-		'LINEOUT2 DAC Switch':1:0
-		'LINEOUT4 DAC Switch':1:0
-		'RX5_USB MIX1 INP1':0:ZERO
-		'RX6_USB MIX1 INP1':0:ZERO
-	EndSequence
-
-	ACDBID 602:1
-
-EndSection
-
-SectionDevice
 	Name "Line VR"
 	Comment "Speaker Tx device"
 
@@ -5757,52 +4945,6 @@ SectionDevice
 	EndSequence
 
 	ACDBID 307:2
-
-EndSection
-
-SectionDevice
-	Name "Headset Beats"
-	Comment "Headset Tx device"
-
-	EnableSequence
-		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC5
-		'DEC5 MUX':0:ADC2
-		'DEC5 Volume':1:71
-		'ADC2 Volume':1:100
-	EndSequence
-
-	DisableSequence
-		'ADC2 Volume':1:0
-		'DEC5 Volume':1:0
-		'DEC5 MUX':0:ZERO
-		'SLIM TX7 MUX':0:ZERO
-	EndSequence
-
-	ACDBID 323:2
-
-EndSection
-
-SectionDevice
-	Name "Headset BeatsVR"
-	Comment "Headset Tx device"
-
-	EnableSequence
-		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC5
-		'DEC5 MUX':0:ADC2
-		'DEC5 Volume':1:71
-		'ADC2 Volume':1:100
-	EndSequence
-
-	DisableSequence
-		'ADC2 Volume':1:0
-		'DEC5 Volume':1:0
-		'DEC5 MUX':0:ZERO
-		'SLIM TX7 MUX':0:ZERO
-	EndSequence
-
-	ACDBID 326:2
 
 EndSection
 
@@ -6057,85 +5199,6 @@ SectionDevice
 EndSection
 
 SectionDevice
-	Name "Headset Beats Voice"
-	Comment "Headset Tx device"
-
-	EnableSequence
-		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC5
-		'DEC5 MUX':0:ADC2
-		'DEC5 Volume':1:73
-		'ADC2 Volume':1:100
-		'IIR1 INP1 MUX':0:DEC5 
-		'RX1 MIX1 INP2':0:IIR1 
-		'RX2 MIX1 INP2':0:IIR1
-		'IIR1 Band1':2:0x081263D9 0x36370119 0x02E784C0 0x0B5A1949 0x02D9D7F8
-		'IIR1 Band2':2:0x081263D9 0x3011E313 0x07DC1E52 0x214F1D29 0x0EBA79F9
-		'IIR1 Band3':2:0x081263D9 0x309F3C9A 0x07D215BF 0x2161F381 0x0F94E904
-		'IIR1 Band4':2:0x081263D9 0x33986476 0x05BA0150 0x21FEF9A6 0x0EB749DD
-		'IIR1 Band5':2:0x081263D9 0x3F902CB2 0x0004C555 0x2215801D 0x0E2DDC7B
-		'IIR1 Enable Band1':1:1
-		'IIR1 Enable Band2':1:1 
-		'IIR1 Enable Band3':1:1 
-		'IIR1 Enable Band4':1:1 
-		'IIR1 Enable Band5':1:1                  
-		'IIR1 INP1 Volume':1:45 
-	EndSequence
-
-	DisableSequence
-		'ADC2 Volume':1:0
-		'DEC5 Volume':1:0
-		'IIR1 INP1 Volume':1:0 
-		'DEC5 MUX':0:ZERO
-		'SLIM TX7 MUX':0:ZERO
-		'IIR1 INP1 MUX':0:ZERO 
-		'RX1 MIX1 INP2':0:ZERO 
-		'RX2 MIX1 INP2':0:ZERO 
-		'IIR1 Enable Band1':1:0 
-		'IIR1 Enable Band2':1:0 
-		'IIR1 Enable Band3':1:0 
-		'IIR1 Enable Band4':1:0 
-		'IIR1 Enable Band5':1:0 
-	EndSequence
-
-	ACDBID 321:2
-
-EndSection
-
-SectionDevice
-	Name "Headphones Beats Voice"
-	Comment "Headset Rx device"
-
-	EnableSequence
-		'SLIM_0_RX Channels':0:One
-		'RX1 MIX1 INP1':0:RX1
-		'RX2 MIX1 INP1':0:RX1
-		'HPHL DAC Switch':1:1
-		'HPHR DAC Switch':1:1
-		'RX1 Digital Volume':1:67
-		'RX2 Digital Volume':1:67
-		'HPHL Volume':1:60
-		'HPHR Volume':1:60
-		'FENS Enable':1:1
-	EndSequence
-
-	DisableSequence
-		'FENS Enable':1:0
-		'HPHL Volume':1:0
-		'HPHR Volume':1:0
-		'RX1 Digital Volume':1:0
-		'RX2 Digital Volume':1:0
-		'HPHL DAC Switch':1:0
-		'HPHR DAC Switch':1:0
-		'RX1 MIX1 INP1':0:ZERO
-		'RX2 MIX1 INP1':0:ZERO
-	EndSequence
-
-	ACDBID 421:1
-
-EndSection
-
-SectionDevice
 	Name "Earpiece HAC Voice"
 	Comment "Handset Rx device"
 
@@ -6230,29 +5293,6 @@ SectionDevice
 	EndSequence
 
 	ACDBID 305:2
-
-EndSection
-
-SectionDevice
-	Name "Headset BeatsCam"
-	Comment "Headset Tx device"
-
-	EnableSequence
-		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC5
-		'DEC5 MUX':0:ADC2
-		'DEC5 Volume':1:69
-		'ADC2 Volume':1:50
-	EndSequence
-
-	DisableSequence
-		'ADC2 Volume':1:0
-		'DEC5 Volume':1:0
-		'DEC5 MUX':0:ZERO
-		'SLIM TX7 MUX':0:ZERO
-	EndSequence
-
-	ACDBID 324:2
 
 EndSection
 
@@ -6371,29 +5411,6 @@ SectionDevice
 	EndSequence
 
 	ACDBID 306:2
-
-EndSection
-
-SectionDevice
-	Name "Headset Beats StereoCam"
-	Comment "Headset Tx device"
-
-	EnableSequence
-		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC5
-		'DEC5 MUX':0:ADC2
-		'DEC5 Volume':1:69
-		'ADC2 Volume':1:50
-	EndSequence
-
-	DisableSequence
-		'ADC2 Volume':1:0
-		'DEC5 Volume':1:0
-		'DEC5 MUX':0:ZERO
-		'SLIM TX7 MUX':0:ZERO
-	EndSequence
-
-	ACDBID 325:2
 
 EndSection
 
@@ -6737,85 +5754,6 @@ SectionDevice
 	EndSequence
 
 	ACDBID 401:1
-
-EndSection
-
-SectionDevice
-	Name "Headphones Beats HW VOIP"
-	Comment "Headset Rx device"
-
-	EnableSequence
-		'SLIM_0_RX Channels':0:One
-		'RX1 MIX1 INP1':0:RX1
-		'RX2 MIX1 INP1':0:RX1
-		'HPHL DAC Switch':1:1
-		'HPHR DAC Switch':1:1
-		'RX1 Digital Volume':1:67
-		'RX2 Digital Volume':1:67
-		'HPHL Volume':1:60
-		'HPHR Volume':1:60
-		'FENS Enable':1:1
-	EndSequence
-
-	DisableSequence
-		'FENS Enable':1:0
-		'HPHL Volume':1:0
-		'HPHR Volume':1:0
-		'RX1 Digital Volume':1:0
-		'RX2 Digital Volume':1:0
-		'HPHL DAC Switch':1:0
-		'HPHR DAC Switch':1:0
-		'RX1 MIX1 INP1':0:ZERO
-		'RX2 MIX1 INP1':0:ZERO
-	EndSequence
-
-	ACDBID 422:1
-
-EndSection
-
-SectionDevice
-	Name "Headset Beats HW VOIP"
-	Comment "Headset Tx device"
-
-	EnableSequence
-		'SLIM_0_TX Channels':0:One
-		'SLIM TX7 MUX':0:DEC5
-		'DEC5 MUX':0:ADC2
-		'DEC5 Volume':1:73
-		'ADC2 Volume':1:100
-		'IIR1 INP1 MUX':0:DEC5
-		'RX1 MIX1 INP2':0:IIR1
-		'RX2 MIX1 INP2':0:IIR1
-		'IIR1 Band1':2:0x081263D9 0x36370119 0x02E784C0 0x0B5A1949 0x02D9D7F8
-		'IIR1 Band2':2:0x081263D9 0x3011E313 0x07DC1E52 0x214F1D29 0x0EBA79F9
-		'IIR1 Band3':2:0x081263D9 0x309F3C9A 0x07D215BF 0x2161F381 0x0F94E904
-		'IIR1 Band4':2:0x081263D9 0x33986476 0x05BA0150 0x21FEF9A6 0x0EB749DD
-		'IIR1 Band5':2:0x081263D9 0x3F902CB2 0x0004C555 0x2215801D 0x0E2DDC7B
-		'IIR1 Enable Band1':1:1
-		'IIR1 Enable Band2':1:1
-		'IIR1 Enable Band3':1:1
-		'IIR1 Enable Band4':1:1
-		'IIR1 Enable Band5':1:1
-		'IIR1 INP1 Volume':1:45
-	EndSequence
-
-	DisableSequence
-		'ADC2 Volume':1:0
-		'DEC5 Volume':1:0
-		'IIR1 INP1 Volume':1:0
-		'DEC5 MUX':0:ZERO
-		'SLIM TX7 MUX':0:ZERO
-		'IIR1 INP1 MUX':0:ZERO
-		'RX1 MIX1 INP2':0:ZERO
-		'RX2 MIX1 INP2':0:ZERO
-		'IIR1 Enable Band1':1:0
-		'IIR1 Enable Band2':1:0
-		'IIR1 Enable Band3':1:0
-		'IIR1 Enable Band4':1:0
-		'IIR1 Enable Band5':1:0
-	EndSequence
-
-	ACDBID 322:2
 
 EndSection
 
@@ -7216,44 +6154,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play MusicHeadphone Beats"
-	Comment "Modifier for music playback"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play MusicSpeaker VZWUSB"
-	Comment "Modifier for music playback"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
 	Name "Play MusicHeadphones FM"
 	Comment "Modifier for music playback"
 
@@ -7331,25 +6231,6 @@ EndSection
 
 SectionModifier
 	Name "Play MusicHeadphones Voice"
-	Comment "Modifier for music playback"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play MusicHeadphones Beats Voice"
 	Comment "Modifier for music playback"
 
 	EnableSequence
@@ -7464,25 +6345,6 @@ EndSection
 
 SectionModifier
 	Name "Play MusicHeadphones HW VOIP"
-	Comment "Modifier for music playback"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia1':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play MusicHeadphones Beats HW VOIP"
 	Comment "Modifier for music playback"
 
 	EnableSequence
@@ -7696,48 +6558,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play FMHeadphone Beats"
-
-	EnableSequence
-		'Internal FM RX Volume':1:0
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
-		'SLIMBUS_DL_HL Switch':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
-		'SLIMBUS_DL_HL Switch':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 6
-	PlaybackPCM 5
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play FMSpeaker VZWUSB"
-
-	EnableSequence
-		'Internal FM RX Volume':1:0
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
-		'SLIMBUS_DL_HL Switch':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
-		'SLIMBUS_DL_HL Switch':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 6
-	PlaybackPCM 5
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
 	Name "Play FMHeadphones FM"
 
 	EnableSequence
@@ -7823,27 +6643,6 @@ EndSection
 
 SectionModifier
 	Name "Play FMHeadphones Voice"
-
-	EnableSequence
-		'Internal FM RX Volume':1:0
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
-		'SLIMBUS_DL_HL Switch':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
-		'SLIMBUS_DL_HL Switch':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 6
-	PlaybackPCM 5
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play FMHeadphones Beats Voice"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -7970,27 +6769,6 @@ EndSection
 
 SectionModifier
 	Name "Play FMHeadphones HW VOIP"
-
-	EnableSequence
-		'Internal FM RX Volume':1:0
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:1
-		'SLIMBUS_DL_HL Switch':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Port Mixer INTERNAL_FM_TX':1:0
-		'SLIMBUS_DL_HL Switch':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 6
-	PlaybackPCM 5
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play FMHeadphones Beats HW VOIP"
 
 	EnableSequence
 		'Internal FM RX Volume':1:0
@@ -8305,40 +7083,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPAHeadphone Beats"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 4
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play LPASpeaker VZWUSB"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 4
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
 	Name "Play LPAHeadphones FM"
 
 	EnableSequence
@@ -8408,23 +7152,6 @@ EndSection
 
 SectionModifier
 	Name "Play LPAHeadphones Voice"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 4
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play LPAHeadphones Beats Voice"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -8527,23 +7254,6 @@ EndSection
 
 SectionModifier
 	Name "Play LPAHeadphones HW VOIP"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 4
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play LPAHeadphones Beats HW VOIP"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia3':1:1
@@ -8802,42 +7512,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Capture MusicHeadset Beats"
-
-	EnableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Capture MusicHeadset BeatsVR"
-
-	EnableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
 	Name "Capture MusicHandset Voice"
 
 	EnableSequence
@@ -8892,24 +7566,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Capture MusicHeadset Beats Voice"
-
-	EnableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
 	Name "Capture MusicLine mono cam"
 
 	EnableSequence
@@ -8947,24 +7603,6 @@ EndSection
 
 SectionModifier
 	Name "Capture MusicHeadset Cam"
-
-	EnableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Capture MusicHeadset BeatsCam"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -9037,24 +7675,6 @@ EndSection
 
 SectionModifier
 	Name "Capture MusicHeadset StereoCam"
-
-	EnableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Capture MusicHeadset Beats StereoCam"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -9163,24 +7783,6 @@ EndSection
 
 SectionModifier
 	Name "Capture MusicHeadset HW VOIP"
-
-	EnableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:1
-	EndSequence
-
-	DisableSequence
-		'MultiMedia1 Mixer SLIM_0_TX':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 0
-	PlaybackPCM 0
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Capture MusicHeadset Beats HW VOIP"
 
 	EnableSequence
 		'MultiMedia1 Mixer SLIM_0_TX':1:1
@@ -9623,36 +8225,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceHeadphone Beats"
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:0
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VoiceSpeaker VZWUSB"
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:0
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
 	Name "Play VoiceLine VR"
 
 	EnableSequence
@@ -9669,36 +8241,6 @@ EndSection
 
 SectionModifier
 	Name "Play VoiceHeadset VR"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VoiceHeadset Beats"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VoiceHeadset BeatsVR"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -9833,36 +8375,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceHeadset Beats Voice"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VoiceHeadphones Beats Voice"
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:0
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
 	Name "Play VoiceEarpiece HAC Voice"
 
 	DisableSequence
@@ -9923,21 +8435,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VoiceHeadset BeatsCam"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
 	Name "Play VoiceLine LandscapeCam"
 
 	EnableSequence
@@ -9984,21 +8481,6 @@ EndSection
 
 SectionModifier
 	Name "Play VoiceHeadset StereoCam"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VoiceHeadset Beats StereoCam"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:1
@@ -10168,36 +8650,6 @@ SectionModifier
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer CSVoice':1:0
 		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VoiceHeadphones Beats HW VOIP"
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:0
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 2
-	PlaybackPCM 2
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VoiceHeadset Beats HW VOIP"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer CSVoice':1:1
-		'Voice_Tx Mixer SLIM_0_TX_Voice':1:1
 	EndSequence
 
 	# ALSA PCMs
@@ -10550,36 +9002,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPHeadphone Beats"
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VOIPSpeaker VZWUSB"
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
 	Name "Play VOIPLine VR"
 
 	EnableSequence
@@ -10596,36 +9018,6 @@ EndSection
 
 SectionModifier
 	Name "Play VOIPHeadset VR"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VOIPHeadset Beats"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VOIPHeadset BeatsVR"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -10760,36 +9152,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPHeadset Beats Voice"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VOIPHeadphones Beats Voice"
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
 	Name "Play VOIPEarpiece HAC Voice"
 
 	DisableSequence
@@ -10850,21 +9212,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play VOIPHeadset BeatsCam"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
 	Name "Play VOIPLine LandscapeCam"
 
 	EnableSequence
@@ -10911,21 +9258,6 @@ EndSection
 
 SectionModifier
 	Name "Play VOIPHeadset StereoCam"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VOIPHeadset Beats StereoCam"
 
 	EnableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:1
@@ -11065,36 +9397,6 @@ SectionModifier
 	DisableSequence
 		'SLIM_0_RX_Voice Mixer Voip':1:0
 		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VOIPHeadphones Beats HW VOIP"
-
-	DisableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:0
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:0
-	EndSequence
-
-	# ALSA PCMs
-	CapturePCM 3
-	PlaybackPCM 3
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play VOIPHeadset Beats HW VOIP"
-
-	EnableSequence
-		'SLIM_0_RX_Voice Mixer Voip':1:1
-		'Voip_Tx Mixer SLIM_0_TX_Voip':1:1
 	EndSequence
 
 	# ALSA PCMs
@@ -11399,40 +9701,6 @@ SectionModifier
 EndSection
 
 SectionModifier
-	Name "Play LPA TunnelHeadphone Beats"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play LPA TunnelSpeaker VZWUSB"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
 	Name "Play LPA TunnelHeadphones FM"
 
 	EnableSequence
@@ -11502,23 +9770,6 @@ EndSection
 
 SectionModifier
 	Name "Play LPA TunnelHeadphones Voice"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play LPA TunnelHeadphones Beats Voice"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
@@ -11621,23 +9872,6 @@ EndSection
 
 SectionModifier
 	Name "Play LPA TunnelHeadphones HW VOIP"
-
-	EnableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
-	EndSequence
-
-	DisableSequence
-		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:0
-	EndSequence
-
-	# ALSA PCMs
-	PlaybackPCM 9
-	ACDBID 0:0
-
-EndSection
-
-SectionModifier
-	Name "Play LPA TunnelHeadphones Beats HW VOIP"
 
 	EnableSequence
 		'SLIMBUS_0_RX Audio Mixer MultiMedia4':1:1
