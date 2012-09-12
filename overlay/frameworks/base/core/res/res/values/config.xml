@@ -155,4 +155,7 @@
     <!-- If this value is true, The mms content-disposition field is supported correctly.
          If false, Content-disposition fragments are ignored -->
     <bool name="config_mms_content_disposition_support">false</bool>
+
+    <!-- Set to false to enable CRT-off animation. -->
+    <bool name="config_animateScreenLights">false</bool>
 </resources>
