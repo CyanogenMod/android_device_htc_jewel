@@ -14,6 +14,11 @@ on early-init
     export EXTERNAL_STORAGE /storage/sdcard0
     export SECONDARY_STORAGE /storage/sdcard1
 
+    # create directory for mounting usb drives
+    mkdir /storage/usbdisk 0666 system system
+    symlink /storage/usbdisk /mnt/usbdisk
+    symlink /mnt/usbdisk /usbdisk
+
 on init
     mkdir /devlog 0700 root root
 
