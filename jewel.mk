@@ -116,12 +116,6 @@ PRODUCT_PACKAGES += \
    e2fsck \
    setup_fs
 
-# Kernel Modules
-PRODUCT_COPY_FILES += $(shell \
-    find device/htc/jewel/modules -name '*.ko' \
-    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
-    | tr '\n' ' ')
-
 # Sprint specific APNs config
 PRODUCT_COPY_FILES += \
     device/htc/jewel/configs/apns-conf.xml:system/etc/apns-conf.xml
