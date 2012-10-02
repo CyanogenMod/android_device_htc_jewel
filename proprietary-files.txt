@@ -11,8 +11,8 @@ bin/mm-qcamera-daemon
 bin/mpdecision
 bin/netmgrd
 bin/netsharing
-bin/rmt_storage
 bin/qmuxd
+bin/rmt_storage
 bin/thermald
 bin/zchgd
 
@@ -57,7 +57,6 @@ lib/libC2D2.so
 lib/libgsl.so
 lib/libOpenVG.so
 lib/libsc-a2xx.so
-lib/libsc-a3xx.so
 
 # GPS
 lib/hw/gps.default.so
@@ -91,7 +90,6 @@ lib/libqmiservices.so
 
 # Radio
 lib/libnetmgr.so
-lib/libnetutils.so
 lib/libqc-opt.so
 lib/libril.so
 lib/libril-qc-qmi-1.so
