@@ -77,6 +77,7 @@ version 4 - added sms to mms text threshold.
          to indicate default value -->
     <int name="maxMessageTextSize">-1</int>
 
+    <!-- Support to hide Sprints VVM text messages -->
+    <bool name="enableSprintVVM">true</bool>
+
 </mms_config>
-
-
