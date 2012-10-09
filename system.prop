@@ -12,8 +12,7 @@ ro.hwui.text_cache_height=256
 # cm props
 mobiledata.interfaces=rmnet0
 ro.telephony.ril_class=HTCQualcommRIL
-ro.telephony.ril.v3=subscriptionFromSource
-ro.telephony.ril.v3=skipnullaid
+ro.telephony.ril.v3=subscriptionFromSource,skipnullaid
 
 # Default network type.
 ro.telephony.default_network=8
