@@ -116,10 +116,6 @@ PRODUCT_PACKAGES += \
    e2fsck \
    setup_fs
 
-# Sprint specific APNs config
-PRODUCT_COPY_FILES += \
-    device/htc/jewel/configs/apns-conf.xml:system/etc/apns-conf.xml
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
@@ -132,14 +128,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-sprint-us \
     ro.com.google.locationfeatures=1 \
     ro.cdma.home.operator.numeric=310120 \
-    ro.cdma.home.operator.alpha=Sprint
-
-# Extra properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.setupwizard.enable_bypass=1 \
-    ro.com.google.locationfeatures=1
-    dalvik.vm.lockprof.threshold=500
-    dalvik.vm.dexopt-flags=m=y
+    ro.cdma.home.operator.alpha=Sprint \
+    gsm.sim.operator.alpha = sprint \
+    gsm.sim.operator.numeric = 310120 \
+    gsm.sim.operator.iso-country = us \
+    gsm.operator.alpha = sprint \
+    gsm.operator.numeric = 310120 \
+    gsm.operator.iso-country = us \
+    ro.carrier=Sprint
 
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
