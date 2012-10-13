@@ -132,14 +132,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.clientidbase=android-sprint-us \
     ro.com.google.locationfeatures=1 \
     ro.cdma.home.operator.numeric=310120 \
-    ro.cdma.home.operator.alpha=Sprint
-
-# Extra properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.setupwizard.enable_bypass=1 \
-    ro.com.google.locationfeatures=1
-    dalvik.vm.lockprof.threshold=500
-    dalvik.vm.dexopt-flags=m=y
+    ro.cdma.home.operator.alpha=Sprint \
+    ro.carrier=Sprint
 
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
