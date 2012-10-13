@@ -127,20 +127,6 @@ PRODUCT_COPY_FILES += \
     frameworks/base/nfc-extras/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
 
-## CDMA Sprint stuffs
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=android-sprint-us \
-    ro.com.google.locationfeatures=1 \
-    ro.cdma.home.operator.numeric=310120 \
-    ro.cdma.home.operator.alpha=Sprint
-
-# Extra properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.setupwizard.enable_bypass=1 \
-    ro.com.google.locationfeatures=1
-    dalvik.vm.lockprof.threshold=500
-    dalvik.vm.dexopt-flags=m=y
-
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -151,6 +137,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_LOCALES += en_US
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.carrier=Sprint
 
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/htc/jewel/jewel-vendor.mk)

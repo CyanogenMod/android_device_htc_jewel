@@ -2,70 +2,17 @@
 # system.prop for jewel
 #
 
-persist.fuse_sdcard=true
-
 ro.sf.lcd_density=320
 ro.hwui.text_cache_width=2048
 ro.hwui.text_cache_height=256
 
 # RIL properties
-# cm props
-mobiledata.interfaces=rmnet0
+rild.libargs=-d /dev/smd0
+rild.libpath=/system/lib/libril-qc-qmi-1.so
+ro.vendor.extension_library=/system/lib/libqc-opt.so
+ril.subscription.types=NV,RUIM
 ro.telephony.ril_class=HTCQualcommRIL
 ro.telephony.ril.v3=subscriptionFromSource,skipnullaid
-
-# Default network type.
-ro.telephony.default_network=8
-ro.vendor.extension_library=/system/lib/libqc-opt.so
-ro.baseband.arch=msm
-rild.libpath=/system/lib/libril-qc-qmi-1.so
-rild.libargs=-d /dev/smd0
-persist.rild.nitz_plmn=
-persist.rild.nitz_long_ons_0=
-persist.rild.nitz_long_ons_1=
-persist.rild.nitz_long_ons_2=
-persist.rild.nitz_long_ons_3=
-persist.rild.nitz_short_ons_0=
-persist.rild.nitz_short_ons_1=
-persist.rild.nitz_short_ons_2=
-persist.rild.nitz_short_ons_3=
-persist.rild.ril.ltedr=0
-persist.rild.ril.ltedrtable=max_retries=infinite,10000
-ril.subscription.types=NV,RUIM
-DEVICE_PROVISIONED=1
-telephony.lteOnCdmaDevice=1
-
-# system props for the cne module
-#
-persist.cne.UseCne=false
-persist.cne.bat.range.low.med=30
-persist.cne.bat.range.med.high=60
-persist.cne.loc.policy.op=/system/etc/OperatorPolicy.xml
-persist.cne.loc.policy.user=/system/etc/UserPolicy.xml
-persist.cne.bwbased.rat.sel=false
-persist.cne.snsr.based.rat.mgt=false
-persist.cne.bat.based.rat.mgt=false
-persist.cne.be.ge.sqi.min=0
-persist.cne.be.ge.sqi.max=100
-persist.cne.be.umts.sqi.min=0
-persist.cne.be.umts.sqi.max=100
-persist.cne.be.hspa.sqi.min=0
-persist.cne.be.hspa.sqi.max=100
-persist.cne.be.1x.sqi.min=0
-persist.cne.be.1x.sqi.max=100
-persist.cne.be.do.sqi.min=0
-persist.cne.be.do.sqi.max=100
-persist.cne.be.wlan.sqi.min=0
-persist.cne.be.wlan.sqi.max=100
-
-#
-# system props for telephony modules
-#
-#device supports LTE
-ro.config.lte=true
-#device supports simultaneous 1x voice + LTE
-ro.config.svlte1x=true
-
 gsm.sim.operator.alpha = sprint
 gsm.sim.operator.numeric = 310120
 gsm.sim.operator.iso-country = us
@@ -74,36 +21,21 @@ gsm.operator.numeric = 310120
 gsm.operator.iso-country = us
 ro.cdma.home.operator.numeric=310120
 ro.cdma.home.operator.alpha=Sprint
+ro.telephony.default_network=8
 keyguard.no_require_sim=true
-
-# Default ecclist
-ro.ril.ecclist=112,911,#911,*911
-
-# For Verizon data retry configuration
-ro.cdma.data_retry_config = max_retries=infinite,0,0,60000,120000,480000,900000
-
-# Modify MMS APN retry timer from 5s to 2s.
-ro.gsm.2nd_data_retry_config = max_retries=3, 2000, 2000, 2000
-
-# RF team request
-ro.ril.enable.dtm = 0
-ro.ril.gprsclass = 12
-ro.ril.hsdpa.category = 10
-ro.ril.hsupa.category = 6
-ro.ril.hsxpa = 3
-
-# For HSDPA low throughput
-ro.ril.disable.power.collapse = 1
-
-# For the default value of agps
-ro.ril.def.agps.mode = 6
-
-# data module
-persist.data_netmgrd_mtu=1428
+DEVICE_PROVISIONED=1
+telephony.lteOnCdmaDevice=1
+ro.config.svlte1x=true
+ro.ril.hsxpa=1
+ro.ril.gprsclass=10
+persist.radio.add_power_save=1
+persist.radio.snapshot_disabled=1
+persist.radio.apm_sim_not_pwdn=1
+persist.gps.qmienabled=true
+ro.telephony.call_ring.multiple=0
+ro.ril.transmitpower=true
+ro.use_data_netmgrd=true
 persist.data_netmgrd_nint=16
-
-# For Pyramid China NEL
-ro.ril.enable.prl.recognition = 1
 
 # NFC
 debug.nfc.fw_download=true
@@ -113,11 +45,6 @@ ro.nfc.port=I2C
 
 # enable time services
 persist.timed.enable=true
-
-# support sdcard2
-ro.sdcard2 = 1
-# For internal fat file system
-ro.phone_fat = 1
 
 # UMS
 persist.sys.usb.config=mass_storage,adb
