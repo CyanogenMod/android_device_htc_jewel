@@ -146,3 +146,9 @@
 
 # jewel NFC
 /dev/pn544                0600  nfc          nfc
+
+#Usb Stuff
+/dev/bus/usb/*            0660   root       usb
+/dev/mtp_usb              0660   root       mtp
+/dev/usb_accessory        0660   root       usb
+/dev/usb/lp*              0660   system     usb
