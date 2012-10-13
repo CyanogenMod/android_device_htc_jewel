@@ -5,9 +5,8 @@ on early-init
     mkdir /storage/sdcard0 0000 system system
     mkdir /storage/sdcard1 0000 system system
 
-    # for backwards compatibility
-    symlink /storage/sdcard0 /mnt/sdcard
     symlink /storage/sdcard0 /sdcard
+    symlink /storage/sdcard0 /mnt/sdcard
     symlink /storage/sdcard1 /external_sd
     symlink /storage/sdcard1 /mnt/external_sd
 
@@ -157,12 +156,10 @@ on boot
     #Set SUID bit for iproute2 ip tool
     chmod 4755 /system/bin/ip
 
-    # port-bridge
-    chmod 0660 /dev/smd0
-    chown system system /dev/smd0
-
-    chmod 0660 /dev/ttyGS0
-    chown system system /dev/ttyGS0
+    # HTC SSD USB
+    chown system system /sys/class/android_usb/f_modem/on
+    chown system system /sys/class/android_usb/f_diag/on
+    chown system system /sys/class/android_usb/f_rmnet/on
 
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
@@ -245,6 +242,9 @@ service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
 service netmgrd /system/bin/netmgrd
     class main
 
+service ipd /system/bin/ipd
+    socket ipd stream 666 root inet
+
 service qcamerasvr /system/bin/mm-qcamera-daemon
     class main
     user camera
@@ -259,6 +259,17 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     class main
     user root
     oneshot
+
+service port-bridge /system/bin/port-bridge /dev/smd0 /dev/ttyGS0
+    user system
+    group system inet
+    disabled
+
+on property:ro.baseband="msm"
+    start port-bridge
+
+on property:ro.baseband="unknown"
+    start port-bridge
 
 service qmuxd /system/bin/qmuxd
     class main
