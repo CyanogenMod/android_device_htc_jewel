@@ -113,6 +113,8 @@ on boot
 
     # radio
     mkdir /data/radio 0770 radio radio
+    mkdir /dev/socket/qmux_radio 0770 radio radio
+    chown root radio /proc/cmdline
 
     # time-services
     mkdir /data/time 0700 system system
@@ -120,11 +122,6 @@ on boot
     # flashlight
     chown system camera /sys/class/leds/flashlight/brightness
     chmod 0666          /sys/class/leds/flashlight/brightness
-
-    # For Flashlight Restriction
-    chown radio system /sys/camera_led_status/led_ril_status
-    chown system system /sys/camera_led_status/led_wimax_status
-    chown system system /sys/camera_led_status/led_hotspot_status
 
     # liblights
     chown system system /sys/class/leds/green/brightness
@@ -138,13 +135,6 @@ on boot
 
     #Set SUID bit for iproute2 ip tool
     chmod 4755 /system/bin/ip
-
-    # port-bridge
-    chmod 0660 /dev/smd0
-    chown system system /dev/smd0
-
-    chmod 0660 /dev/ttyGS0
-    chown system system /dev/ttyGS0
 
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
