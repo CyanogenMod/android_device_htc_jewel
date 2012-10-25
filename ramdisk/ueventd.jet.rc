@@ -1,6 +1,7 @@
 /dev/rtc0                 0600   system     system
 
 # HTC diag
+/dev/diag                 0660   radio      radio
 /dev/btdiag               0660   radio      radio
 /dev/diag_arm9            0660   radio      radio
 /dev/diag_mdm             0660   radio      radio
@@ -67,6 +68,7 @@
 /dev/block/mmcblk0p18     0660   system     system
 /dev/video*               0660   system     camera
 /dev/msm_camera/*         0660   system     camera
+/dev/radio_feedback       0660   radio      radio
 
 # regular apps need to be able to open ion
 /dev/ion                  0664   system     system
@@ -77,6 +79,10 @@
 # CDMA radio interface MUX
 /dev/ts0710mux*           0640   radio      radio
 /dev/ppp                  0660   radio      vpn
+/sys/power/state          0660   radio      system
+/sys/power/wake_lock      0660   radio      system
+/sys/power/wake_unlock    0660   radio      system
+/dev/radio_feedback       0660   radio      radio
 
 # permissions for video
 /dev/msm_vidc_reg         0660  system       audio
@@ -119,6 +125,8 @@
 /dev/simlock              0660  radio        radio
 
 # sysfs properties
+/sys/devices/virtual/input/input*   enable      0660  root   input
+/sys/devices/virtual/input/input*   poll_delay  0660  root   input
 /sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
 
 # felica device file nodes
