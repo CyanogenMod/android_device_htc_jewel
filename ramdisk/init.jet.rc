@@ -127,38 +127,14 @@ on boot
     chown system system /sys/camera_led_status/led_hotspot_status
 
     # liblights
-    chown system system /sys/class/leds/red/brightness
-    chown system system /sys/class/leds/red/blink
-    chown system system /sys/class/leds/red/off_timer
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/green/blink
     chown system system /sys/class/leds/green/off_timer
-    chown system system /sys/class/leds/blue/brightness
-    chown system system /sys/class/leds/blue/blink
-    chown system system /sys/class/leds/blue/off_timer
     chown system system /sys/class/leds/amber/brightness
     chown system system /sys/class/leds/amber/blink
     chown system system /sys/class/leds/amber/off_timer
-    chown system system /sys/class/leds/button-backlight-portrait/brightness
-    chown system system /sys/class/leds/button-backlight-landscape/brightness
-    chown system system /sys/class/leds/amber-portrait/brightness
-    chown system system /sys/class/leds/green-portrait/brightness
-    chown system system /sys/class/leds/blue-portrait/brightness
-    chown system system /sys/class/leds/amber-landscape/brightness
-    chown system system /sys/class/leds/green-landscape/brightness
-    chown system system /sys/class/leds/blue-landscape/brightness
-    chown system system /sys/class/leds/sharekey/brightness
-    chown system system /sys/class/leds/sharekey/breath_times
-    chown system system /sys/class/leds/sharekey/breath_max_brightness
-    chown system system /sys/class/leds/charming-led/brightness
-    chown system system /sys/class/leds/charming-led/blink
-    chown system system /sys/class/leds/charming-led/off_timer
-    chown system system /sys/class/leds/flashlight/brightness
-    chown system system /sys/class/leds/caps/brightness
-    chown system system /sys/class/leds/func/brightness
-    chown media media /sys/class/leds/green-camera/brightness
-    chown system system /sys/devices/virtual/htc_accessory/fm/flag
-    chown system system /sys/devices/virtual/htc_accessory/tty/flag
+    chown system system /sys/class/leds/button-backlight/brightness
+    chown system system /sys/class/leds/lcd-backlight/brightness
 
     #Set SUID bit for iproute2 ip tool
     chmod 4755 /system/bin/ip

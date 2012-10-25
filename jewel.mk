@@ -102,10 +102,6 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
-# Lights
-#PRODUCT_PACKAGES += \
-#    lights.jet
-
 # Torch
 PRODUCT_PACKAGES += \
     Torch
