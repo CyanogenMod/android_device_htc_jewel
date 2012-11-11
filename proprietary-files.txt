@@ -137,7 +137,6 @@ lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
 
 # Sensors
-lib/hw/lights.msm8960.so
 lib/hw/sensors.jet.so
 lib/libimu.so
 lib/libmlplatform.so
