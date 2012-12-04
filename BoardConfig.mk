@@ -50,6 +50,9 @@ TARGET_PROVIDES_LIBLIGHTS := true
 # HTCLOG
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
+# Use libril in the device tree
+BOARD_PROVIDES_LIBRIL := true
+
 # Wifi
 WIFI_DRIVER_MODULE_NAME          := prima_wlan
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/prima_wlan.ko"
