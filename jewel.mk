@@ -109,10 +109,6 @@ PRODUCT_PACKAGES += \
    e2fsck \
    setup_fs
 
-# Sprint specific APNs config
-PRODUCT_COPY_FILES += \
-    device/htc/jewel/configs/apns-conf.xml:system/etc/apns-conf.xml
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \

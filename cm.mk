@@ -1,8 +1,6 @@
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-# Dont inherrit CDMA apns for now and use Sprint only set in device config
-# Bug: using config with ehrpd entries cause issues on jewel.
-# $(call inherit-product, vendor/cm/config/cdma.mk)
+$(call inherit-product, vendor/cm/config/cdma.mk)
 
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
