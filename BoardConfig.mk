@@ -40,10 +40,6 @@ TARGET_PREBUILT_KERNEL := device/htc/jewel/prebuilt/kernel
 TARGET_KERNEL_CONFIG := jet_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8960
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
-
 # HTCLOG
 COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
