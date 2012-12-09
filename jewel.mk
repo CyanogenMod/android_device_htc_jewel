@@ -42,10 +42,6 @@ PRODUCT_COPY_FILES += device/htc/jewel/configs/AudioBTID.csv:system/etc/AudioBTI
 PRODUCT_COPY_FILES += \
     device/htc/jewel/configs/vold.fstab:system/etc/vold.fstab
 
-# wifi config
-PRODUCT_COPY_FILES += \
-    device/htc/jewel/configs/wpa_supplicant.conf:/system/etc/wifi/wpa_supplicant.conf
-
 # Sound configs
 PRODUCT_COPY_FILES += \
     device/htc/jewel/dsp/soundimage/srs_bypass.cfg:system/etc/soundimage/srs_bypass.cfg \
