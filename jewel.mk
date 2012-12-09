@@ -87,10 +87,6 @@ endif
 PRODUCT_COPY_FILES += \
     $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
-# GPS
-#PRODUCT_PACKAGES += \
-#    gps.jewel \
-
 # NFC Support
 PRODUCT_PACKAGES += \
     libnfc \
