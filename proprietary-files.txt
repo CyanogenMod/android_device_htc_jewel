@@ -5,7 +5,6 @@ etc/agps_rm
 bin/akmd
 bin/bma150_usr
 bin/charging
-bin/hci_qcomm_init
 bin/hdmid
 bin/mm-qcamera-daemon
 bin/mpdecision
