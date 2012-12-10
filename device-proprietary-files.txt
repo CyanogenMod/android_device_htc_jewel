@@ -1,0 +1,29 @@
+# Executable files
+bin/akmd
+bin/bma150_usr
+
+# Camera
+lib/libchromatix_s5k3h2yx_default_video.so
+lib/libchromatix_s5k3h2yx_hdr.so
+lib/libchromatix_s5k3h2yx_hfr.so
+lib/libchromatix_s5k3h2yx_preview.so
+lib/libchromatix_s5k3h2yx_zsl.so
+lib/libchromatix_s5k6a1gx_default_video.so
+lib/libchromatix_s5k6a1gx_preview.so
+lib/libchromatix_s5k6a1gx_zsl.so
+
+# NFC
+lib/hw/nfc.jet.so
+vendor/firmware/libpn544_fw.so
+
+# Radio
+lib/libhtc_rilhook.so
+
+# Sensors
+lib/hw/sensors.jet.so
+lib/libimu.so
+lib/libmlplatform.so
+lib/libmllite.so
+lib/libMLTransition.so
+lib/libmpl.so
+lib/libmpl_jni.so
