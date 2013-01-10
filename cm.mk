@@ -21,6 +21,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_jewel BUILD_ID=IMM76D BUILD_FIN
 # Release name
 PRODUCT_RELEASE_NAME := jewel
 
-TARGET_BOOTANIMATION_NAME := 720
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
 
 -include vendor/cm/config/common_versions.mk
