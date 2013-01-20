@@ -22,11 +22,9 @@ $(call inherit-product, device/htc/msm8960-common/msm8960.mk)
 DEVICE_PACKAGE_OVERLAYS += device/htc/jewel/overlay
 
 # Boot ramdisk setup
-PRODUCT_COPY_FILES += \
-    device/htc/jewel/ramdisk/init.jet.rc:root/init.jet.rc \
-    device/htc/jewel/ramdisk/init.jet.usb.rc:root/init.jet.usb.rc \
-    device/htc/jewel/ramdisk/ueventd.jet.rc:root/ueventd.jet.rc \
-    device/htc/jewel/ramdisk/fstab.jet:root/fstab.jet
+PRODUCT_PACKAGES += \
+    fstab.jet \
+    init.target.rc
 
 # recovery and custom charging
 PRODUCT_COPY_FILES += \
