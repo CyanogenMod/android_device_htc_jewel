@@ -13,14 +13,14 @@ lib/libchromatix_s5k6a1gx_preview.so
 lib/libchromatix_s5k6a1gx_zsl.so
 
 # NFC
-lib/hw/nfc.jet.so
+lib/hw/nfc.default.so
 vendor/firmware/libpn544_fw.so
 
 # Radio
 lib/libhtc_rilhook.so
 
 # Sensors
-lib/hw/sensors.jet.so
+lib/hw/sensors.default.so
 lib/libimu.so
 lib/libmlplatform.so
 lib/libmllite.so
