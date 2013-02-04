@@ -4,7 +4,7 @@
              android:storageDescription="@string/storage_sd_card"
              android:primary="false"
              android:removable="true"
-             android:allowMassStorage="false" />
+             android:allowMassStorage="true" />
     <storage android:mountPoint="/storage/sdcard0"
              android:storageDescription="@string/storage_internal"
              android:primary="true"

@@ -13,6 +13,8 @@ on early-init
     export SECONDARY_STORAGE /storage/sdcard1
 
     setprop ro.usb.idproduct.ums 0ce9
+    setprop ro.usb.idproduct.mtp 0f91
+    setprop ro.usb.idproduct.mtp_adb 0df5
     setprop ro.usb.idproduct.rndis 0ce9
 
 on fs
