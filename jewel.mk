@@ -26,13 +26,6 @@ PRODUCT_PACKAGES += \
     fstab.jet \
     init.target.rc
 
-# recovery and custom charging
-PRODUCT_COPY_FILES += \
-    device/htc/jewel/recovery/sbin/choice_fn:recovery/root/sbin/choice_fn \
-    device/htc/jewel/recovery/sbin/power_test:recovery/root/sbin/power_test \
-    device/htc/jewel/recovery/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
-    device/htc/jewel/recovery/sbin/detect_key:recovery/root/sbin/detect_key
-
 # vold.fstab
 PRODUCT_COPY_FILES += \
     device/htc/jewel/configs/vold.fstab:system/etc/vold.fstab
