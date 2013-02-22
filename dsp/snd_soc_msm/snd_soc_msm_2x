@@ -2259,10 +2259,10 @@ SectionDevice
 		'RX4 DSM MUX':0:DSM_INV
 		'LINEOUT1 DAC Switch':1:1
 		'LINEOUT3 DAC Switch':1:1
-		'LINEOUT1 Volume':1:60
-		'LINEOUT3 Volume':1:60
-		'RX3 Digital Volume':1:75
-		'RX4 Digital Volume':1:75
+		'LINEOUT1 Volume':1:65
+		'LINEOUT3 Volume':1:65
+		'RX3 Digital Volume':1:70
+		'RX4 Digital Volume':1:70
 		'SPK AMP EN Switch':1:1
 		'FENS Enable':1:1
 	EndSequence
