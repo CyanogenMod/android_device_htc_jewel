@@ -23,7 +23,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/jewel/overlay
 
 # Boot ramdisk setup
 PRODUCT_PACKAGES += \
-    fstab.jet \
+    fstab.qcom \
     init.target.rc
 
 # HTC BT audio config
