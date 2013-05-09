@@ -49,13 +49,10 @@ PRODUCT_COPY_FILES += \
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
     device/htc/jewel/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl \
-    device/htc/jewel/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
     device/htc/jewel/keylayout/dummy_keypad.kl:system/usr/keylayout/dummy_keypad.kl \
-    device/htc/jewel/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
     device/htc/jewel/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/jewel/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
-    device/htc/jewel/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
-    device/htc/jewel/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl
+    device/htc/jewel/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl
 
 # Input device config
 PRODUCT_COPY_FILES += \
@@ -89,9 +86,7 @@ PRODUCT_PACKAGES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-   make_ext4fs \
-   e2fsck \
-   setup_fs
+    e2fsck
 
 # Permissions
 PRODUCT_COPY_FILES += \
