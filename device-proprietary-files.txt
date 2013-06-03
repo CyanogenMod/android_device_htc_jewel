@@ -1,7 +1,6 @@
 # Executable files
 bin/akmd
 bin/bma150_usr
-bin/rild
 
 # Camera
 lib/libchromatix_s5k3h2yx_default_video.so
@@ -19,7 +18,6 @@ vendor/firmware/libpn544_fw.so
 
 # Radio
 lib/libhtc_rilhook.so
-lib/libril.so
 
 # Sensors
 lib/hw/sensors.default.so
