@@ -75,7 +75,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 2550136320
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Recovery
-TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/jewel/recovery/kernel
 TARGET_RECOVERY_FSTAB := device/htc/jewel/rootdir/etc/fstab.qcom
 
 # TWRP
