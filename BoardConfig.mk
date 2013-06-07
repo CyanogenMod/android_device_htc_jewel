@@ -33,15 +33,13 @@ TARGET_BOOTLOADER_BOARD_NAME := jewel
 # Kernel
 TARGET_KERNEL_CONFIG := jet_defconfig
 
-# RIL
-BOARD_PROVIDES_LIBRIL := true
-
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/jewel/bluetooth
 
-# Vold
-BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
-BOARD_VOLD_MAX_PARTITIONS := 38
+# RIL
+BOARD_PROVIDES_LIBRIL := true
+
+# USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
 #dev:        size     erasesize name
@@ -74,8 +72,11 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1744829440
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2550136320
 BOARD_FLASH_BLOCK_SIZE := 131072
 
+# Vold
+BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
+BOARD_VOLD_MAX_PARTITIONS := 38
+
 # Recovery
-TARGET_PREBUILT_RECOVERY_KERNEL := device/htc/jewel/recovery/kernel
 TARGET_RECOVERY_FSTAB := device/htc/jewel/rootdir/etc/fstab.qcom
 
 # TWRP
