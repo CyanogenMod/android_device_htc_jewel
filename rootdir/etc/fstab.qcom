@@ -5,12 +5,12 @@
 #TODO: Add 'check' as fs_mgr_flags with data partition.
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
-#<src>                                       <mnt_point>       <type>      <mnt_flags and options>                      <fs_mgr_flags>
-/dev/block/platform/msm_sdcc.1/by-num/p17     /firmware_radio   vfat        ro,shortname=lower                           wait
-/dev/block/platform/msm_sdcc.1/by-num/p18     /firmware_q6      vfat        ro,shortname=lower                           wait
-#/dev/block/platform/msm_sdcc.1/by-num/p19     /firmware_wcnss   vfat        ro,shortname=lower                           wait
+#<src>						<mnt_point>	<type>	<mnt_flags and options>					<fs_mgr_flags>
+/dev/block/platform/msm_sdcc.1/by-num/p17	/firmware_radio	vfat	ro,shortname=lower					wait
+/dev/block/platform/msm_sdcc.1/by-num/p18	/firmware_q6	vfat	ro,shortname=lower					wait
+#/dev/block/platform/msm_sdcc.1/by-num/p19	/firmware_wcnss	vfat	ro,shortname=lower					wait
 
-/dev/block/platform/msm_sdcc.1/by-num/p35     /system      ext4    ro,data=ordered,noauto_da_alloc                       wait
-/dev/block/platform/msm_sdcc.1/by-num/p36     /cache       ext4    noatime,nosuid,nodev,data=ordered,noauto_da_alloc     wait
-/dev/block/platform/msm_sdcc.1/by-num/p37     /data        ext4    noatime,nosuid,nodev,data=ordered,noauto_da_alloc     wait,encryptable=footer
-/dev/block/platform/msm_sdcc.1/by-num/p26     /devlog      ext4    noatime,nosuid,nodev,data=ordered,noauto_da_alloc     wait
+/dev/block/platform/msm_sdcc.1/by-num/p35	/system		ext4	ro,noatime,barrier=0					wait
+/dev/block/platform/msm_sdcc.1/by-num/p37	/data		ext4	noatime,nosuid,nodev,noauto_da_alloc,barrier=0,discard	wait,encryptable=footer
+/dev/block/platform/msm_sdcc.1/by-num/p36	/cache		ext4	noatime,nosuid,nodev,barrier=0				wait
+/dev/block/platform/msm_sdcc.1/by-num/p26	/devlog		ext4	noatime,nosuid,nodev,barrier=0				wait
