@@ -24,7 +24,8 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/jewel/overlay
 # Boot ramdisk setup
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.target.rc
+    init.target.rc \
+    remount.qcom
 
 # vold.fstab
 PRODUCT_COPY_FILES += \
