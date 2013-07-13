@@ -6,8 +6,8 @@
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
 #<src>                                       <mnt_point>       <type>      <mnt_flags and options>                      <fs_mgr_flags>
-#/dev/block/platform/msm_sdcc.1/by-num/p17     /firmware_radio   vfat        ro,shortname=lower                           wait
-#/dev/block/platform/msm_sdcc.1/by-num/p18     /firmware_q6      vfat        ro,shortname=lower                           wait
+/dev/block/platform/msm_sdcc.1/by-num/p17     /firmware_radio   vfat        ro,shortname=lower                           wait
+/dev/block/platform/msm_sdcc.1/by-num/p18     /firmware_q6      vfat        ro,shortname=lower                           wait
 #/dev/block/platform/msm_sdcc.1/by-num/p19     /firmware_wcnss   vfat        ro,shortname=lower                           wait
 
 /dev/block/platform/msm_sdcc.1/by-num/p35     /system      ext4    ro,data=ordered,noauto_da_alloc                       wait
