@@ -14,6 +14,8 @@ vendor/firmware/libpn544_fw.so
 
 # Radio
 lib/libhtc_rilhook.so
+lib/libril.so
+bin/rild
 
 # Sensors
 lib/hw/sensors.default.so
