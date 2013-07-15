@@ -33,9 +33,6 @@ TARGET_BOOTLOADER_BOARD_NAME := jewel
 # Kernel
 TARGET_KERNEL_CONFIG := jet_defconfig
 
-# RIL
-BOARD_PROVIDES_LIBRIL := true
-
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/jewel/bluetooth
 

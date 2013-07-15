@@ -6,19 +6,17 @@ ro.sf.lcd_density=320
 
 # RIL properties
 rild.libargs=-d /dev/smd0
-rild.libpath=/system/lib/libril-qc-qmi-1.so
 ro.vendor.extension_library=/system/lib/libqc-opt.so
-ril.subscription.types=NV,RUIM
-ro.telephony.ril.v3=subscriptionFromSource,skipCdmaSubcription
+ro.telephony.ril_class=HTCCDMAQualcommRIL
+
+ro.cdma.home.operator.numeric=310120
+ro.cdma.home.operator.alpha=Sprint
 ro.telephony.default_network=8
-keyguard.no_require_sim=true
-DEVICE_PROVISIONED=1
 telephony.lteOnCdmaDevice=1
-ro.config.svlte1x=true
-ro.cdma.subscribe_on_ruim_ready=true
-persist.radio.no_wait_for_card=1
-ro.ril.gprsclass=10
+persist.radio.snapshot_timer=22
+persist.eons.enabled=false
 ro.ril.hsxpa=1
+ro.ril.gprsclass=10
 persist.radio.add_power_save=1
 persist.radio.snapshot_disabled=1
 persist.radio.apm_sim_not_pwdn=1
@@ -26,7 +24,21 @@ ro.telephony.call_ring.multiple=0
 ro.ril.transmitpower=true
 ro.use_data_netmgrd=true
 persist.data_netmgrd_nint=16
-persist.cne.UseCne=false
+rild.libpath=/system/lib/libril-qc-qmi-1.so
+ril.subscription.types=NV,RUIM
+ro.config.svlte1x=true
+ro.cdma.subscribe_on_ruim_ready=true
+persist.radio.no_wait_for_card=0
+keyguard.no_require_sim=true
+persist.rild.nitz_plmn=""
+persist.rild.nitz_long_ons_0=""
+persist.rild.nitz_long_ons_1=""
+persist.rild.nitz_long_ons_2=""
+persist.rild.nitz_long_ons_3=""
+persist.rild.nitz_short_ons_0=""
+persist.rild.nitz_short_ons_1=""
+persist.rild.nitz_short_ons_2=""
+persist.rild.nitz_short_ons_3=""
 
 # NFC
 debug.nfc.fw_download=true
