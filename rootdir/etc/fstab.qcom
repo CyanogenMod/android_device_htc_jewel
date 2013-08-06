@@ -23,3 +23,7 @@
 
 # USB storage
 /devices/platform/msm_hsusb_host/usb	/storage/usbdisk	auto	defaults			voldmanaged=usbdisk:auto
+
+# Recovery
+/dev/block/mmcblk0p38	/sdcard			vfat	defaults	recoveryonly
+/dev/block/mmcblk1p1	/external_sd	vfat	defaults	recoveryonly
