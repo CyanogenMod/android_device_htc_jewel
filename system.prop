@@ -7,7 +7,7 @@ ro.sf.lcd_density=320
 # RIL properties
 rild.libargs=-d /dev/smd0
 ro.vendor.extension_library=/system/lib/libqc-opt.so
-ro.telephony.ril_class=HTCCDMAQualcommRIL
+ro.telephony.ril_class=HTCQualcommRIL
 ro.telephony.ril.v3=forceCdmaLteNetworkType
 
 ro.cdma.home.operator.numeric=310120
