@@ -38,7 +38,11 @@ PRODUCT_COPY_FILES += \
     device/htc/jewel/dsp/soundimage/srs_global.cfg:system/etc/soundimage/srs_global.cfg
 
 PRODUCT_COPY_FILES += \
-    device/htc/jewel/dsp/snd_soc_msm/snd_soc_msm_2x:/system/etc/snd_soc_msm/snd_soc_msm_2x
+    device/htc/jewel/dsp/snd_soc_msm/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
+
+# Media config
+PRODUCT_COPY_FILES += \
+    device/htc/jewel/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
