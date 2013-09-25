@@ -39,6 +39,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/jewel/bluetooth
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 
+# Tuning
+BOARD_HARDWARE_CLASS := device/htc/jewel/cmhw
+
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 

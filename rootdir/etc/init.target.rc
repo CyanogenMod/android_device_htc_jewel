@@ -19,6 +19,12 @@ on init
     setprop ro.usb.idproduct.mtp_adb 0df5
     setprop ro.usb.idproduct.rndis 0ce9
 
+    # Vibrator
+    chown system system /sys/class/timed_output/vibrator/voltage_level
+    chown root system /sys/class/timed_output/vibrator/voltage_level
+    chmod 0664 /sys/class/timed_output/vibrator/voltage_level
+    restorecon /sys/class/timed_output/vibrator/voltage_level	
+
 on fs
     # for NFC
     symlink /system/vendor/pittpatt /vendor/pittpatt
