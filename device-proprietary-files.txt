@@ -13,8 +13,10 @@ lib/hw/nfc.default.so
 vendor/firmware/libpn544_fw.so
 
 # Radio
+lib/libhtc_rilhook.so
 lib/libqcci_legacy.so
 lib/libqmi_client_qmux.so
+lib/libqmi_csvt_srvc.so
 
 # Sensors
 lib/hw/sensors.default.so
