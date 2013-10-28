@@ -1,46 +1,45 @@
-#
 # system.prop for jewel
 #
 
 ro.sf.lcd_density=320
 
-# RIL properties
-rild.libargs=-d /dev/smd0
+ro.ril.enable.sdr=0
+ro.ril.set.mtusize=1422
+ro.telephony.ipv6_capability=1
+persist.rild.ril.ltedr=0
+persist.rild.ril.ltedrtable=max_retries=infinite,10000
+keyguard.no_require_sim=1
+persist.radio.snapshot_enabled=1
+persist.radio.snapshot_timer=22
 ro.vendor.extension_library=/system/lib/libqc-opt.so
-ro.telephony.ril_class=HTCQualcommRIL
-ro.telephony.ril.v3=forceCdmaLteNetworkType
-ro.ril.svdo=true
-
-ro.cdma.home.operator.numeric=310120
-ro.cdma.home.operator.alpha=Sprint
 ro.telephony.default_network=8
 telephony.lteOnCdmaDevice=1
-persist.radio.snapshot_timer=22
-persist.eons.enabled=false
-ro.ril.hsxpa=1
-ro.ril.gprsclass=10
-persist.radio.add_power_save=1
-persist.radio.snapshot_disabled=1
-persist.radio.apm_sim_not_pwdn=1
-ro.telephony.call_ring.multiple=0
-ro.ril.transmitpower=true
-ro.use_data_netmgrd=true
-persist.data_netmgrd_nint=16
+
+rild.libargs=-d /dev/smd0
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 ril.subscription.types=NV,RUIM
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+ro.cdma.home.operator.numeric=310120
+ro.cdma.home.operator.alpha=Sprint
+gsm.sim.operator.alpha=Sprint
+gsm.sim.operator.numeric=310120
+gsm.sim.operator.iso-country=us
+gsm.operator.alpha=Sprint
+gsm.operator.numeric=310120
+gsm.operator.iso-country=us
+ro.telephony.ril_class=HTCQualcommRIL
+ro.telephony.ril.v3=forceCdmaLteNetworkType
 ro.config.svlte1x=true
-ro.cdma.subscribe_on_ruim_ready=true
-persist.radio.no_wait_for_card=0
-keyguard.no_require_sim=true
-persist.rild.nitz_plmn=""
-persist.rild.nitz_long_ons_0=""
-persist.rild.nitz_long_ons_1=""
-persist.rild.nitz_long_ons_2=""
-persist.rild.nitz_long_ons_3=""
-persist.rild.nitz_short_ons_0=""
-persist.rild.nitz_short_ons_1=""
-persist.rild.nitz_short_ons_2=""
-persist.rild.nitz_short_ons_3=""
+ro.ril.svdo=true
+persist.radio.use_nv_for_ehrpd=true
 
 # NFC
 debug.nfc.fw_download=true
