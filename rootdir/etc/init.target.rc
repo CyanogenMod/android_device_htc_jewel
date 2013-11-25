@@ -16,7 +16,7 @@ on init
     symlink /storage/usbdisk /mnt/usbdisk
 
     export EXTERNAL_STORAGE /storage/sdcard0
-    export SECONDARY_STORAGE /storage/sdcard1
+    export SECONDARY_STORAGE /storage/sdcard1:/storage/usbdisk
 
     setprop ro.usb.idproduct.ums 0ce9
     setprop ro.usb.idproduct.mtp 0f91
