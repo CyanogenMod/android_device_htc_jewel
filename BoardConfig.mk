@@ -75,9 +75,6 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Vold
 BOARD_VOLD_MAX_PARTITIONS := 38
 
-# Recovery
-TARGET_RECOVERY_FSTAB := device/htc/jewel/rootdir/etc/fstab.qcom
-
 # TWRP
 DEVICE_RESOLUTION := 720x1280
 TW_FLASH_FROM_STORAGE := true
