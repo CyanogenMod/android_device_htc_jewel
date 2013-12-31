@@ -59,7 +59,8 @@ PRODUCT_COPY_FILES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    device/htc/jewel/rootdir/etc/fstab.qcom:recovery/root/fstab.qcom
+    device/htc/jewel/rootdir/etc/fstab.qcom:recovery/root/fstab.qcom \
+    device/htc/jewel/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
