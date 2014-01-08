@@ -14,8 +14,8 @@
 /dev/block/mmcblk0p37	/data		ext4	noatime,nosuid,nodev,noauto_da_alloc,barrier=0		wait,encryptable=footer,length=-16384
 
 # SD card
-/devices/platform/msm_sdcc.1/mmc_host/mmc0	/storage/sdcard0	auto	defaults		voldmanaged=sdcard0:38
-/devices/platform/msm_sdcc.3/mmc_host/mmc1	/storage/sdcard1	auto	defaults		voldmanaged=sdcard1:auto
+/dev/block/mmcblk0p38	/storage/sdcard0	auto	defaults		voldmanaged=sdcard0:38
+/dev/block/mmcblk1p1	/storage/sdcard1	auto	defaults		voldmanaged=sdcard1:auto
 
 # USB storage
-/devices/platform/msm_hsusb_host/usb	/storage/usbdisk	auto	defaults			voldmanaged=usbdisk:auto
+/dev/block/sda1			/storage/usbdisk	auto	defaults		voldmanaged=usbdisk:auto
