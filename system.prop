@@ -17,7 +17,6 @@ persist.radio.use_nv_for_ehrpd=true
 persist.radio.always_send_plmn=true
 ro.telephony.default_network=8
 telephony.lteOnCdmaDevice=1
-ro.telephony.call_ring.multiple=0
 ro.config.svlte1x=true
 ro.ril.svdo=true
 keyguard.no_require_sim=1
