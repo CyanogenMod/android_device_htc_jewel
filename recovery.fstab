@@ -9,13 +9,12 @@
 /dev/block/mmcblk0p21	/boot		emmc	defaults						defaults
 /dev/block/mmcblk0p22	/recovery	emmc	defaults						defaults
 /dev/block/mmcblk0p26	/devlog		ext4	noatime,nosuid,nodev,barrier=0				wait
-/dev/block/mmcblk0p35	/system		ext4	rw,noatime,barrier=0					wait
-/dev/block/mmcblk0p36	/cache		ext4	noatime,nosuid,nodev,barrier=0				wait
-/dev/block/mmcblk0p37	/data		ext4	noatime,nosuid,nodev,noauto_da_alloc,barrier=0		wait,encryptable=footer,length=-16384
+/dev/block/mmcblk0p36	/system		ext4	rw,noatime,barrier=0					wait
+/dev/block/mmcblk0p37	/cache		ext4	noatime,nosuid,nodev,barrier=0				wait
+/dev/block/mmcblk0p38	/data		ext4	noatime,nosuid,nodev,noauto_da_alloc,barrier=0		wait,encryptable=footer,length=-16384
 
 # SD card
-/dev/block/mmcblk0p38	auto	auto	defaults		voldmanaged=sdcard0:38,noemulatedsd
-/dev/block/mmcblk1p1	auto	auto	defaults		voldmanaged=sdcard1:auto
+/dev/block/mmcblk1p1	auto	vfat	defaults		voldmanaged=sdcard1:auto
 
 # USB storage
 /devices/platform/msm_hsusb_host/usb	auto	auto	defaults			voldmanaged=usbdisk:auto
