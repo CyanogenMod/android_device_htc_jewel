@@ -29,6 +29,7 @@
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := jewel
+TARGET_BOARD_INFO_FILE ?= device/htc/jewel/board-info.txt
 
 # Kernel
 TARGET_KERNEL_CONFIG := jet_defconfig
@@ -46,14 +47,16 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 #mmcblk0p23: 000ffa00 00000200 "misc"
 #mmcblk0p22: 00fffe00 00000200 "recovery"
 #mmcblk0p21: 01000000 00000200 "boot"
-#mmcblk0p35: 4dfffc00 00000200 "system"
+#mmcblk0p36: 88000000 00000200 "system"
 #mmcblk0p30: 00140200 00000200 "local"
-#mmcblk0p36: 0dfffe00 00000200 "cache"
-#mmcblk0p37: 89fffe00 00000200 "userdata"
+#mmcblk0p37: 0dfffc00 00000200 "cache"
+#mmcblk0p38: 2f0000000 00000200 "userdata"
 #mmcblk0p26: 01400000 00000200 "devlog"
 #mmcblk0p28: 00040000 00000200 "pdata"
-#mmcblk0p38: 27be00000 00000200 "fat"
+#mmcblk0p34: 01900000 00000200 "carrier"
+#mmcblk0p39: 05dffc00 00000200 "fat"
 #mmcblk0p31: 00010000 00000200 "extra"
+#mmcblk0p35: 047e9800 00000200 "reserve"
 #mmcblk0p17: 02d00000 00000200 "radio"
 #mmcblk0p18: 00a00000 00000200 "adsp"
 #mmcblk0p16: 00100000 00000200 "dsps"
@@ -63,17 +66,18 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/
 #mmcblk0p25: 00400000 00000200 "modem_st2"
 #mmcblk0p32: 00040000 00000200 "skylink"
 #mmcblk0p33: 00040000 00000200 "cdma_record"
+#mmcblk0p35: 047e9800 00000200 "reserve"
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1744829440
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 2550136320
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2281701376
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 12616466432
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Vold
-BOARD_VOLD_MAX_PARTITIONS := 38
+BOARD_VOLD_MAX_PARTITIONS := 39
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/htc/jewel/rootdir/etc/fstab.qcom

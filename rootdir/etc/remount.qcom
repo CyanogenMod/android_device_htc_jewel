@@ -6,4 +6,4 @@
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
 #<src>						<mnt_point>	<type>	<mnt_flags and options>					<fs_mgr_flags>
-/dev/block/platform/msm_sdcc.1/by-num/p35	/system		ext4	remount,ro,noatime,barrier=0				wait
+/dev/block/platform/msm_sdcc.1/by-num/p36	/system		ext4	remount,ro,noatime,barrier=0				wait
