@@ -39,7 +39,7 @@ ro.nfc.port=I2C
 persist.timed.enable=true
 
 # UMS
-persist.sys.usb.config=mass_storage,adb
+persist.sys.usb.config=mtp
 
 # Recovery
 ro.cwm.forbid_format=/firmware_radio,/firmware_q6,/devlog
