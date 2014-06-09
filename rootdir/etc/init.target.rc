@@ -23,11 +23,6 @@ on fs
     symlink /system/vendor/pittpatt /vendor/pittpatt
     symlink /system/vendor/firmware/libpn544_fw.so /vendor/firmware/libpn544_fw.so
 
-on boot
-    # jewel radio
-    mkdir /dev/socket/qmux_radio 0770 radio radio
-    chmod 2770 /dev/socket/qmux_radio
-
 # Services start here
 
 service akmd /system/bin/akmd
