@@ -40,7 +40,3 @@ persist.timed.enable=true
 
 # UMS
 persist.sys.usb.config=mtp
-
-# Recovery
-ro.cwm.forbid_format=/firmware_radio,/firmware_q6,/devlog
-ro.cwm.forbid_mount=/firmware_radio,/firmware_q6,/devlog
