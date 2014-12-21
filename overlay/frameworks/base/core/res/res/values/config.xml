@@ -33,9 +33,10 @@
              8 - Assistant (search)
             16 - App switch
             32 - Camera
+            64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <integer name="config_deviceHardwareKeys">51</integer>
+    <integer name="config_deviceHardwareKeys">115</integer>
 
     <!-- If this value is true, The mms content-disposition field is supported correctly.
          If false, Content-disposition fragments are ignored -->
