@@ -32,12 +32,6 @@ on fs
 
 # Services start here
 
-service setup_fs /system/bin/setup_fs mmcblk0p36
-    class core
-    user root
-    group root
-    oneshot
-
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
 
