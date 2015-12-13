@@ -27,12 +27,18 @@
 # inherit from S4 common
 -include device/htc/s4-common/BoardConfigCommon.mk
 
+TARGET_SPECIFIC_HEADER_PATH := device/htc/jewel/include
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := jewel
 TARGET_BOARD_INFO_FILE ?= device/htc/jewel/board-info.txt
 
 # Kernel
 TARGET_KERNEL_CONFIG := jet_defconfig
+
+# QCOM
+QCOM_FM_ENABLED := true
+BOARD_USES_SEPARATED_FM := true
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/jewel/bluetooth
