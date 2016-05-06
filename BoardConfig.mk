@@ -40,9 +40,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/jewel/bluetooth
 # RIL
 BOARD_PROVIDES_LIBRIL := true
 
-# USB
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
-
 #dev:        size     erasesize name
 #mmcblk0p23: 000ffa00 00000200 "misc"
 #mmcblk0p22: 00fffe00 00000200 "recovery"
@@ -78,9 +75,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12616466432
 BOARD_CACHEIMAGE_PARTITION_SIZE := 234880000
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
-
-# Vold
-BOARD_VOLD_MAX_PARTITIONS := 40
 
 # Recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
