@@ -28,8 +28,8 @@
 -include device/htc/s4-common/BoardConfigCommon.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := jewel
 TARGET_BOARD_INFO_FILE ?= device/htc/jewel/board-info.txt
+TARGET_BOOTLOADER_BOARD_NAME := jewel
 
 # Kernel
 TARGET_KERNEL_CONFIG := jet_defconfig
@@ -37,9 +37,7 @@ TARGET_KERNEL_CONFIG := jet_defconfig
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/jewel/bluetooth
 
-# RIL
-BOARD_PROVIDES_LIBRIL := true
-
+# cat /proc/emmc
 #dev:        size     erasesize name
 #mmcblk0p23: 000ffa00 00000200 "misc"
 #mmcblk0p22: 00fffe00 00000200 "recovery"
@@ -75,6 +73,9 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12616466432
 BOARD_CACHEIMAGE_PARTITION_SIZE := 234880000
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
+
+# Radio
+BOARD_PROVIDES_LIBRIL := true
 
 # Recovery
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
