@@ -35,8 +35,5 @@ debug.nfc.fw_boot_download=false
 debug.nfc.se=true
 ro.nfc.port=I2C
 
-# OTG
-persist.sys.isUsbOtgEnabled=true
-
 # Time Services
 persist.timed.enable=true
