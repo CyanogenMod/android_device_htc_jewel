@@ -15,7 +15,6 @@
 on fs
     # for NFC
     symlink /system/vendor/pittpatt /vendor/pittpatt
-    symlink /system/vendor/firmware/libpn544_fw.so /vendor/firmware/libpn544_fw.so
 
 on post-fs
     # Support legacy paths
