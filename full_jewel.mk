@@ -14,20 +14,15 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/htc/jewel/full_jewel.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit CM full phone configuration
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit from jewel device
+$(call inherit-product, device/htc/jewel/device.mk)
 
-# Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
-
-# Device naming
-PRODUCT_NAME := cm_jewel
-
-# Override build props
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="htc/sprint_wwe/jewel:4.3/JSS15Q/310297.4:user/release-keys" \
-    BUILD_ID=JSS15Q \
-    PRIVATE_BUILD_DESC="4.13.651.4 CL310297 release-keys" \
-    PRODUCT_NAME=jewel
+# Set those variables here to overwrite the inherited values.
+PRODUCT_BRAND := htc
+PRODUCT_DEVICE := jewel
+PRODUCT_MANUFACTURER := HTC
+PRODUCT_MODEL := EVO
+PRODUCT_NAME := full_jewel
