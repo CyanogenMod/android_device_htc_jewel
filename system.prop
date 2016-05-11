@@ -29,11 +29,5 @@ gsm.operator.alpha=Sprint
 gsm.operator.numeric=310120
 gsm.operator.iso-country=us
 
-# NFC
-debug.nfc.fw_download=true
-debug.nfc.fw_boot_download=false
-debug.nfc.se=true
-ro.nfc.port=I2C
-
 # Time Services
 persist.timed.enable=true
