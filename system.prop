@@ -3,6 +3,14 @@
 
 ro.sf.lcd_density=320
 
+# Audio
+persist.audio.fluence.mode=endfire
+persist.audio.handset.mic=digital
+persist.audio.speaker.location=high
+persist.audio.vr.enable=false
+qcom.hw.aac.encoder=true
+ro.qc.sdk.audio.fluencetype=fluence
+
 # RIL properties
 ro.ril.enable.sdr=0
 ro.ril.set.mtusize=1422
